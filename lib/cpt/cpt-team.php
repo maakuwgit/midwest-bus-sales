@@ -27,7 +27,6 @@ if ( ! function_exists('register_team_custom_post_type') ) {
       'description'         => 'Team description',
       'labels'              => $labels,
       'supports'            => array( 'title', 'page-attributes' ),
-      // 'taxonomies'          => array( 'category', 'post_tag' ),
       'hierarchical'        => true,
       'public'              => true,
       'show_ui'             => true,

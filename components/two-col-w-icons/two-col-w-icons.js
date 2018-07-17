@@ -1,14 +1,14 @@
 /**
-* three-col-block JS
+* two-col-w-icons JS
 * -----------------------------------------------------------------------------
 *
-* All the JS for the three-col-block component.
+* All the JS for the two-col-w-icons component.
 */
 ( function( app ) {
 
   var COMPONENT = {
 
-    className: 'll-three-col-block',
+    className: 'll-two-col-w-icons',
 
 
     selector : function() {
@@ -31,5 +31,5 @@
   };
 
   // Hooks the component into the app
-  app.registerComponent( 'three-col-block', COMPONENT );
+  app.registerComponent( 'two-col-w-icons', COMPONENT );
 } )( app );

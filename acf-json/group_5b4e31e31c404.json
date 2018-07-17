@@ -1,69 +1,11 @@
 {
-    "key": "group_5b46001ba2f3d",
-    "title": "Member Grid",
+    "key": "group_5b4e31e31c404",
+    "title": "Location Grid",
     "fields": [
         {
-            "key": "field_5b46001baaf53",
-            "label": "Supertitle",
-            "name": "member_grid_supertitle",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b46001bae1ff",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5b46001bae25d",
-                    "label": "Tag",
-                    "name": "tag",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "h2": "H2",
-                        "h3": "H3"
-                    },
-                    "allow_null": 0,
-                    "default_value": "h2",
-                    "layout": "",
-                    "return_format": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5b46001bab039",
+            "key": "field_5b4e31e322881",
             "label": "Heading",
-            "name": "member_grid_heading",
+            "name": "location_grid_heading",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -76,7 +18,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5b46001bb8507",
+                    "key": "field_5b4e31e3250b6",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -95,7 +37,7 @@
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_5b46001bb856b",
+                    "key": "field_5b4e31e325106",
                     "label": "Tag",
                     "name": "tag",
                     "type": "button_group",
@@ -112,16 +54,35 @@
                         "h3": "H3"
                     },
                     "allow_null": 0,
-                    "default_value": "h2",
+                    "default_value": "h3",
                     "layout": "horizontal",
                     "return_format": "value"
                 }
             ]
         },
         {
-            "key": "field_5b4e42eaa165f",
-            "label": "Number of Members",
-            "name": "member_number",
+            "key": "field_5b4e31e3228c7",
+            "label": "Content",
+            "name": "location_grid_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5b4e31e322907",
+            "label": "Number of Locations",
+            "name": "location_grid_number",
             "type": "range",
             "instructions": "",
             "required": 0,
@@ -142,9 +103,9 @@
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "default"
+                "value": "location"
             }
         ]
     ],
@@ -155,6 +116,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "A simple grid of all entries dynamically pulled from the Team Custom Post Type with captions. All images maintain their aspect ratio. Only the Number of Members is an option.",
-    "modified": 1531860828
+    "description": "A definition list grid containing Single Location information. All cards should be dynamically generated from the Locations CPT.",
+    "modified": 1531851356
 }

@@ -1,11 +1,11 @@
 {
-    "key": "group_5b29b32050293",
-    "title": "Left \/ Right Image Blocks",
+    "key": "group_5b4e1dd498b7d",
+    "title": "Left \/ Right Image w\/ Gradient",
     "fields": [
         {
-            "key": "field_5b3699521cc37",
+            "key": "field_5b4e1dd4a02a5",
             "label": "Style",
-            "name": "lr_blocks_style",
+            "name": "lr_w_gradient_style",
             "type": "button_group",
             "instructions": "",
             "required": 0,
@@ -25,9 +25,9 @@
             "return_format": "value"
         },
         {
-            "key": "field_5b364973c32de",
+            "key": "field_5b4e1dd4a02eb",
             "label": "Image",
-            "name": "lr_blocks_image",
+            "name": "lr_w_gradient_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -49,9 +49,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_5b364973c323a",
+            "key": "field_5b4e1dd4a032b",
             "label": "Content",
-            "name": "lr_blocks_content",
+            "name": "lr_w_gradient_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -68,9 +68,9 @@
             "delay": 0
         },
         {
-            "key": "field_5b4e1d8e848c3",
+            "key": "field_5b4e1dd4a0369",
             "label": "Background Color",
-            "name": "lr_blocks_background",
+            "name": "lr_w_gradient_background",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -103,6 +103,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "An image on the right and text on the left. The image matches the height of the content. The background color is global. The side of the image can be changed.",
-    "modified": 1531852883
+    "description": "Similar to the Left\/Right Block, only with a white-to-transparent gradient on the left overlaying the image.",
+    "modified": 1531852956
 }

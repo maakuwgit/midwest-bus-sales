@@ -1,11 +1,11 @@
 {
     "key": "group_5b35650abf1f4",
-    "title": "Superheading",
+    "title": "Supertitle",
     "fields": [
         {
             "key": "field_5b3565215119e",
-            "label": "Superheading",
-            "name": "superheader",
+            "label": "Supertitle",
+            "name": "supertitle",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -15,8 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "RFID TECHNOLOGY MANUFACTURER",
-            "placeholder": "RFID TECHNOLOGY MANUFACTURER",
+            "default_value": "Official Thomas Built Bus Dealer",
+            "placeholder": "Official Thomas Built Bus Dealer",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -26,29 +26,22 @@
         [
             {
                 "param": "post_template",
-                "operator": "!=",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-home.php"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
                 "value": "templates\/template-form-template.php"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "page_type",
-                "operator": "==",
-                "value": "posts_page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "case_study"
             }
         ]
     ],
@@ -59,6 +52,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1531167840
+    "description": "A header that supersedes the page, sub and main headings. It is hardcoded to H1",
+    "modified": 1531852734
 }

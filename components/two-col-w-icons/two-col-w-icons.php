@@ -1,13 +1,12 @@
 <?php
 /**
-* call-to-action
+* two-col-w-icons
 * -----------------------------------------------------------------------------
 *
-* call-to-action component
+* two-col-w-icons component
 */
 
 $defaults = [
-  'form_id' => false
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -32,6 +31,6 @@ $component_id   = $component_args['id'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="ll-call-to-action <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="call-to-action">
+<div class="ll-two-col-w-icons <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="two-col-w-icons">
 
 </div>

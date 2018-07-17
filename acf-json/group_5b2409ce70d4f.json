@@ -1,11 +1,11 @@
 {
-    "key": "group_5b46001ba2f3d",
-    "title": "Member Grid",
+    "key": "group_5b2409ce70d4f",
+    "title": "Hero Banner",
     "fields": [
         {
-            "key": "field_5b46001baaf53",
+            "key": "field_5b240b32b71c2",
             "label": "Supertitle",
-            "name": "member_grid_supertitle",
+            "name": "hero_supertitle",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -18,7 +18,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5b46001bae1ff",
+                    "key": "field_5b240b32b71c3",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -26,18 +26,18 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "80",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
                     "placeholder": "",
                     "maxlength": "",
-                    "rows": 2,
+                    "rows": 4,
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_5b46001bae25d",
+                    "key": "field_5b240b32b71c4",
                     "label": "Tag",
                     "name": "tag",
                     "type": "button_group",
@@ -45,69 +45,12 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
                     "choices": {
-                        "h2": "H2",
-                        "h3": "H3"
-                    },
-                    "allow_null": 0,
-                    "default_value": "h2",
-                    "layout": "",
-                    "return_format": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5b46001bab039",
-            "label": "Heading",
-            "name": "member_grid_heading",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b46001bb8507",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5b46001bb856b",
-                    "label": "Tag",
-                    "name": "tag",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
+                        "h1": "H1",
                         "h2": "H2",
                         "h3": "H3"
                     },
@@ -119,10 +62,10 @@
             ]
         },
         {
-            "key": "field_5b4e42eaa165f",
-            "label": "Number of Members",
-            "name": "member_number",
-            "type": "range",
+            "key": "field_5b240b1db71bf",
+            "label": "Heading",
+            "name": "hero_heading",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -131,30 +74,136 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "min": -1,
-            "max": 12,
-            "step": "",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5b240b1db71c0",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5b240b1db71c1",
+                    "label": "Tag",
+                    "name": "tag",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "h1": "H1",
+                        "h2": "H2"
+                    },
+                    "allow_null": 0,
+                    "default_value": "h1",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_5b240b6ab71c5",
+            "label": "Image",
+            "name": "hero_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b250ea4c5a3c",
+            "label": "Overlay",
+            "name": "overlay_strength",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "10",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "0.6",
+            "placeholder": "0.6",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "min": 0,
+            "max": 1,
+            "step": "0.1"
+        },
+        {
+            "key": "field_5b240b90b71c6",
+            "label": "Looping Video",
+            "name": "hero_video",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "page_type",
                 "operator": "==",
-                "value": "default"
+                "value": "posts_page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
             }
         ]
     ],
-    "menu_order": 0,
-    "position": "normal",
+    "menu_order": -1,
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 0,
-    "description": "A simple grid of all entries dynamically pulled from the Team Custom Post Type with captions. All images maintain their aspect ratio. Only the Number of Members is an option.",
-    "modified": 1531860828
+    "active": 1,
+    "description": "100vw, 90vh <DIV> with the following options. The background image is styled to have an overlay tint, which can be controlled through the component.",
+    "modified": 1531855132
 }

@@ -1,11 +1,71 @@
 {
     "key": "group_5b43b67fb2b29",
-    "title": "3 Column Block",
+    "title": "2 Column w\/ Icon List",
     "fields": [
         {
+            "key": "field_5b4e508fba74a",
+            "label": "Content",
+            "name": "two_col_icons_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5b4e5049ba749",
+            "label": "Style",
+            "name": "two_col_icons_style",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "lefty": "Left Side List",
+                "righty": "Right Side List"
+            },
+            "allow_null": 0,
+            "default_value": "righty",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b4e4ae7ba747",
+            "label": "Background Color",
+            "name": "two_col_icons_background",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
             "key": "field_5b43b7a24fa2b",
-            "label": "Column",
-            "name": "three_col_block",
+            "label": "List",
+            "name": "two_col_icons_list",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -23,8 +83,8 @@
             "sub_fields": [
                 {
                     "key": "field_5b43b7a24fa2c",
-                    "label": "Icon",
-                    "name": "icon",
+                    "label": "Type",
+                    "name": "type",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -35,15 +95,8 @@
                         "id": ""
                     },
                     "choices": {
-                        "icon-clock": "Clock",
-                        "icon-conversion": "Conversion",
-                        "icon-shield": "Shield",
-                        "icon-cube": "Cube",
-                        "icon-graph": "Graph",
-                        "icon-search-docs": "Search",
-                        "icon-inbox-star": "Inbox w\/ Star",
-                        "icon-dollars": "Dollars",
-                        "icon-clipboard": "Clipboard"
+                        "sizes": "Sizes",
+                        "checkbox": "Checkboxes"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -55,8 +108,8 @@
                 },
                 {
                     "key": "field_5b43b7a24fa2d",
-                    "label": "Title",
-                    "name": "title",
+                    "label": "Label",
+                    "name": "label",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -71,25 +124,6 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_5b43b7a24fa2e",
-                    "label": "Caption",
-                    "name": "caption",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 8,
-                    "new_lines": "br"
                 }
             ]
         }
@@ -99,7 +133,14 @@
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "templates\/template-home.php"
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "bus"
             }
         ]
     ],
@@ -110,6 +151,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "",
-    "modified": 1531326537
+    "description": "Similar to the Left\/Right Block, only with one side being a list of features.",
+    "modified": 1531859232
 }

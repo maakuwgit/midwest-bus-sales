@@ -3,6 +3,67 @@
     "title": "Prefooter",
     "fields": [
         {
+            "key": "field_5b4e1c43ad594",
+            "label": "Icon Links",
+            "name": "prefooter_icon_links",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 4,
+            "layout": "block",
+            "button_label": "+ Icon Link",
+            "sub_fields": [
+                {
+                    "key": "field_5b4e1c87ad595",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_5b4610ab632ad"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_5b4e1cb5ad596",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_5b3640dcdd5aa",
             "label": "Title",
             "name": "prefooter_title",
@@ -15,8 +76,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "Request your free ShelfAware demo",
+            "default_value": "Shop Our Used Buses",
+            "placeholder": "Shop Our Used Buses",
             "maxlength": "",
             "rows": 2,
             "new_lines": "br"
@@ -34,7 +95,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Ready to automate your supply chain? It’s never been easier. ShelfAware is redefining the vendor managed inventory industry. Contact us today for more information. \r\n\r\n<a class=\"btn\" title=\"Vendors\" href=\"\/vendors\">Vendors<\/a><a class=\"btn btn--secondary\" title=\"Manufacturers\" href=\"\/manufacturers\">Manufacturers<\/a>",
+            "default_value": "Midwest Bus Sales sells new & uses buses that promote the safety, \r\ndependability, and quality.",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -45,15 +106,22 @@
         [
             {
                 "param": "page_template",
-                "operator": "!=",
-                "value": "templates\/template-form-template.php"
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-home.php"
             }
         ],
         [
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "case_study"
+                "value": "location"
             }
         ]
     ],
@@ -64,6 +132,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1531141159
+    "description": "Centered text with textured background and a list of icons",
+    "modified": 1531852119
 }

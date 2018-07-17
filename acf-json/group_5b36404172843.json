@@ -39,6 +39,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1531168747
+    "description": "A card grid containing blog post information. All cards should be the same height. The whole card should be clickable to follow the link.",
+    "modified": 1531851191
 }

@@ -1,14 +1,14 @@
 /**
-* homepage-synopsis JS
+* two-col-w-heading JS
 * -----------------------------------------------------------------------------
 *
-* All the JS for the homepage-synopsis component.
+* All the JS for the two-col-w-heading component.
 */
 ( function( app ) {
 
   var COMPONENT = {
 
-    className: 'll-homepage-synopsis',
+    className: 'll-two-col-w-heading',
 
 
     selector : function() {
@@ -31,5 +31,5 @@
   };
 
   // Hooks the component into the app
-  app.registerComponent( 'homepage-synopsis', COMPONENT );
+  app.registerComponent( 'two-col-w-heading', COMPONENT );
 } )( app );

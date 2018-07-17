@@ -1,9 +1,9 @@
 <?php
 /**
-* homepage-synopsis
+* image-grid
 * -----------------------------------------------------------------------------
 *
-* homepage-synopsis component
+* image-grid component
 */
 
 $defaults = [
@@ -31,6 +31,6 @@ $component_id   = $component_args['id'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="ll-homepage-synopsis <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="homepage-synopsis">
+<div class="ll-image-grid <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="image-grid">
 
 </div>

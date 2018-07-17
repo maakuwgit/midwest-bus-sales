@@ -1,11 +1,11 @@
 {
-    "key": "group_5b46001ba2f3d",
-    "title": "Member Grid",
+    "key": "group_5b4e436c7ce1e",
+    "title": "Logo Grid",
     "fields": [
         {
-            "key": "field_5b46001baaf53",
+            "key": "field_5b4e47fd110c0",
             "label": "Supertitle",
-            "name": "member_grid_supertitle",
+            "name": "logo_grid_supertitle",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -18,7 +18,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5b46001bae1ff",
+                    "key": "field_5b4e47fd110c1",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -37,7 +37,7 @@
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_5b46001bae25d",
+                    "key": "field_5b4e47fd110c2",
                     "label": "Tag",
                     "name": "tag",
                     "type": "button_group",
@@ -50,66 +50,8 @@
                         "id": ""
                     },
                     "choices": {
-                        "h2": "H2",
-                        "h3": "H3"
-                    },
-                    "allow_null": 0,
-                    "default_value": "h2",
-                    "layout": "",
-                    "return_format": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5b46001bab039",
-            "label": "Heading",
-            "name": "member_grid_heading",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b46001bb8507",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5b46001bb856b",
-                    "label": "Tag",
-                    "name": "tag",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "h2": "H2",
-                        "h3": "H3"
+                        "h1": "H1",
+                        "h2": "H2"
                     },
                     "allow_null": 0,
                     "default_value": "h2",
@@ -119,10 +61,68 @@
             ]
         },
         {
-            "key": "field_5b4e42eaa165f",
-            "label": "Number of Members",
-            "name": "member_number",
-            "type": "range",
+            "key": "field_5b4e436c831d4",
+            "label": "Heading",
+            "name": "logo_grid_heading",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5b4e436c84f2b",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5b4e436c84fec",
+                    "label": "Tag",
+                    "name": "tag",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "h2": "H2",
+                        "h3": "H3"
+                    },
+                    "allow_null": 0,
+                    "default_value": "h3",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_5b4e436c832a1",
+            "label": "Content",
+            "name": "logo_grid_content",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -132,11 +132,55 @@
                 "id": ""
             },
             "default_value": "",
-            "min": -1,
-            "max": 12,
-            "step": "",
-            "prepend": "",
-            "append": ""
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5b4e436c8331b",
+            "label": "Logos",
+            "name": "logo_grid_logos",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "+ Image",
+            "sub_fields": [
+                {
+                    "key": "field_5b4e436c8e423",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.333",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -145,6 +189,13 @@
                 "param": "post_template",
                 "operator": "==",
                 "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-home.php"
             }
         ]
     ],
@@ -155,6 +206,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "A simple grid of all entries dynamically pulled from the Team Custom Post Type with captions. All images maintain their aspect ratio. Only the Number of Members is an option.",
-    "modified": 1531860828
+    "description": "A simple grid of logos with captions. Logo will space around by default, and center until more than 6 images are available, when they start a new line.  If more than 15 icons are used, pagination occurs. All images maintain their aspect ratio.",
+    "modified": 1531857030
 }

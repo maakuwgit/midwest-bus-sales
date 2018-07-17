@@ -179,7 +179,7 @@ main {
   article > *:last-child {
     padding-bottom: 0;
   }
-  
+
   @include screen-lg-up {
     article > *:last-child {
       padding-bottom: rem-calc(50);

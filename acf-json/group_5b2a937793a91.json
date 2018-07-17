@@ -1,11 +1,11 @@
 {
     "key": "group_5b2a937793a91",
-    "title": "Card Grid",
+    "title": "Bus Type Grid",
     "fields": [
         {
             "key": "field_5b3bb09721689",
-            "label": "Superheading",
-            "name": "card-grid_superheading",
+            "label": "Supertitle",
+            "name": "bus_grid_supertitle",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -63,7 +63,7 @@
         {
             "key": "field_5b3fb6ee3e120",
             "label": "Heading",
-            "name": "card-grid_heading",
+            "name": "bus_grid_heading",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -121,7 +121,7 @@
         {
             "key": "field_5b3fb7513e123",
             "label": "Content",
-            "name": "card-grid_content",
+            "name": "bus_grid_content",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -140,7 +140,7 @@
         {
             "key": "field_5b2a93779aa29",
             "label": "Cards",
-            "name": "card-grid_cards",
+            "name": "bus_grid_cards",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -157,30 +157,9 @@
             "button_label": "+ Image",
             "sub_fields": [
                 {
-                    "key": "field_5b2a9377aabde",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "clone",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33.333",
-                        "class": "",
-                        "id": ""
-                    },
-                    "clone": [
-                        "field_5b4610ab632ad"
-                    ],
-                    "display": "seamless",
-                    "layout": "block",
-                    "prefix_label": 0,
-                    "prefix_name": 0
-                },
-                {
-                    "key": "field_5b3fbc8ca2d8f",
-                    "label": "Title",
-                    "name": "title",
+                    "key": "field_5b4e37648992c",
+                    "label": "Type",
+                    "name": "type",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -214,6 +193,21 @@
                     "maxlength": "",
                     "rows": 8,
                     "new_lines": "br"
+                },
+                {
+                    "key": "field_5b2a9377aabde",
+                    "label": "Call-to-Action",
+                    "name": "cta",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -222,7 +216,7 @@
         [
             {
                 "param": "post_template",
-                "operator": "!=",
+                "operator": "==",
                 "value": "templates\/template-home.php"
             }
         ]
@@ -234,6 +228,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "",
-    "modified": 1531515321
+    "description": "A simple columned card component always set to 3 columns. The CTA “Shop Inventory”.",
+    "modified": 1531860716
 }
