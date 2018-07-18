@@ -7,5 +7,35 @@
  */
 
 .ll-teaser {
+  @extend %section-padding;
+
+  .teaser__col__title {
+    color: $blue;
+    font-weight: $text-semi;
+  }
+
+  .teaser__col__icon {
+    @extend %coin;
+    margin-bottom: rem-calc(16);
+    background-color: $powder;
+  }
+
+  .teaser__body {
+    margin-top: $padding-medium;
+  }
+
+  @include screen-md-only {
+    .teaser__col:nth-of-type(3n+3) {
+      width: 100%;
+      max-width: 100%;
+      margin-top: $padding-small;
+    }
+  }
+
+  @include screen-md-up {
+    .teaser__body {
+      margin-top: $padding-large;
+    }
+  }
 
 }
