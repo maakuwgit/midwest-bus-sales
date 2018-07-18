@@ -8,4 +8,49 @@
 
 .ll-bus-types-grid {
 
+  .bus-type-grid__card {
+    @extend %card;
+
+    &[data-clickthrough]:hover {
+      background-color: $cerulean;
+      background: linear-gradient(135deg, $powder 0%, $cerulean 100%);
+
+      * {
+        color: $white;
+        opacity: 1;
+      }
+
+      .bus-types-grid__list__cta {
+        color: $white;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .bus-types-grid__list__title {
+    @extend %card__title;
+  }
+
+  .bus-types-grid__list__description {
+    @extend %card__body;
+  }
+
+  .bus-types-grid__list__cta {
+    @extend %card__cta;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: rem-calc(48);
+    margin-top: rem-calc(-48);
+
+    [data-clickthrough] & {
+
+      &:hover {
+        background-color: $white;
+      }
+
+    }
+  }
+
 }

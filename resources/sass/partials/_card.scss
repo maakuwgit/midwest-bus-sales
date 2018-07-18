@@ -5,22 +5,26 @@
  * A (mostly) square box with a light shadow and gradient headline
  */
 %card {
-  min-height: 365px;
-  margin: #{$padding-xsmall * 1.5} auto;
-  padding: #{rem-calc(27)};
-  border-radius: rem-calc(4);
-  background-color: $white;
-  box-shadow: 0 #{rem-calc(2)} #{rem-calc(8)} 0 rgba($black, 0.15);
+  position: relative;
+  min-height: rem-calc(231);//Since we want these to scale on XL+ screens, these need to be rems
+  max-width: rem-calc(255);//Since we want these to scale on XL+ screens, these need to be rems
+  margin: #{$padding-small} auto;
+  padding: #{rem-calc(30)};
+  border-radius: 0;
+  color: $white;
+  background-color: $cerulean;
+  background: linear-gradient(135deg, $cerulean 0%, $blue 100%);
+  box-shadow: 0 0 #{rem-calc(8)} 0 rgba($black, 0.26);
   overflow: hidden;
 }
 
 %card__body {
 
   p {
+    @extend %h4;
     margin-top: 0;
     font-weight: $text-normal;
-    line-height: 26px;
-    line-height: 1.625;
+    color: rgba($white, 0.5);
 
     &:last-child {
       margin-bottom: 0;
@@ -33,7 +37,7 @@
   margin-bottom: rem-calc(4);
   font-size: rem-calc(18);
   font-weight: $text-bold;
-  color: #404040;
+  color: $white;
   line-height: 23px;
   line-height: 1.27777777777778;
 
@@ -57,11 +61,10 @@
 }
 
 %card__cta {
-  display: inline-block;
-  margin-top: rem-calc(42);
-  border-bottom: solid 1px $navy;
-  color: $navy;
-  font-weight: $text-normal;
+  @extend %btn;
+  padding: rem-calc(14);
+  color: $ebony;
+  background-color: $white;
 }
 
 %card__nav {

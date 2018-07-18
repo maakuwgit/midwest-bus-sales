@@ -10,7 +10,6 @@ if( have_rows( 'components' ) ) {
       case 'bus-types-grid' :
         //About Us”
         $buses = array(
-          'supertitle' => get_sub_field('bus_grid_supertitle'),
           'heading'    => get_sub_field('bus_grid_heading'),
           'content'    => get_sub_field('bus_grid_content'),
           'cards'      => get_sub_field('bus_grid_cards')

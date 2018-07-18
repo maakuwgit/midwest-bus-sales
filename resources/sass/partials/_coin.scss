@@ -1,0 +1,25 @@
+/**
+ * Coin
+ *
+ * Used width cards and grids to show a bluish icon or alphanumeric element
+ */
+%coin {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: rem-calc(51);
+  width: rem-calc(51);
+  padding: rem-calc(14);
+  border-radius: 200px;
+  color: $white;
+  font-size: rem-calc(18);
+  font-weight: $text-bold;
+  line-height: 23px;
+  line-height: 1.27777777777778;
+  background-color: rgba($white, 0.2);
+  box-shadow: inset 0 #{rem-calc(1)} #{rem-calc(3)} 0 rgba($black, 0.05);
+}
+
+.coin {
+  @extend %coin;
+}
