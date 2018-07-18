@@ -4,9 +4,9 @@
 %btn {
   display: inline-block;
   min-width: 176px;
-  border: none;
+  border: solid 1px $blue;
   margin: auto 0;
-  padding: #{rem-calc(11)} #{rem-calc(43)};
+  padding: #{rem-calc(11)} #{rem-calc(23)};
   border-radius: 0;
   background-color: $blue;
   color: $white;
@@ -19,18 +19,21 @@
   box-shadow: none;
 
   &:hover, &:active, &:focus {
-    background-color: darken($blue, 5%);
+    border-color: $navy;
+    background-color: $navy;
   }
 }
 
 %btn--secondary {
   @extend %btn;
   color: $black;
-  border: solid 1px $silver;
+  border: solid 1px #d8d8d8;
   background-color: $white;
 
   &:hover, &:active, &:focus {
-    border-color: $blue;
+    color: $navy;
+    border-color: $powder;
+    background-color: $powder;
   }
 }
 

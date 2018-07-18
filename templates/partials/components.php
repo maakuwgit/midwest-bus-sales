@@ -60,7 +60,7 @@ if( have_rows( 'components' ) ) {
           'style'       => get_sub_field('lr_blocks_style'),
           'image'       => get_sub_field('lr_blocks_image'),
           'content'     => get_sub_field('lr_blocks_content'),
-          'background'  => get_sub_field('lr_blocks_background')
+          'has_bg'      => get_sub_field('lr_blocks_background')
         );
 
         $components .= ll_include_component(

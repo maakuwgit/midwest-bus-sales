@@ -170,6 +170,55 @@
   background: linear-gradient(45deg, $cerulean 0%, $blue 100%);
 }
 
+/*
+ * Triangle Caps
+ * Add a :before and :after tag and color matched triangles
+ */
+
+
+@mixin triangle-caps($color:$periwinkle) {
+  position: relative;
+  background-color: $color;
+  margin-bottom: $padding-xsmall;
+
+  @include screen-md-only {
+    margin-bottom: $padding-small;
+  }
+
+  @include screen-lg-up {
+    margin-bottom: $padding-medium;
+  }
+
+  //Top Triangle
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: rem-calc(-75);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: rem-calc(75) 100vw 0 0;
+    border-color: transparent $color transparent transparent;
+  }
+
+  //Bottom Triangle
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: rem-calc(-75);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: rem-calc(75) 100vw 0 0;
+    border-color: $color transparent transparent transparent;
+  }
+
+}
+
 /**
  * Background opacity
  */

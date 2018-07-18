@@ -45,7 +45,7 @@ $columns     = $component_data['columns'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<header class="ll-teaser<?php echo implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="teaser">
+<section class="ll-teaser<?php echo implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="teaser">
 
   <div class="container">
 
@@ -108,4 +108,4 @@ $columns     = $component_data['columns'];
 
   </div><!-- .container -->
 
-</header>
+</section>

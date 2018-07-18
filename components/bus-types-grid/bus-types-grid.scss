@@ -24,6 +24,7 @@
       .bus-types-grid__list__cta {
         color: $white;
         background-color: transparent;
+        border-color: transparent;
       }
     }
   }
@@ -44,6 +45,7 @@
     bottom: 0;
     height: rem-calc(48);
     margin-top: rem-calc(-48);
+    border: none;
 
     [data-clickthrough] & {
 

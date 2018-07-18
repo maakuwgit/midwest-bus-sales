@@ -50,16 +50,16 @@
 }
 
 %section-padding {
-  margin-top: $padding-xsmall;
+  padding-top: $padding-xsmall;
   padding-bottom: $padding-small;
 
   @include screen-md-only {
-    margin-top: $padding-small;
+    padding-top: $padding-small;
     padding-bottom: $padding-medium;
   }
 
   @include screen-lg-up {
-    margin-top: $padding-medium;
+    padding-top: $padding-medium;
     padding-bottom: $padding-large;
   }
 }
@@ -251,19 +251,22 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
     color: $white;
   }
   &.blue {
-    color: $grey;
-  }
-  &.navy {
-    color: $grey;
-  }
-  &.royal {
-    color: $grey;
-  }
-  &.teal {
     color: $blue;
   }
-  &.lavender {
+  &.navy {
+    color: $navy;
+  }
+  &.cerulean {
+    color: $cerulean;
+  }
+  &.silver {
     color: $silver;
+  }
+  &.powder {
+    color: $powder;
+  }
+  &.periwinkle {
+    color: $periwinkle;
   }
   &.grey {
     color: $grey;
@@ -278,19 +281,22 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
     background-color: $white;
   }
   &.blue {
-    background-color: $grey;
+    background-color: $blue;
   }
   &.navy {
     background-color: $grey;
   }
-  &.royal {
-    background-color: $grey;
+  &.cerulean {
+    background-color: $cerulean;
   }
-  &.teal {
-    background-color: $blue;
-  }
-  &.lavender {
+  &.silver {
     background-color: $silver;
+  }
+  &.powder {
+    background-color: $powder;
+  }
+  &.periwinkle {
+    background-color: $periwinkle;
   }
   &.grey {
     background-color: $grey;

@@ -7,9 +7,10 @@
 */
 
 $defaults = [
+  'style'      => false,
   'image'      => false,
   'content'    => false,
-  'style'      => false
+  'has_bg'     => false
 ];
 
 $args = [
@@ -42,12 +43,13 @@ $id = $component_args['id'];
 /**
  * ACF values pulled into the component from the components.php partial.
  */
+$style              = $component_data['style'];
 $image              = $component_data['image'];
 $content            = $component_data['content'];
-$style              = $component_data['style'];
+$has_bg             = $component_data['has_bg'];
 
-if( $image ) {
-  $bg = ' data-backgrounder';
+if( $has_bg ) {
+  $bg = 'periwinkle ';
 }else{
   $bg = '';
 }
@@ -55,7 +57,7 @@ if( $image ) {
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<section class="ll-lr-blocks<?php echo ' ' . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
+<section class="ll-lr-blocks<?php echo ' ' . $bg . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
 
   <div class="container row">
 
@@ -72,7 +74,7 @@ if( $image ) {
   </div>
 
 <?php if( $image ) : ?>
-  <figure class="lr-blocks__figure col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12"<?php echo $bg;?>>
+  <figure class="lr-blocks__figure col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12" data-backgrounder>
 
     <div class="lr-blocks__feature feature">
     <?php echo ll_format_image($image); ?>

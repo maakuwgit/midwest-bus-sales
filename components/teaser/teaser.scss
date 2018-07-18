@@ -8,6 +8,7 @@
 
 .ll-teaser {
   @extend %section-padding;
+  @include triangle-caps;
 
   .teaser__col__title {
     color: $blue;

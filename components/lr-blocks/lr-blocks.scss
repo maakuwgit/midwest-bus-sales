@@ -9,6 +9,7 @@
 .ll-lr-blocks {
   position: relative;
   @extend %section-padding;
+  @include triangle-caps;
   padding-top: $padding-small;
 
   @include screen-md-only {
@@ -21,13 +22,10 @@
     .lr-blocks__figure {
       top: $padding-large;
       bottom: $padding-large;
-      border-top-left-radius: rem-calc(4);
-      border-bottom-left-radius: rem-calc(4);
-      box-shadow: 0 #{rem-calc(4)} #{rem-calc(10)} 0 rgba(0,0,0,0.4);
     }
 
     .lr-blocks__content {
-      min-height: 448px;
+      min-height: 397px;
     }
 
     .lr-blocks__figure {
@@ -48,14 +46,15 @@
     .lr-blocks__figure {
       left: 0;
       right: initial;
-      border-radius: 0;
-      border-top-right-radius: rem-calc(4);
-      border-bottom-right-radius: rem-calc(4);
     }
   }
 
+
+
   .lr-blocks__figure {
+    position: absolute;
     top: $padding-medium;
+    right: 0;
     bottom: $padding-medium;
   }
 
@@ -75,17 +74,6 @@
 
     }
 
-    h2, h3, h4, h5, h6, li, time {
-
-      &:not(.h1) {
-        color: $white;
-      }
-    }
-
-    p, li {
-      font-weight: $text-normal;
-    }
-
     ul {
       list-style: none;
     }
@@ -96,7 +84,7 @@
     }
 
     p {
-      margin-top: 0.5rem;
+      margin-top: rem-calc(8);
     }
 
     li {
@@ -105,16 +93,18 @@
 
     a:not(.btn) {
       display: inline-block;
-      border-bottom: solid 1px $white;
-      font-weight: $text-normal;
+    }
+
+    .btn {
+      margin-top: $padding-small;
+      margin-right: $padding-xsmall;
     }
   }
 
-  .lr-blocks__figure {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+  &.periwinkle {
+    + .ll-lr-blocks {
+      @include triangle-caps($white);
+      background-color: $white;
+    }
   }
-
 }
