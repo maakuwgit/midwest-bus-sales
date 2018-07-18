@@ -7,22 +7,19 @@
   @include flexible(flex-start, flex-start, row, center);
   min-height: 300px;
   max-height: initial;
+  background-color: $silver;
 
   @include screen-md-up {
-    height: 55vh;
-    max-height: 465px;
+    height: 69vh;
+    max-height: 610px;
     overflow: hidden;
-
-    &[data-backgrounder] {
-      height: 100vh;
-      max-height: initial;
-    }
   }
 
   .hdg__supertitle,
   .hdg__title,
   .hdg__content {
     padding-left: 0;
+    color: $white;
   }
 
   .hdg__supertitle {
@@ -31,7 +28,6 @@
 
   .hdg__title {
     @extend %h0;
-    color: $white;
   }
 
   .hdg__content {

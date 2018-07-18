@@ -7,6 +7,7 @@
 */
 
 $defaults = [
+  'icons'     => false,
   'title'     => false,
   'content'   => false
 ];
@@ -36,6 +37,7 @@ $id = ( $component_args['id'] ? $component_args['id'] : uniqid('prefooter-') );
  */
 $title          = $component_data['title'];
 $content        = $component_data['content'];
+$icons          = $component_data['icons'];
 
 if ( !$title && !$content ) return;
 ?>
@@ -45,9 +47,26 @@ if ( !$title && !$content ) return;
 
   <div class="container row">
 
+  <?php if( $icons ) : ?>
+    <nav class="prefooter__icons text-center col col-md-7of12 col-lg-8of12 col-xl-10of12">
+      <?php
+        foreach( $icons as $icon ) :
+          $iconlink = $icon['link'];
+      ?>
+      <a class="icon__link" href="#">
+        <svg class="icon icon__link__icon <?php echo $icon['icon']; ?>">
+          <use xlink:href="#<?php echo $icon['icon']; ?>"></use>
+        </svg>
+        <span class="icon__link__label">Title</span>
+      </a>
+      <?php endforeach; ?>
+    </nav>
+    <!-- .prefooter__icons -->
+  <?php endif; ?>
+
   <?php if( $title ) : ?>
     <h2 class="prefooter__title text-center col col-md-7of12 col-lg-8of12 col-xl-10of12"><?php echo $title; ?></h2>
-    <!-- .prefooter__section -->
+    <!-- .prefooter__title -->
   <?php endif; ?>
 
   <?php if( $content ) : ?>

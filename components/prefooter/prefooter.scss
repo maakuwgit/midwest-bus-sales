@@ -42,6 +42,32 @@
     font-weight: $text-light;
   }
 
+  .prefooter__icons {
+    margin-bottom: rem-calc(58);
+  }
+
+  .icon__link {
+    display: inline-flex;
+    flex-direction: column;
+    color: $white;
+    fill: $white;
+    font-size: rem-calc(14);
+    line-height: 18px;
+    line-height: 1.28571428571429;
+  }
+
+  .icon__link__icon {
+    width: rem-calc(93);
+    height: rem-calc(93);
+    border: solid #{rem-calc(3)} $white;
+    border-radius: 200px;
+  }
+
+  .icon__link__label {
+    margin-top: rem-calc(9);
+    font-weight: $text-bold;
+  }
+
   h2, h3, h4, h5, h6, p, li {
     color: $white;
   }

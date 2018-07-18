@@ -1,8 +1,8 @@
 <?php
   $prefooter = array(
+    'icons'    => get_field('prefooter_icon_links'),
     'title'    => get_field('prefooter_title'),
-    'content'  => get_field('prefooter_content'),
-    'image'    => get_field('prefooter_image')
+    'content'  => get_field('prefooter_content')
   );
 
   ll_include_component(

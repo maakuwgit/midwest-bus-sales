@@ -43,10 +43,10 @@
                     "prefix_name": 0
                 },
                 {
-                    "key": "field_5b4e1cb5ad596",
-                    "label": "Label",
-                    "name": "label",
-                    "type": "text",
+                    "key": "field_5b4f66d96d58d",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -55,11 +55,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "return_format": "array"
                 }
             ]
         },
@@ -133,5 +129,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Centered text with textured background and a list of icons",
-    "modified": 1531852119
+    "modified": 1531930347
 }
