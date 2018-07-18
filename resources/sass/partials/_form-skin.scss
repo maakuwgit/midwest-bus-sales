@@ -445,15 +445,15 @@
 
   .gform_previous_button {
     border-radius: 0 #{rem-calc(10)} 0 #{rem-calc(10)};
-    color: $turquoise;
+    color: $blue;
     background: $white url(../img/svg/triangle-left.svg) center no-repeat;
   }
 
   input[type="submit"],
   .gform_next_button {
     border-radius: #{rem-calc(10)} 0 #{rem-calc(10)} 0;
-    background-color: $turquoise;
-    background-image: url(../img/svg/triangle-right.svg), linear-gradient(45deg, $cerulean 0%, $turquoise 100%);
+    background-color: $blue;
+    background-image: url(../img/svg/triangle-right.svg), linear-gradient(45deg, $cerulean 0%, $blue 100%);
     background-repeat: no-repeat;
     background-position: center;
   }

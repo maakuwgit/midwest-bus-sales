@@ -1,68 +1,84 @@
+<?php
+  $phone  = get_field('contact_phone_number', 'options');
+?>
 <header class="navbar top" role="banner">
-
-    <div class="navbar-header container">
-
-      <?php $logo = get_field( 'global_logo', 'option' ); ?>
-
-      <?php if ( $logo ) : ?>
-
-        <a class="flex" href="<?php echo esc_url(home_url('/')); ?>">
-          <img class="logo logo--header" src="<?php echo $logo['url']; ?>" alt="<?php bloginfo('name'); ?>">
-        </a>
-
-      <?php else : ?>
-
-        <a class="logo__brand flex" href="<?php echo esc_url(home_url('/')); ?>">
-          <?php bloginfo('name');?>
-        </a>
-
+  <div class="navbar__topbar">
+    <nav class="navbar__topbar__nav container row end">
+      <a href="#search" class="navbar__topbar__search iflex">
+        <span>Search</span>
+        <svg class="icon icon-search">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+      </a>
+      <?php if( $phone ) : ?>
+        <a class="navbar__topbar__phone iflex" href="tel:+1<?php echo $phone; ?>"><?php echo $phone; ?></a>
       <?php endif; ?>
+    </nav>
+  </div>
+  <div class="navbar-header container">
 
-      <?php if (has_nav_menu('secondary_navigation')) : ?>
+    <?php $logo = get_field( 'global_logo', 'option' ); ?>
 
-      <div class="secondary-nav" id="secondary-nav" role="navigation">
+    <?php if ( $logo ) : ?>
 
-        <div class="container row">
+      <a class="flex" href="<?php echo esc_url(home_url('/')); ?>">
+        <img class="logo logo--header" src="<?php echo $logo['url']; ?>" alt="<?php bloginfo('name'); ?>">
+      </a>
 
-          <?php
-          wp_nav_menu( array(
-            'theme_location' => 'secondary_navigation',
-            'menu_class'     => 'nav navbar-nav col col-sm-9of12 col-md-9of12 col-lg-9of12 col-xl-9of12'
-          ));
-          ?>
+    <?php else : ?>
 
-          <?php echo get_sidebar(); ?>
+      <a class="logo__brand flex" href="<?php echo esc_url(home_url('/')); ?>">
+        <span class="block"><?php bloginfo('name');?></span>
+        <small class="block"><?php bloginfo('description');?></small>
+      </a>
 
-        </div><!-- .container -->
+    <?php endif; ?>
 
-      </div><!-- .secondary-nav -->
+    <?php if (has_nav_menu('secondary_navigation')) : ?>
 
-      <?php endif; ?>
+    <div class="secondary-nav" id="secondary-nav" role="navigation">
 
-      <?php if (has_nav_menu('primary_navigation')) : ?>
-      <nav class="primary-nav flex" id="primary-nav" role="navigation">
+      <div class="container row">
+
         <?php
-        if ( has_nav_menu('primary_navigation') ) {
-          wp_nav_menu( array(
-            'theme_location'  => 'primary_navigation',
-            'menu_class'      => 'nav navbar-nav'
-          ) );
-        }
+        wp_nav_menu( array(
+          'theme_location' => 'secondary_navigation',
+          'menu_class'     => 'nav navbar-nav col col-sm-9of12 col-md-9of12 col-lg-9of12 col-xl-9of12'
+        ));
         ?>
-      </nav><!-- .primary-nav -->
-      <?php endif; ?>
 
-      <?php if (has_nav_menu('secondary_navigation')) : ?>
-      <button type="button" class="navbar-toggle navbar-toggle--stand">
+        <?php echo get_sidebar(); ?>
 
-        <span class="sr-only">Toggle navigation</span>
-        <span class="navbar-toggle__box">
-          <span class="navbar-toggle__inner"></span>
-        </span><!-- .navbar-toggle__box -->
+      </div><!-- .container -->
 
-      </button><!-- .navbar-toggle -->
-      <?php endif; ?>
+    </div><!-- .secondary-nav -->
 
-    </div>
+    <?php endif; ?>
+
+    <?php if (has_nav_menu('primary_navigation')) : ?>
+    <nav class="primary-nav flex" id="primary-nav" role="navigation">
+      <?php
+      if ( has_nav_menu('primary_navigation') ) {
+        wp_nav_menu( array(
+          'theme_location'  => 'primary_navigation',
+          'menu_class'      => 'nav navbar-nav'
+        ) );
+      }
+      ?>
+    </nav><!-- .primary-nav -->
+    <?php endif; ?>
+
+    <?php if (has_nav_menu('secondary_navigation')) : ?>
+    <button type="button" class="navbar-toggle navbar-toggle--stand">
+
+      <span class="sr-only">Toggle navigation</span>
+      <span class="navbar-toggle__box">
+        <span class="navbar-toggle__inner"></span>
+      </span><!-- .navbar-toggle__box -->
+
+    </button><!-- .navbar-toggle -->
+    <?php endif; ?>
+
+  </div>
 
 </header>

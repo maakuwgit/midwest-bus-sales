@@ -28,8 +28,8 @@
 
 .social-list__item {
   display: inline-flex;
-  margin: auto rem-calc(10);
-  font-size: rem-calc(16);
+  margin: auto rem-calc(9);
+  font-size: rem-calc(15);
 }
 
 .social-list__link {
@@ -37,19 +37,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: rem-calc(45);
-  height: rem-calc(45);
+  width: rem-calc(35);
+  height: rem-calc(35);
   border: none;
+  opaciyt: 0.19;
   text-align: center;
-  border-radius: #{rem-calc(10)} 0 #{rem-calc(10)} 0;
-  background-color: $shamrock;
-  background-image: linear-gradient(45deg, $shamrock 0%, $apple 100%);
-  background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 200px;
+  background-color: $white;
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5);
 
   &:hover {
-    background-color: $turquoise;
-    background-image: linear-gradient(45deg, $cerulean 0%, $turquoise 100%);
+    opacity: 1;
+    background-color: $blue;
   }
 }
 

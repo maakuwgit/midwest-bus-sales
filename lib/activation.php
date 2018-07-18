@@ -83,16 +83,16 @@ function roots_theme_activation_options_render_page() { ?>
         <tr valign="top"><th scope="row"><?php _e('Create navigation menu?', 'roots'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Create navigation menu?', 'roots'); ?></span></legend>
+              <legend class="screen-reader-text"><span><?php _e('Create navigation menus?', 'roots'); ?></span></legend>
               <select name="roots_theme_activation_options[create_navigation_menus]" id="create_navigation_menus">
                 <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
                 <option value="false"><?php echo _e('No', 'roots'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Create the Primary Navigation menu and set the location', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Create the Primary (Header) and Secondary (Footer) Navigation menus and set their locations', 'roots')); ?></p>
             </fieldset>
           </td>
         </tr>
-        <tr valign="top"><th scope="row"><?php _e('Add pages to menu?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Add pages to Header menu?', 'roots'); ?></th>
           <td>
             <fieldset>
               <legend class="screen-reader-text"><span><?php _e('Add pages to menu?', 'roots'); ?></span></legend>
@@ -101,6 +101,18 @@ function roots_theme_activation_options_render_page() { ?>
                 <option value="false"><?php echo _e('No', 'roots'); ?></option>
               </select>
               <p class="description"><?php printf(__('Add all current published pages to the Primary Navigation', 'roots')); ?></p>
+            </fieldset>
+          </td>
+        </tr>
+        <tr valign="top"><th scope="row"><?php _e('Add pages to Footer menu?', 'roots'); ?></th>
+          <td>
+            <fieldset>
+              <legend class="screen-reader-text"><span><?php _e('Add pages to menu?', 'roots'); ?></span></legend>
+              <select name="roots_theme_activation_options[add_pages_to_secondary_navigation]" id="add_pages_to_primary_navigation">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
+                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              </select>
+              <p class="description"><?php printf(__('Add all current published pages to the Secondary Navigation', 'roots')); ?></p>
             </fieldset>
           </td>
         </tr>
@@ -170,13 +182,21 @@ function roots_theme_activation_action() {
 
     $roots_nav_theme_mod = false;
 
-    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'roots'));
+    $primary_nav    = wp_get_nav_menu_object(__('Primary Navigation', 'roots'));
+    $secondary_nav  = wp_get_nav_menu_object(__('Secondary Navigation', 'roots'));
 
     if (!$primary_nav) {
       $primary_nav_id = wp_create_nav_menu(__('Primary Navigation', 'roots'), array('slug' => 'primary_navigation'));
       $roots_nav_theme_mod['primary_navigation'] = $primary_nav_id;
     } else {
       $roots_nav_theme_mod['primary_navigation'] = $primary_nav->term_id;
+    }
+
+    if (!$secondary_nav) {
+      $secondary_nav_id = wp_create_nav_menu(__('Primary Navigation', 'roots'), array('slug' => 'secondary_navigation'));
+      $roots_nav_theme_mod['secondary_navigation'] = $secondary_nav_id;
+    } else {
+      $roots_nav_theme_mod['secondary_navigation'] = $secondary_nav->term_id;
     }
 
     if ($roots_nav_theme_mod) {
@@ -201,6 +221,27 @@ function roots_theme_activation_action() {
           'menu-item-status' => 'publish'
         );
         wp_update_nav_menu_item($primary_nav_term_id, 0, $item);
+      }
+    }
+  }
+
+  if ($roots_theme_activation_options['add_pages_to_secondary_navigation'] === 'true') {
+    $roots_theme_activation_options['add_pages_to_secondary_navigation'] = false;
+
+    $secondary_nav = wp_get_nav_menu_object(__('Secondary Navigation', 'roots'));
+    $secondary_nav_term_id = (int) $secondary_nav->term_id;
+    $menu_items= wp_get_nav_menu_items($secondary_nav_term_id);
+
+    if (!$menu_items || empty($menu_items)) {
+      $pages = get_pages();
+      foreach($pages as $page) {
+        $item = array(
+          'menu-item-object-id' => $page->ID,
+          'menu-item-object' => 'page',
+          'menu-item-type' => 'post_type',
+          'menu-item-status' => 'publish'
+        );
+        wp_update_nav_menu_item($secondary_nav_term_id, 0, $item);
       }
     }
   }

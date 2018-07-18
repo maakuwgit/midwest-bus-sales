@@ -1,33 +1,22 @@
 <?php
-
-  if( is_archive() ){
-
-    $cat          = get_queried_object();
-    $heading      = $cat->name;
-    $overlay      = 0.5;
-    $image        = get_the_post_thumbnail_url( get_option( 'page_for_posts' ), 'large' );
-
-  }else{
-
-    $supertitle   = get_field('hero_supertitle');
-    $heading      = get_field('hero_heading');
-    $overlay      = get_field('overlay_strength');
-    $image        = get_field('hero_image');
-    $video        = get_field('hero_video');
-
-  }
-
-  $hero = array(
-    'supertitle'  => $supertitle,
-    'heading'     => $heading,
-    'image'       => $feature,
-    'overlay'     => $overlay,
-    'video'       => $video
-  );
-
-  ll_include_component(
-    'hero',
-    $hero
-  );
-
+  $supertitle = get_field('supertitle');
 ?>
+<header class="hdg">
+
+  <div class="container">
+
+  <?php if( $supertitle ) : ?>
+    <h1 class="hdg__supertitle col col-md-8of12 col-lg-8of12 col-xl-8of12 col-xxl-8of12 end"><?php echo $supertitle; ?></h1><!-- .hdg__supertitle.col -->
+  <?php endif; ?>
+
+    <h2 class="hdg__title col col-md-8of12 col-lg-8of12 col-xl-8of12 col-xxl-8of12 end"><?php the_title(); ?></h2><!-- .hdg__title.col -->
+
+  <?php if( get_the_content() !== '' ) : ?>
+    <div class="hdg__content col col-md-8of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12">
+      <?php the_content(); ?>
+    </div><!-- .hdg__content -->
+  <?php endif; ?>
+
+  </div><!-- .container -->
+
+</header><!-- .hdg -->

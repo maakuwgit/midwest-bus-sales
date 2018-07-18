@@ -16,26 +16,12 @@
                 "id": ""
             },
             "choices": {
-                "icon-bulb": "Bulb",
-                "icon-clipboard": "Clipboard",
-                "icon-clock": "Clock",
-                "icon-conversion": "Conversion",
-                "icon-cube": "Cube",
-                "icon-graph": "Graph",
-                "icon-dollars": "Dollars",
-                "icon-exclamation": "Exclamation",
-                "icon-inbox": "Inbox",
-                "icon-inbox-star": "Inbox w\/ Star",
-                "icon-molecule": "Molecule",
-                "icon-printer": "Printer",
-                "icon-scan": "Scanner",
-                "icon-search-docs": "Search",
-                "icon-shield": "Shield",
-                "icon-stack": "Stack",
-                "icon-stack-v": "Stack Vertical"
+                "icon-calendar": "Calendar",
+                "icon-user": "User",
+                "icon-location": "Location"
             },
             "default_value": [
-                "icon-shield"
+                "icon-calendar"
             ],
             "allow_null": 0,
             "multiple": 0,
@@ -62,5 +48,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "This houses all the icon options. Other 'Icon' fields are clones of this",
-    "modified": 1531775049
+    "modified": 1531867944
 }

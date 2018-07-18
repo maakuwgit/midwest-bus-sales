@@ -16,9 +16,9 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "Restore your youth",
+            "placeholder": "Midwest Bus Sales is a family owned & operated Thomas Built Bus dealer, selling school, activity, commercial, & used buses.",
             "maxlength": "",
-            "rows": 1,
+            "rows": 2,
             "new_lines": "br"
         },
         {
@@ -56,7 +56,7 @@
             "collapsed": "",
             "min": 0,
             "max": 3,
-            "layout": "table",
+            "layout": "block",
             "button_label": "",
             "sub_fields": [
                 {
@@ -138,5 +138,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Two columns with a headline on the left and copy on the right. All elements should justify content center",
-    "modified": 1531857474
+    "modified": 1531871700
 }

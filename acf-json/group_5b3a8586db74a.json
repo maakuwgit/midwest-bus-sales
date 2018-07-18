@@ -16,7 +16,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "Restore your youth",
+            "placeholder": "Midwest Bus Sales",
             "maxlength": "",
             "rows": 1,
             "new_lines": "br"
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Two columns with a headline on the left and copy on the right. All elements should justify content center",
-    "modified": 1531852820
+    "modified": 1531867452
 }

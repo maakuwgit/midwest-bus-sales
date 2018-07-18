@@ -5,7 +5,7 @@
  * A (mostly) square box with a light shadow and gradient headline
  */
 %card {
-  min-height: 335px;
+  min-height: 365px;
   margin: #{$padding-xsmall * 1.5} auto;
   padding: #{rem-calc(27)};
   border-radius: rem-calc(4);
@@ -53,7 +53,7 @@
   margin-bottom: rem-calc(18);
   border-radius: #{rem-calc(10)} 0 #{rem-calc(10)} 0;
   background-color: $cerulean;
-  background-image: linear-gradient(45deg, $cerulean 0%, $turquoise 100%);
+  background-image: linear-gradient(45deg, $cerulean 0%, $blue 100%);
 }
 
 %card__cta {

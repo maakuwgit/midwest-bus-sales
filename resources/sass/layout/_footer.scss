@@ -2,7 +2,7 @@
  * Footer styles
  */
 .footer {
-  background-color: $midnight;
+  background-color: $navy;
 
   * {
     color: $white;
@@ -21,14 +21,14 @@
     font-weight: $text-bold;
 
     &:hover {
-      color: $turquoise;
+      color: $blue;
     }
   }
 
   .footer__logo__anchor {
     display: flex;
-    width: rem-calc(123);
-    height: rem-calc(50);
+    width: rem-calc(184);
+    height: rem-calc(38);
     font-size: rem-calc(26);
     font-weight: $text-bold;
     fill: $white;
@@ -57,24 +57,27 @@
   }
 
   .footer__bottom {
-    padding-top: rem-calc(30);
-    padding-bottom: rem-calc(30);
-    border-top: solid 3px #212457;
+    padding-top: rem-calc(19);
+    padding-bottom: rem-calc(19);
+    border-top: solid 1px rgba($white,0.4);
   }
 
   .footer__copyright,
   .footer__credits {
     > * {
       margin: auto;
+      opacity: 0.75;
+      font-size: rem-calc(14);
       font-weight: $text-light;
-      line-height: 20px;
-      line-height: 1.25;
+      line-height: 19px;
+      line-height: 1.35714285714286;
     }
   }
 
   .footer__ll_logo {
-    width: rem-calc(44);
-    height: rem-calc(20);
+    width: rem-calc(45);
+    height: rem-calc(18);
+    opacity: 1;
   }
 
   @include screen-lg-up {

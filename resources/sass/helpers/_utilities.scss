@@ -75,16 +75,6 @@
     font-weight: $text-bold;
 }
 
-.text-medium,
-.h1.text-medium,
-.h2.text-medium,
-.h3.text-medium,
-.h4.text-medium,
-.h5.text-medium,
-.h6.text-medium {
-  font-weight: $text-normal;
-}
-
 .text-normal,
 .h1.text-normal,
 .h2.text-normal,
@@ -92,10 +82,17 @@
 .h4.text-normal,
 .h5.text-normal,
 .h6.text-normal {
+  font-weight: $text-normal;
+}
+
+.text-light,
+.h1.text-light,
+.h2.text-light,
+.h3.text-light,
+.h4.text-light,
+.h5.text-light,
+.h6.text-light {
   font-weight: $text-light;
-  main.hero & {
-    font-weight: $text-light;
-  }
 }
 
 /* List Styles */
@@ -263,10 +260,10 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
     color: $grey;
   }
   &.teal {
-    color: $aquamarine;
+    color: $blue;
   }
   &.lavender {
-    color: $periwinkle;
+    color: $silver;
   }
   &.grey {
     color: $grey;
@@ -290,10 +287,10 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
     background-color: $grey;
   }
   &.teal {
-    background-color: $aquamarine;
+    background-color: $blue;
   }
   &.lavender {
-    background-color: $periwinkle;
+    background-color: $silver;
   }
   &.grey {
     background-color: $grey;

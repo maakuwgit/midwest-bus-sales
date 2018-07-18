@@ -10,8 +10,8 @@
 }
 
 .logo-svg {
-  width: rem-calc(124);
-  height: rem-calc(50);
+  width: rem-calc(184);
+  height: rem-calc(38);
 
   @include screen-xl-up {
     > g  {
@@ -21,10 +21,11 @@
 }
 
 .logo__brand {
+  @extend h2;
   display: flex;
+  flex-direction: column;
   z-index: 2;
-  font-size: rem-calc(28);
-  font-weight: $text-bold;
   fill: $white;
   color: $white;
+  text-transform: uppercase;
 }

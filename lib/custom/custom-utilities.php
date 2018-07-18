@@ -206,6 +206,16 @@ function ll_get_the_slug( $id=null ){
   return $slug;
 }
 
+function ll_get_logo() {
+
+  $logo = '<svg class="logo-svg" width="255px" height="52px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>' . get_bloginfo('name') . '</title>
+    <text x="0" y="20" class="h2 text-uppercase">' . get_bloginfo('name') . '</text>
+    <text x="0" y="40" class="small text-light">' . get_bloginfo('description') . '</text>
+    </svg>';
+  return $logo;
+}
+
 // Update Select2 in ACF
 function my_acf_init()
 {

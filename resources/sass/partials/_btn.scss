@@ -6,31 +6,31 @@
   min-width: 176px;
   border: none;
   margin: auto 0;
-  padding: #{rem-calc(14)} #{rem-calc(38)};
-  border-radius: rem-calc(4);
-  background-color: $turquoise;
-  background: linear-gradient(45deg, $cerulean 0%, $turquoise 100%);
+  padding: #{rem-calc(11)} #{rem-calc(43)};
+  border-radius: 0;
+  background-color: $blue;
   color: $white;
   outline: none;
   font-weight: $text-bold;
-  font-size: rem-calc(16);
-  line-height: 20px;
-  line-height: 1.25;
+  font-size: rem-calc(14);
+  line-height: 18px;
+  line-height: 1.28571428571429;
   text-align: center;
   box-shadow: none;
 
   &:hover, &:active, &:focus {
-    background-color: darken($turquoise, 5%);
+    background-color: darken($blue, 5%);
   }
 }
 
 %btn--secondary {
   @extend %btn;
-  background-color: $apple;
-  background: linear-gradient(45deg, $shamrock 0%, $apple 100%);
+  color: $black;
+  border: solid 1px $silver;
+  background-color: $white;
 
   &:hover, &:active, &:focus {
-    background-color: lighten($apple, 15%);
+    border-color: $blue;
   }
 }
 
@@ -40,9 +40,9 @@ button {
   @extend %btn;
 
   &.btn--muted {
-    color: $grey;
+    color: $silver;
     svg {
-      fill: $grey;
+      fill: $silver;
     }
   }
 

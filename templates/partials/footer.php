@@ -10,31 +10,21 @@
   $address  .= '<br>' . $city . ', ' . $state . ' ' . $zip;
   $address  .= '<br>' . format_phone($phone, true, '-');
 ?>
-<footer class="footer" role="contentinfo">
+<footer class="footer">
 
   <div class="footer__top">
 
-    <div class="row container">
+    <div class="row container start centered">
 
-      <div class="footer__logo_wrap col col-md-4of12 col-lg-4of12 col-xl-4of12">
+      <div class="footer__logo_wrap">
 
         <a class="footer__logo__anchor" href="<?php echo esc_url(home_url('/')); ?>">
-          <?php bloginfo('name');?>
+          <?php echo ll_get_logo();?>
         </a><!-- .footer__logo__anchor -->
 
-        <?php if( $address ) : ?>
-        <address>
-          <?php echo $address; ?>
-        </address><!-- .footer__address -->
-        <?php endif; ?>
+      </div><!-- .footer__logo_wrap -->
 
-        <nav class="footer__social">
-          <?php ll_get_social_list(); ?>
-        </nav><!-- .footer__social -->
-
-      </div><!-- .col -->
-
-      <div class="footer__navigation_wrap col col-md-8of12 col-lg-8of12 col-xl-8of12">
+      <div class="footer__navigation_wrap">
 
         <div class="footer__navigation">
         <?php if (has_nav_menu('footer_navigation')) : ?>
@@ -42,7 +32,15 @@
         <?php endif;?>
         </div><!-- .footer__top__nav -->
 
-      </div><!-- .col -->
+      </div><!-- .footer__navigation_wrap -->
+
+      <div class="footer__social_wrap">
+
+        <nav class="footer__social">
+          <?php ll_get_social_list(); ?>
+        </nav><!-- .footer__social -->
+
+      </div><!-- .footer__social_wrap -->
 
     </div><!-- .container.row -->
 
@@ -53,7 +51,7 @@
     <div class="row between container">
 
       <div class="footer__copyright col center col-md-6of12 col-lg-6of12 col-xl-6of12">
-       <p> &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
+       <p> &copy; 2014-<?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
       </div><!-- .footer__copyright -->
 
       <div class="footer__credits col center col-md-6of12 col-lg-6of12 col-xl-6of12">
@@ -65,7 +63,7 @@
             </svg>
           </a>
         </p>
-      </div><!-- .footer__credits -->
+      </div><!-- .footer__credits.col.center.col-md-6of12.col-lg-6of12.col-xl-6of12 -->
 
     </div><!-- .container.row -->
 

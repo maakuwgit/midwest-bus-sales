@@ -12,23 +12,20 @@
 
  // Base colors (ordered the greys by lightness from lightest to darkest)
 $black: black;
-$ebony: #03062D;
+$ebony: #0A1F2D;
 $white: white;
 $midnight: #060944;
-$navy: #2E31AF;
+$navy: #002D73;
 $purple: #5353CE;
-$cerulean: #00B6F9;
-$aquamarine: #00D9FC;
+$cerulean: #41A4FF;
+$blue: #2A77F0;
 $grey: #E7E9ED;
-$periwinkle: #788E9E;
-$shamrock: #00B184;
-$apple: #03E0A8;
-$turquoise: #00DFFD;
+$silver: #889797;
 
 // Markup Oriented
-$text-color: $periwinkle;
+$text-color: $silver;
 $selection: $white;
-$selection-bg: $aquamarine;
+$selection-bg: $blue;
 
 // Official social colors
 $facebook: #3461a1;
@@ -36,7 +33,7 @@ $twitter: #28aae1;
 $google: #d44a2c;
 
 // Success
-$success-color: $apple;
+$success-color: green;
 
 // Danger
 $danger-color: red;
@@ -44,11 +41,12 @@ $danger-background: #f2dede;
 $danger-border: red;
 
 // Font Family
-$font-family: 'Source Sans Pro', sans-serif;
+$font-family: 'IBM Plex Sans', sans-serif;
 
 // Font Weights
 $text-light: 300;
 $text-normal: 400;
+$text-semi: 500;
 $text-bold: 600;
 
 /**
@@ -131,5 +129,5 @@ $container-lg:    (rem-calc($screen-lg) - $grid-gutter-width);
 // Links
 $link-color: $text-color;
 $link-decoration: none;
-$link-hover-color: $aquamarine;
+$link-hover-color: $blue;
 $link-hover-decoration: none;

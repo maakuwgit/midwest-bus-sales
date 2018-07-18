@@ -18,12 +18,43 @@
             "layouts": {
                 "5b43b94334b41": {
                     "key": "5b43b94334b41",
+                    "name": "two-col-w-heading",
+                    "label": "2 Column w\/ Heading",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b43b94334b42",
+                            "label": "2 Column w\/ Heading",
+                            "name": "two-col-w-heading",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b4e51358605d"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b4e58681f74c": {
+                    "key": "5b4e58681f74c",
                     "name": "bus-types-grid",
                     "label": "Bus Types Grid",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5b43b94334b42",
+                            "key": "field_5b4e58681f74d",
                             "label": "Bus Types Grid",
                             "name": "bus-types-grid",
                             "type": "clone",
@@ -68,6 +99,68 @@
                             },
                             "clone": [
                                 "group_5b4e35a995877"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b4601fc28c50": {
+                    "key": "5b4601fc28c50",
+                    "name": "lr-block",
+                    "label": "Left\/Right Image Blocks",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4601fc28c51",
+                            "label": "Left\/Right Blocks",
+                            "name": "lr-block",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b29b32050293"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b4e572685a30": {
+                    "key": "5b4e572685a30",
+                    "name": "lr-w-gradient",
+                    "label": "Left\/Right Images w\/ Gradient",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4e572685a31",
+                            "label": "Left\/Right Image w\/ Gradient",
+                            "name": "lr-w-gradient",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b4e1dd498b7d"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -161,68 +254,6 @@
                             },
                             "clone": [
                                 "group_5b4e167b3d1a5"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "5b4601fc28c50": {
-                    "key": "5b4601fc28c50",
-                    "name": "lr-block",
-                    "label": "Left\/Right Image Blocks",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b4601fc28c51",
-                            "label": "Left\/Right Blocks",
-                            "name": "lr-block",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5b29b32050293"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "5b4e572685a30": {
-                    "key": "5b4e572685a30",
-                    "name": "lr-w-gradient",
-                    "label": "Left\/Right Images w\/ Gradient",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b4e572685a31",
-                            "label": "Left\/Right Image w\/ Gradient",
-                            "name": "lr-w-gradient",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5b4e1dd498b7d"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -358,8 +389,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1531861025
+    "modified": 1531867683
 }
