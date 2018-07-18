@@ -133,7 +133,7 @@ if( have_rows( 'components' ) ) {
         //Form Template, Services
         $locations = array(
           'heading'       => get_sub_field('location_heading'),
-          'content'       => get_sub_field('location_content')
+          'content'       => get_sub_field('location_content'),
           'num_locations' => get_sub_field('location_num_locations')
         );
 
@@ -148,8 +148,8 @@ if( have_rows( 'components' ) ) {
         //Form Template
         $locations = array(
           'heading'       => get_sub_field('map_heading'),
-          'content'       => get_sub_field('map_content')
-          'locations'     => get_sub_field('map_locations'),
+          'content'       => get_sub_field('map_content'),
+          'locations'     => get_sub_field('map_locations')
         );
 
         $components .= ll_include_component(
@@ -177,9 +177,9 @@ if( have_rows( 'components' ) ) {
       case 'two-col-w-heading' :
         //Home, About, all Locations
         $blocks = array(
-          'title'     => get_sub_field("two-col-w-heading-title"),
-          'l_content' => get_sub_field("two-col-w-heading-l_content"),
-          'r_content' => get_sub_field("two-col-w-heading-r_content")
+          'title'     => get_sub_field('two-col-w-heading-title'),
+          'l_content' => get_sub_field('two-col-w-heading-l_content'),
+          'r_content' => get_sub_field('two-col-w-heading-r_content')
         );
 
         $components .= ll_include_component(
@@ -206,11 +206,10 @@ if( have_rows( 'components' ) ) {
         );
       break;
       default:
-        the_content();
       break;
     }
   }
   echo $components;
 }
 ?>
-<?php // wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+<?php // wp_link_pages(array('before' => '<nav class='pagination'>', 'after' => '</nav>')); ?>
