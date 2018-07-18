@@ -191,10 +191,11 @@ if( have_rows( 'components' ) ) {
       case 'two-col-w-icons' :
         //About Us”
         $images = array(
-          'style'      => get_sub_field('two-col-w-icons_style'),
-          'content'    => get_sub_field('two-col-w-icons_content'),
-          'background' => get_sub_field('two-col-w-icons_background'),
-          'list'       => get_sub_field('two-col-w-icons_list')
+          'style'      => get_sub_field('two_col_icons_style'),
+          'type'       => get_sub_field('two_col_icons_type'),
+          'content'    => get_sub_field('two_col_icons_content'),
+          'has_bg'     => get_sub_field('two_col_icons_background'),
+          'list'       => get_sub_field('two_col_icons_list')
         );
 
         $components .= ll_include_component(

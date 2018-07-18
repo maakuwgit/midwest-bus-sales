@@ -47,6 +47,37 @@
                     "min": "",
                     "max": ""
                 },
+                "5b4fa320730f8": {
+                    "key": "5b4fa320730f8",
+                    "name": "two-col-w-icons",
+                    "label": "2 Column w\/ Icon List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4fa320730f9",
+                            "label": "2 Column w\/ Icon List",
+                            "name": "two-col-w-icons",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b43b67fb2b29"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5b4e58681f74c": {
                     "key": "5b4e58681f74c",
                     "name": "bus-types-grid",
@@ -109,6 +140,37 @@
                     "min": "",
                     "max": ""
                 },
+                "5b4e5635adf3f": {
+                    "key": "5b4e5635adf3f",
+                    "name": "icon-grid",
+                    "label": "Icon Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b4e5635adf40",
+                            "label": "Icon Grid",
+                            "name": "icon-grid",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b4e310539be0"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5b4601fc28c50": {
                     "key": "5b4601fc28c50",
                     "name": "lr-block",
@@ -161,37 +223,6 @@
                             },
                             "clone": [
                                 "group_5b4e1dd498b7d"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "5b4e5635adf3f": {
-                    "key": "5b4e5635adf3f",
-                    "name": "icon-grid",
-                    "label": "Icon Grid",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b4e5635adf40",
-                            "label": "Icon Grid",
-                            "name": "icon-grid",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5b4e310539be0"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -395,5 +426,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531867683
+    "modified": 1531945866
 }

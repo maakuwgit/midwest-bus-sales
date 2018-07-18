@@ -7,5 +7,70 @@
  */
 
 .ll-two-col-w-icons {
+  @extend %section-padding;
+  @include triangle-caps;
 
+  .two-col-w-icons__item__title {
+    color: $ebony;
+  }
+
+  .two-col-w-icons__item__caption {
+    margin-top: 0;
+  }
+
+  .two-col-w-icons__content {
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: $padding-xsmall;
+    }
+
+    li {
+      display: inline-flex;
+      flex: 0 0.5 auto;
+      width: 50%;
+      margin-top: rem-calc(8);
+      margin-bottom: rem-calc(8);
+      font-size: rem-calc(16);
+      font-weight: $text-semi;
+      line-height: 20px;
+      line-height: 1.25;
+    }
+
+    a {
+      color: $blue;
+
+      &:hover {
+        color: $navy;
+      }
+    }
+  }
+
+  .two-col-w-icons__item {
+    position: relative;
+    list-style: none;
+
+    &:before {
+      @extend %coin;
+      content: '✔';
+      position: absolute;
+      margin-left: rem-calc(-70);
+      color: $blue;
+      background-color: $powder;
+    }
+  }
+
+  @include screen-md-up {
+    .two-col-w-icons__content {
+
+      > * {
+        max-width: 85%;
+      }
+
+      ul {
+        margin-top: $padding-small;
+      }
+    }
+  }
 }
