@@ -39,7 +39,6 @@ $id            = ' id="' . $component_args['id'] . '"';
 /**
  * ACF values pulled into the component from the components.php partial.
  */
-$superheading  = $component_data['superheading'];
 $heading       = $component_data['heading'];
 $content       = $component_data['content'];
 $blocks        = $component_data['blocks'];
@@ -50,10 +49,6 @@ $blocks        = $component_data['blocks'];
 <section class="ll-icon-grids<?php echo implode( " ", $classes ); ?>" <?php echo $id; ?> data-component="icon-grids">
 
   <div class="container column text-center">
-
-  <?php if( $superheading  ) : ?>
-    <<?php echo $superheading['tag']; ?> class="col-md-10of12 col-lg-8of12 col-xl-8of12 col-xxl-8of12 icon-grid__supertitle"><?php echo $superheading['text']; ?></<?php echo $superheading['tag']; ?>><!-- .col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12.icon-grid__supertitle -->
-  <?php endif; ?>
 
   <?php if( $heading  ) : ?>
     <<?php echo $heading['tag']; ?> class="col col-md-10of12 col-lg-8of12 col-xl-8of12 col-xxl-8of12 icon-grid__heading"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>><!-- .col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12.icon-grid__heading -->

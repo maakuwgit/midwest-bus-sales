@@ -35,10 +35,6 @@
     margin-left: $grid-column-padding * -1;
   }
 
-  .logo-grid__supertitle {
-    @extend %h1;
-  }
-
   .logo-grid__content {
     margin: auto auto #{$padding-xsmall} auto;
 

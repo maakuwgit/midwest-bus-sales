@@ -7,5 +7,66 @@
  */
 
 .ll-member-grid {
+  @extend %section-padding;
+
+  .member-grid__heading {
+    @extend %h2;
+    margin-right: auto;
+    margin-left: auto;
+    color: $ebony;
+  }
+
+  .member-grid__items {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc( 100% + #{$grid-column-padding*4} );
+  }
+
+  .member-grid__item {
+  }
+
+  .member-grid__thumb__figure {
+  }
+
+  .member-grid__thumb__caption,
+  .member-grid__thumb__image {
+    width: calc( 100% - #{$grid-column-padding*2} );
+    margin-right: $grid-column-padding;
+    margin-left: $grid-column-padding;
+  }
+
+  .member-grid__thumb__image {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    min-height: rem-calc(299);
+    align-items: center;
+    list-style: none;
+    background-size: cover;
+    background-color: #D8D8D8;
+  }
+
+  .member-grid__thumb__title {
+    margin-top: rem-calc(17);
+    line-height: 34px;
+    line-height: 1.54545454545455;
+    text-align: left;
+  }
+
+  .member-grid__thumb__caption {
+    text-align: left;
+
+    h3 {
+      margin-top: rem-calc(20);
+    }
+
+    p {
+      margin-top: 0;
+      font-size: rem-calc(16);
+      font-weight: $text-light;
+      line-height: 22px;
+      line-height: 1.375;
+    }
+  }
 
 }
