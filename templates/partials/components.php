@@ -193,9 +193,9 @@ if( have_rows( 'components' ) ) {
       case 'two-col-w-heading' :
         //Home, About, all Locations
         $blocks = array(
-          'title'     => get_sub_field('two-col-w-heading-title'),
-          'l_content' => get_sub_field('two-col-w-heading-l_content'),
-          'r_content' => get_sub_field('two-col-w-heading-r_content')
+          'title'     => get_sub_field('two_col_heading_title'),
+          'l_content' => get_sub_field('two_col_heading_l_content'),
+          'r_content' => get_sub_field('two_col_heading_r_content')
         );
 
         $components .= ll_include_component(

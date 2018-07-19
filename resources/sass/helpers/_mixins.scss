@@ -176,45 +176,54 @@
  */
 
 
-@mixin triangle-caps($color:$periwinkle) {
+@mixin triangle-caps($color:$periwinkle,$top:true,$bottom:true) {
   position: relative;
   background-color: $color;
-  margin-bottom: $padding-xsmall;
 
-  @include screen-md-only {
-    margin-bottom: $padding-small;
+  @if $bottom {
+
+    margin-bottom: $padding-xsmall;
+
+    @include screen-md-only {
+      margin-bottom: $padding-small;
+    }
+
+    @include screen-lg-up {
+      margin-bottom: $padding-medium;
+    }
+
+    //Bottom Triangle
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: rem-calc(-75);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: rem-calc(75) 100vw 0 0;
+      border-color: $color transparent transparent transparent;
+    }
+
   }
 
-  @include screen-lg-up {
-    margin-bottom: $padding-medium;
-  }
+  @if $top {
 
-  //Top Triangle
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: rem-calc(-75);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: rem-calc(75) 100vw 0 0;
-    border-color: transparent $color transparent transparent;
-  }
+    //Top Triangle
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: rem-calc(-75);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: rem-calc(75) 100vw 0 0;
+      border-color: transparent $color transparent transparent;
+    }
 
-  //Bottom Triangle
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: rem-calc(-75);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: rem-calc(75) 100vw 0 0;
-    border-color: $color transparent transparent transparent;
   }
 
 }

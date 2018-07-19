@@ -3,64 +3,6 @@
     "title": "Member Grid",
     "fields": [
         {
-            "key": "field_5b46001baaf53",
-            "label": "Supertitle",
-            "name": "member_grid_supertitle",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b46001bae1ff",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5b46001bae25d",
-                    "label": "Tag",
-                    "name": "tag",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "h2": "H2",
-                        "h3": "H3"
-                    },
-                    "allow_null": 0,
-                    "default_value": "h2",
-                    "layout": "",
-                    "return_format": ""
-                }
-            ]
-        },
-        {
             "key": "field_5b46001bab039",
             "label": "Heading",
             "name": "member_grid_heading",
@@ -119,6 +61,25 @@
             ]
         },
         {
+            "key": "field_5b46001baaf53",
+            "label": "Content",
+            "name": "member_grid_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
             "key": "field_5b4e42eaa165f",
             "label": "Number of Members",
             "name": "member_number",
@@ -156,5 +117,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "A simple grid of all entries dynamically pulled from the Team Custom Post Type with captions. All images maintain their aspect ratio. Only the Number of Members is an option.",
-    "modified": 1531860828
+    "modified": 1532024892
 }

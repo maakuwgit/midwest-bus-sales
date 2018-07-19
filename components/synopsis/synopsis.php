@@ -7,13 +7,12 @@
 */
 
 $defaults = [
-  'headline'     => false,
-  'l_content'      => false,
-  'r_content'      => false
+  'heading'     => false,
+  'content'      => false
 ];
 
 $args = [
-  'id'      => uniqid('card-grid-'),
+  'id'      => uniqid('synopsis-'),
   'classes' => false,
 ];
 
@@ -39,39 +38,30 @@ $id            = ' id="' . $component_args['id'] . '"';
 /**
  * ACF values pulled into the component from the components.php partial.
  */
-$headline      = $component_data['headline'];
-$l_content     = $component_data['l_content'];
-$r_content     = $component_data['r_content'];
+$heading     = $component_data['heading'];
+$content     = $component_data['content'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<header class="ll-synopsis<?php echo implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="synopsis">
+<section class="ll-synopsis<?php echo implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="synopsis">
 
   <div class="container">
 
     <div class="row synopsis__wrapper">
 
-      <div class="synopsis__col col">
+      <div class="synopsis__col col col-md-6of12 col-lg-5of12 col-xl-4of12 col-xxl-4of12">
 
-      <?php if( $headline ) : ?>
-        <h2 class="synopsis__header"><?php echo $headline; ?></h2>
+      <?php if( $heading ) : ?>
+        <h2 class="synopsis__header"><?php echo $heading; ?></h2>
         <!-- .synopsis__header -->
       <?php endif; ?>
 
       </div>
 
-      <div class="synopsis__description col col-md-6of12 col-lg-5of12 col-xl-5of12 col-xxl-5of12">
+      <div class="synopsis__description col col-md-6of12 col-lg-7of12 col-xl-8of12 col-xxl-8of12">
 
-      <?php if( $l_content ) : ?>
-        <?php echo $l_content; ?>
-      <?php endif; ?>
-
-      </div><!-- .synopsis__description.col -->
-
-      <div class="synopsis__description col col-md-6of12 col-lg-7of12 col-xl-7of12 col-xxl-7of12">
-
-      <?php if( $r_content ) : ?>
-        <?php echo $r_content; ?>
+      <?php if( $content ) : ?>
+        <?php echo $content; ?>
       <?php endif; ?>
 
       </div><!-- .synopsis__description.col -->
@@ -80,4 +70,4 @@ $r_content     = $component_data['r_content'];
 
   </div><!-- .container -->
 
-</header>
+</section>

@@ -38,8 +38,10 @@
   }
 
   .logo-grid__block {
-    display: flex;
+    justify-content: center;
+    flex-direction: column;
     flex: 0 0.33 auto;
+    display: flex;
     width: 33.333334%;
   }
 
