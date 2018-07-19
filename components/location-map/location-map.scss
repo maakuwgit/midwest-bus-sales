@@ -7,5 +7,60 @@
  */
 
 .ll-location-map {
+  position: relative;
+  background-color: $periwinkle;
 
+  .location-map__heading,
+  .location-map__content {
+    max-width: 75%;
+  }
+
+  .location-map__heading {
+    @extend %h2;
+    margin-bottom: 0;
+    color: $ebony;
+  }
+
+  .location-map__body {
+    display: flex;
+    @extend %section-padding;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100vh;
+    max-height: 635px;
+  }
+
+  .location-map__googlemap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-height: 635px;
+
+    &:before {
+      position: absolute;
+      z-index: 10;
+      content: '';
+      width: 100px;
+      height: 100%;
+      background-color: red;
+    }
+  }
+
+  .location-map__locations {
+
+    li {
+      font-weight: $text-semi;
+    }
+
+    a {
+      color: $blue;
+
+      &:hover {
+        color: $navy;
+      }
+
+    }
+  }
 }

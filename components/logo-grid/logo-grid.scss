@@ -7,15 +7,25 @@
  */
 
 .ll-logo-grid {
-@extend %section-padding;
+  @extend %section-padding;
 
   .logo-grid__heading {
     @extend %h2;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    color: $ebony;
+  }
+
+  h2.logo-grid__heading {
     font-size: rem-calc(35);
     line-height: 49px;
     line-height: 1.4;
+  }
+
+  h3.logo-grid__heading {
+    font-size: rem-calc(25);
+    line-height: 43px;
+    line-height: 1.72;
   }
 
   .logo-grid__logos {
