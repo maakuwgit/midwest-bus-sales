@@ -9,7 +9,8 @@
 .ll-lr-blocks {
   position: relative;
   @extend %section-padding;
-  @include triangle-caps;
+  @include triangle-caps($white);
+  background-color: $white;
   padding-top: $padding-small;
 
   @include screen-md-only {
@@ -48,8 +49,6 @@
       right: initial;
     }
   }
-
-
 
   .lr-blocks__figure {
     position: absolute;
@@ -101,10 +100,18 @@
     }
   }
 
+  &.periwinkle,
+  + .ll-lr-blocks {
+    @include triangle-caps($periwinkle);
+    background-color: $periwinkle;
+  }
+
   &.periwinkle {
+
     + .ll-lr-blocks {
       @include triangle-caps($white);
       background-color: $white;
     }
+
   }
 }

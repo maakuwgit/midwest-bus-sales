@@ -88,15 +88,17 @@ if( have_rows( 'components' ) ) {
       break;
       case 'icon-grid' :
         //About Us”
-        $images = array(
+        $icons = array(
           'heading' => get_sub_field('icon_grid_heading'),
           'content' => get_sub_field('icon_grid_content'),
           'icons'   => get_sub_field('icon_grid_images')
         );
 
+        var_dump($icons);
+
         $components .= ll_include_component(
           'icon-grid',
-          $images,
+          $icons,
           array(),
           true
         );
@@ -154,6 +156,21 @@ if( have_rows( 'components' ) ) {
         $components .= ll_include_component(
           'location-map',
           $locations,
+          array(),
+          true
+        );
+      break;
+      case 'logo_grid' :
+        //Form Template, Services
+        $logos = array(
+          'heading'       => get_sub_field('logo_grid_heading'),
+          'content'       => get_sub_field('logo_grid_content'),
+          'logos'         => get_sub_field('logo_grid_logos')
+        );
+
+        $components .= ll_include_component(
+          'logo-grid',
+          $logos,
           array(),
           true
         );
