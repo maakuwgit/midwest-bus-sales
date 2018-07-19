@@ -284,7 +284,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5b4e167b3d1a5"
+                                "group_5b4e31e31c404"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -334,8 +334,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5b4e57cd85a33",
-                            "label": "Left\/Right Image w\/ Gradient",
-                            "name": "lr-w-gradient",
+                            "label": "Member Grid",
+                            "name": "member_grid",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -426,5 +426,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531945866
+    "modified": 1532008966
 }
