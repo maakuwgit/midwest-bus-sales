@@ -100,8 +100,8 @@ h2,
 }
 
 %h3 {
-  font-size: rem-calc(16);
-  font-weight: 600;
+  font-size: rem-calc(18);
+  font-weight: $text-bold;
   line-height: 23px;
   line-height: 1.4375;
 
@@ -122,6 +122,7 @@ h3,
   font-size: rem-calc(16);
   line-height: 20px;
   line-height: 1.25;
+  font-weight: $text-semi;
 
   @include screen-lg-up {
     font-size: rem-calc(18);

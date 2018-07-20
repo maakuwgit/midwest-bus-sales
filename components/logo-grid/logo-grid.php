@@ -14,7 +14,7 @@ $defaults = [
 
 $args = [
   'id'      => uniqid('logo-grid-'),
-  'classes' => false,
+  'classes' => array(),
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -26,7 +26,7 @@ $component_args = ll_parse_args( $component_args, $args );
  * @var array
  * @see args['classes']
  */
-$classes  = $component_args['classes'] ?: array();
+$classes  = $component_args['classes'];
 
 /**
  * ID to apply to the main component container.

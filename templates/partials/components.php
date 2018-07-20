@@ -178,12 +178,10 @@ if( have_rows( 'components' ) ) {
       case 'member_grid' :
         //About Us”
         $members = array(
-          'supertitle'  => get_sub_field('member_grid_supertitle'),
           'heading'     => get_sub_field('member_grid_heading'),
+          'content'  => get_sub_field('member_grid_content'),
           'num_members' => get_sub_field('member_number')
         );
-
-        var_dump($members);
 
         $components .= ll_include_component(
           'member-grid',

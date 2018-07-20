@@ -7,10 +7,18 @@
 */
 
 $defaults = [
+  'heading'     => false,
+  'content'     => false,
   'num_members' => 4
 ];
 
+$args = [
+  'id'      => uniqid('logo-grid-'),
+  'classes' => array(),
+];
+
 $component_data = ll_parse_args( $component_data, $defaults );
+$component_args = ll_parse_args( $component_args, $args );
 ?>
 
 <?php
@@ -20,7 +28,7 @@ $component_data = ll_parse_args( $component_data, $defaults );
  * @var array
  * @see args['classes']
  */
-$classes        = $component_args['classes'] ?: array();
+$classes        = $component_args['classes'];
 
 /**
  * ID to apply to the main component container.
@@ -28,12 +36,16 @@ $classes        = $component_args['classes'] ?: array();
  * @var array
  * @see args['id']
  */
-$component_id   = $component_args['id'];
+$id            = ' id="' . $component_args['id'] . '"';
 
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
+$heading       = $component_data['heading'];
+$content       = $component_data['content'];
+$num_members   = $component_data['num_members'];
 
-$num_members = $data['num_members'];
-
-$args = array(
+$margs = array(
   'posts_per_page' => $num_members,
   'order'          => 'ASC',
   'orderby'        => 'menu_order',
@@ -41,27 +53,36 @@ $args = array(
   'post_type'      => 'team',
 );
 
-$members = new WP_Query( $args );
+$members = new WP_Query( $margs );
 
 ?>
 
 <?php if( !$members->have_posts() ) return; ?>
 <section class="ll-member-grid <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="member-grid">
 
+  <div class="container row centered">
+
   <?php if( $heading  ) : ?>
-    <<?php echo $heading['tag']; ?> class="col col-md-10of12 col-lg-8of12 col-xl-8of12 col-xxl-8of12 icon-grid__heading"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>><!-- .col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12.icon-grid__heading -->
+    <<?php echo $heading['tag']; ?> class="col col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12 member-grid__heading"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>><!-- .col-md-6of12.col-lg-4of12.col-xl-4of12.col-xxl-4of12.member-grid__heading -->
   <?php endif; ?>
 
   <?php if( $content  ) : ?>
-    <div class="col col-md-10of12 col-lg-8of12 col-xl-8of12 col-xxl-8of12 icon-grid__content"><?php echo format_text($content); ?></div><!-- .col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12.icon-grid__content -->
+    <div class="col col-md-10of12 col-lg-7of12 col-xl-7of12 col-xxl-7of12 member-grid__content">
+      <?php echo format_text($content); ?>
+    </div><!-- .col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12.member-grid__content -->
   <?php endif; ?>
 
+  </div><!-- .container.row.centered -->
+
+  <div class="container">
     <ul class="member-grid__list no-bullet row">
 
   <?php
     while ( $members->have_posts() ) : $members->the_post();
 
-    $positions  = get_the_terms(get_the_ID(), 'position');
+    $positions  = get_the_terms(get_the_ID(), 'team_position');
+    $offices    = get_the_terms(get_the_ID(), 'offices');
+
   ?>
     <li class="member-grid__item col-3of12">
 
@@ -76,9 +97,12 @@ $members = new WP_Query( $args );
 
         <figcaption class="member-grid__thumb__caption">
 
-          <h3 class="member-grid__thumb__title h5"><?php the_title(); ?></h3>
+          <div class="member-grid__thumb__title h4"><?php the_title(); ?></div>
 
         <?php if( $positions && ! is_wp_error( $positions ) ) : ?>
+
+          <div class="member-grid__thumb__position">
+
           <?php
             $position_names = [];
 
@@ -90,6 +114,29 @@ $members = new WP_Query( $args );
 
             echo format_text($position_list);
           ?>
+
+          </div><!-- .member-grid__thumb__position -->
+
+        <?php endif; ?>
+
+        <?php if( $offices && ! is_wp_error( $offices ) ) : ?>
+
+          <div class="member-grid__thumb__office">
+
+          <?php
+            $office_names = [];
+
+            foreach( $offices as $office ) {
+              $office_names[] = $office->name;
+            }
+
+            $office_list = join(', ', $office_names);
+
+            echo format_text($office_list);
+          ?>
+
+          </div><!-- .member-grid__thumb__office -->
+
         <?php endif; ?>
 
         </figcaption><!-- .member-grid__thumb__caption -->

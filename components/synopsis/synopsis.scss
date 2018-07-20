@@ -11,14 +11,10 @@
   @include triangle-caps($periwinkle,true,false);
 
   .synopsis__col {
-
+    padding-left: 0;
   }
 
   .synopsis__header {
-
-    br {
-      display: none;
-    }
   }
 
   .synopsis__description {
