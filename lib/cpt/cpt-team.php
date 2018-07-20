@@ -31,14 +31,14 @@ if ( ! function_exists('register_team_custom_post_type') ) {
       'public'              => true,
       'show_ui'             => true,
       'show_in_menu'        => true,
-      'show_in_nav_menus'   => false,
-      'show_in_admin_bar'   => false,
+      'show_in_nav_menus'   => true,
+      'show_in_admin_bar'   => true,
       'menu_position'       => 20,
       'menu_icon'           => 'dashicons-groups',
       'can_export'          => true,
-      'has_archive'         => false,
+      'has_archive'         => true,
       'exclude_from_search' => true,
-      'publicly_queryable'  => false,
+      'publicly_queryable'  => true,
       'capability_type'     => 'post',
     );
     register_post_type( 'team', $args );

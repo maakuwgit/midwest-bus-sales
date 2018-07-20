@@ -73,10 +73,10 @@ if( have_rows( 'components' ) ) {
       case 'lr-w-gradient' :
         //Home
         $block = array(
-          'style'       => get_sub_field('lr_w_image_style'),
-          'image'       => get_sub_field('lr_w_image_image'),
-          'content'     => get_sub_field('lr_w_image_content'),
-          'background'  => get_sub_field('lr_w_image_background')
+          'style'       => get_sub_field('lr_w_gradient_style'),
+          'image'       => get_sub_field('lr_w_gradient_image'),
+          'content'     => get_sub_field('lr_w_gradient_content'),
+          'has_bg'      => get_sub_field('lr_w_gradient_background')
         );
 
         $components .= ll_include_component(

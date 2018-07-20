@@ -49,6 +49,7 @@
   .icon__link {
     display: inline-flex;
     flex-direction: column;
+    padding: $grid-column-padding;
     color: $white;
     fill: $white;
     font-size: rem-calc(14);

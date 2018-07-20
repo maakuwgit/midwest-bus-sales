@@ -19,6 +19,10 @@
     @extend %coin;
     margin-bottom: rem-calc(16);
     background-color: $powder;
+
+    svg {
+      fill: $blue;
+    }
   }
 
   .teaser__body {

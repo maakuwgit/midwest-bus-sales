@@ -51,23 +51,23 @@ if ( ! function_exists('register_bus_custom_post_type') ) {
 /**
  * Custom taxonomies
  */
-if ( ! function_exists('register_state_taxonomy') ) {
+if ( ! function_exists('register_bus_taxonomy') ) {
 
-  function register_state_taxonomy() {
+  function register_bus_taxonomy() {
 
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
-      'name'                => _x( 'City/State', 'taxonomy general name' ),
-      'singular_name'       => _x( 'City/State', 'taxonomy singular name' ),
-      'search_items'        => __( 'Search Cities/States' ),
-      'all_items'           => __( 'All Cities/States' ),
-      'parent_item'         => __( 'Parent City/State' ),
-      'parent_item_colon'   => __( 'Parent City/State:' ),
-      'edit_item'           => __( 'Edit City/State' ),
-      'update_item'         => __( 'Update City/State' ),
-      'add_new_item'        => __( 'Add New City/State' ),
-      'new_item_name'       => __( 'New City/State Name' ),
-      'menu_name'           => __( 'Cities/States' )
+      'name'                => _x( 'Ownership', 'taxonomy general name' ),
+      'singular_name'       => _x( 'Ownership', 'taxonomy singular name' ),
+      'search_items'        => __( 'Search Ownership' ),
+      'all_items'           => __( 'All Ownership' ),
+      'parent_item'         => __( 'Owner\'s owner' ),
+      'parent_item_colon'   => __( 'Owner\'s owner:' ),
+      'edit_item'           => __( 'Edit Owner' ),
+      'update_item'         => __( 'Update Owner' ),
+      'add_new_item'        => __( 'Add New Owner' ),
+      'new_item_name'       => __( 'New Owner' ),
+      'menu_name'           => __( 'Ownership' )
     );
 
     $args = array(
@@ -79,11 +79,37 @@ if ( ! function_exists('register_state_taxonomy') ) {
       'query_var'           => true,
       'rewrite'             => array( 'slug' => 'bus' )
     );
-    register_taxonomy( 'bus_state', array( 'bus' ), $args ); // Must include custom post type name
+    register_taxonomy( 'ownership', array( 'bus' ), $args ); // Must include custom post type name
+
+    // Add new taxonomy, make it non-hierarchical (like tags)
+    $labels = array(
+      'name'                => _x( 'Models', 'taxonomy general name' ),
+      'singular_name'       => _x( 'Model', 'taxonomy singular name' ),
+      'search_items'        => __( 'Search Models' ),
+      'all_items'           => __( 'All Models' ),
+      'parent_item'         => __( 'Parent Model' ),
+      'parent_item_colon'   => __( 'Parent Model:' ),
+      'edit_item'           => __( 'Edit Model' ),
+      'update_item'         => __( 'Update Model' ),
+      'add_new_item'        => __( 'Add New Model' ),
+      'new_item_name'       => __( 'New Model' ),
+      'menu_name'           => __( 'Models' )
+    );
+
+    $args = array(
+      'hierarchical'        => false,
+      'labels'              => $labels,
+      'public'              => true,
+      'show_ui'             => true,
+      'show_admin_column'   => true,
+      'query_var'           => true,
+      'rewrite'             => array( 'slug' => 'bus' )
+    );
+    register_taxonomy( 'models', array( 'bus' ), $args ); // Must include custom post type name
 
   }
 
-  add_action( 'init', 'register_state_taxonomy', 0 );
+  add_action( 'init', 'register_bus_taxonomy', 0 );
 
 }
 

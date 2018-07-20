@@ -10,13 +10,13 @@
 }
 
 .logo-svg {
-  width: rem-calc(184);
-  height: rem-calc(38);
+  width: rem-calc(158);
+  height: rem-calc(32);
+  transform: scale(1.6139);
+  transform-origin: left;
 
   @include screen-xl-up {
-    > g  {
-      transform: scale(1.25);
-    }
+    transform: scale(2);
   }
 }
 

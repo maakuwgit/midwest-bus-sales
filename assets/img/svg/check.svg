@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="51px" height="51px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Check Mark</title>
+<defs>
+<linearGradient x1="0.635245675%" y1="0%" x2="100%" y2="100%" id="checkGradient">
+<stop stop-color="#41A4FF" offset="0%"></stop>
+<stop stop-color="#2A77F0" offset="100%"></stop>
+</linearGradient>
+</defs>
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polyline stroke="url(#checkGradient)" stroke-width="2" points="19.3907534 27.5420751 23.8486783 32 33.4877702 19"></polyline>
+</g>
+</svg>

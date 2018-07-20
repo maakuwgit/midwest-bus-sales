@@ -20,6 +20,15 @@ a {
 
 address {
   font-style: normal;
+  font-size: rem-calc(14);
+  line-height: 28px;
+  line-height: 2;
+
+  @include screen-md-up {
+    font-size: rem-calc(16);
+    line-height: 32px;
+    line-height: 2;
+  }
 }
 
 blockquote {
@@ -147,7 +156,7 @@ label {
   line-height: 1.28571428571429;
 }
 
-p, .p, address, li, td, dd {
+p, .p, li, td, dd {
   font-size: rem-calc(14);
   line-height: 26px;
   line-height: 1.85714285714286;
@@ -160,7 +169,7 @@ p, .p, address, li, td, dd {
 }
 
 p, .p, address {
-  font-weight: $text-normal;
+  font-weight: $text-light;
 }
 
 th, dt {

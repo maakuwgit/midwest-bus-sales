@@ -25,18 +25,26 @@
     }
   }
 
-  .footer__logo__anchor {
+  .footer__logo_wrap {
     display: flex;
+    flex-direction: column;
     width: rem-calc(184);
-    height: rem-calc(38);
-    font-size: rem-calc(26);
-    font-weight: $text-bold;
-    fill: $white;
-    color: $white;
 
     a {
       display: block;
+      font-size: rem-calc(26);
+      font-weight: $text-bold;
+      fill: $white;
+      color: $white;
     }
+
+    .logo-svg {
+      transform: scale(1.13926);
+    }
+  }
+
+  .footer__logo__address {
+
   }
 
   .footer__top {

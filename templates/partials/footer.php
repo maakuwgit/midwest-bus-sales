@@ -5,9 +5,9 @@
   $zip    = get_field('contact_zip', 'options');
   $phone  = get_field('contact_phone_number', 'options');
 
-  $address  = get_bloginfo('name') . get_bloginfo('tagline');
-  $address  .= '<br>' . $street;
-  $address  .= '<br>' . $city . ', ' . $state . ' ' . $zip;
+  $address  = $street;
+  $address  .= '<br>' . $city;
+  $address  .= '<br>' . $state . ' ' . $zip;
   $address  .= '<br>' . format_phone($phone, true, '-');
 ?>
 <footer class="footer">
@@ -21,6 +21,13 @@
         <a class="footer__logo__anchor" href="<?php echo esc_url(home_url('/')); ?>">
           <?php echo ll_get_logo();?>
         </a><!-- .footer__logo__anchor -->
+
+        <?php if( $address ) : ?>
+        <address class="footer__logo__address">
+          <?php echo $address; ?>
+        </address>
+        <!-- .footer__logo__address -->
+        <?php endif; ?>
 
       </div><!-- .footer__logo_wrap -->
 
@@ -51,7 +58,7 @@
     <div class="row between container">
 
       <div class="footer__copyright col center col-md-6of12 col-lg-6of12 col-xl-6of12">
-       <p> &copy; 2014-<?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
+       <p>Copyright &copy; 2014-<?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
       </div><!-- .footer__copyright -->
 
       <div class="footer__credits col center col-md-6of12 col-lg-6of12 col-xl-6of12">

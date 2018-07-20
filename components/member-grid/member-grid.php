@@ -9,7 +9,7 @@
 $defaults = [
   'heading'     => false,
   'content'     => false,
-  'num_members' => 4
+  'num_members' => -1
 ];
 
 $args = [
@@ -43,10 +43,10 @@ $id            = ' id="' . $component_args['id'] . '"';
  */
 $heading       = $component_data['heading'];
 $content       = $component_data['content'];
-$num_members   = $component_data['num_members'];
+$showposts     = $component_data['num_members'];
 
 $margs = array(
-  'posts_per_page' => $num_members,
+  'posts_per_page' => $showposts,
   'order'          => 'ASC',
   'orderby'        => 'menu_order',
   'post_status'    => 'publish',
@@ -78,6 +78,9 @@ $members = new WP_Query( $margs );
     <ul class="member-grid__list no-bullet row">
 
   <?php
+    $num_members = wp_count_posts('team');
+    $num_members = $num_members->publish;
+
     while ( $members->have_posts() ) : $members->the_post();
 
     $positions  = get_the_terms(get_the_ID(), 'team_position');
@@ -146,8 +149,14 @@ $members = new WP_Query( $margs );
     </li><!-- .member-grid__item -->
 
   <?php endwhile; ?>
-<?php wp_reset_postdata(); ?>
+  <?php wp_reset_postdata(); ?>
     </ul><!-- .member-grid__list.no-bullet.row -->
+
+  <?php if( $num_members > $showposts && $showposts != -1 ) : ?>
+    <nav class="member-grid__nav text-center">
+      <a class="btn" href="<?php echo get_bloginfo('url') . '/team'; ?>">View All Members</a>
+    </nav><!-- .member-grid__nav -->
+  <?php endif; ?>
 
   </div><!-- .container -->
 

@@ -28,8 +28,7 @@
     <?php else : ?>
 
       <a class="logo__brand flex" href="<?php echo esc_url(home_url('/')); ?>">
-        <span class="block"><?php bloginfo('name');?></span>
-        <small class="block"><?php bloginfo('description');?></small>
+        <?php echo ll_get_logo(); ?>
       </a>
 
     <?php endif; ?>

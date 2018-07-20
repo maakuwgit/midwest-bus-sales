@@ -53,12 +53,20 @@ if ( !$title && !$content ) return;
         foreach( $icons as $icon ) :
           $iconlink = $icon['link'];
       ?>
-      <a class="icon__link" href="#">
+      <?php if( $iconlink) : ?>
+      <a class="icon__link" href="<?php echo $iconlink['url']; ?>">
+      <?php else: ?>
+      <span class="icon__link">
+      <?php endif; ?>
         <svg class="icon icon__link__icon <?php echo $icon['icon']; ?>">
           <use xlink:href="#<?php echo $icon['icon']; ?>"></use>
         </svg>
-        <span class="icon__link__label">Title</span>
+        <span class="icon__link__label"><?php echo $iconlink['title']; ?></span>
+      <?php if( !$iconlink) : ?>
+      </span>
+      <?php else: ?>
       </a>
+      <?php endif; ?>
       <?php endforeach; ?>
     </nav>
     <!-- .prefooter__icons -->
