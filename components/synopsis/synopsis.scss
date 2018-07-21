@@ -8,7 +8,8 @@
 
 .ll-synopsis {
   @extend %section-padding;
-  @include triangle-caps($periwinkle,true,false);
+  @include triangle-caps($talc,true,false);
+  margin-bottom: $padding-small;
 
   .synopsis__col {
     padding-left: 0;
@@ -18,11 +19,26 @@
   }
 
   .synopsis__description {
+    margin-right: auto;
+  }
+
+  + .ll-lr-blocks {
+    &:before {
+      border: none;
+    }
   }
 
   @include screen-sm {
     .synopsis__description {
       margin-top: $padding-large;
+    }
+  }
+
+  @include screen-md-up {
+    margin-bottom: $padding-medium;
+
+    .synopsis__description {
+      padding-right: 0;
     }
   }
 }

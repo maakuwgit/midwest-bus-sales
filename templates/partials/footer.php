@@ -14,7 +14,7 @@
 
   <div class="footer__top">
 
-    <div class="row container start centered">
+    <div class="row container start">
 
       <div class="footer__logo_wrap">
 

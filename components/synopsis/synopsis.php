@@ -49,14 +49,14 @@ $content     = $component_data['content'];
 
     <div class="row synopsis__wrapper">
 
-      <div class="synopsis__col col col-md-6of12 col-lg-5of12 col-xl-4of12 col-xxl-4of12">
+      <div class="synopsis__col col col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
 
       <?php if( $heading ) : ?>
         <h2 class="synopsis__header"><?php echo $heading; ?></h2>
         <!-- .synopsis__header -->
       <?php endif; ?>
 
-      </div>
+      </div><!-- .synopsis__col.col.col-md-6of12.col-lg-4of12.col-xl-4of12.col-xxl-4of12 -->
 
       <div class="synopsis__description col col-md-6of12 col-lg-7of12 col-xl-8of12 col-xxl-8of12">
 
@@ -64,7 +64,7 @@ $content     = $component_data['content'];
         <?php echo $content; ?>
       <?php endif; ?>
 
-      </div><!-- .synopsis__description.col -->
+      </div><!-- .synopsis__description.col.col-md-6of12.col-lg-7of12.col-xl-8of12.col-xxl-8of12 -->
 
     </div><!-- .row.synopsis__wrapper -->
 

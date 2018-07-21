@@ -1,5 +1,5 @@
 /**
- * location-grid Styles
+ * ll-location-grid Styles
  * ----------------------------------------------------------------------------
  *
  * About the module
@@ -7,5 +7,73 @@
  */
 
 .ll-location-grid {
+  @extend %section-padding;
+  background-color: $talc;
 
+  .location-grid__heading {
+    @extend %h3;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: $text-light;
+    color: $ebony;
+  }
+
+  .location-grid__content {
+
+    p:last-child {
+      margin-bottom: auto;
+    }
+
+  }
+
+  .location-grid__locations {
+  }
+
+  .location-grid__location {
+    margin-top: $padding-small;
+
+    a[href^="tel:"] {
+      cursor: initial;
+      color: currentColor;
+    }
+
+  }
+
+  .location-grid__location__title {
+    margin-bottom: rem-calc(10);
+    font-size: rem-calc(18);
+    color: $ebony;
+    line-height: 24px;
+    line-height: 1.33333333333333;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .location-grid__location__address,
+  .location-grid__location__hours,
+  .location-grid__location__phone {
+    font-size: rem-calc(16);
+    font-weight: $text-normal;
+    line-height: 27px;
+    line-height: 1.6875;
+  }
+
+  @include screen-sm {
+
+    .location-grid__location__phone {
+      cursor: pointer;
+    }
+
+  }
+
+  @include screen-md-up {
+
+    .location-grid__location {
+      margin-top: $padding-medium;
+      margin-bottom: $padding-medium;
+    }
+
+  }
 }

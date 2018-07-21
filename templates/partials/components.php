@@ -130,12 +130,12 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
-      case 'location_grid' :
+      case 'location-grid' :
         //Form Template, Services
         $locations = array(
-          'heading'       => get_sub_field('location_heading'),
-          'content'       => get_sub_field('location_content'),
-          'num_locations' => get_sub_field('location_num_locations')
+          'heading'       => get_sub_field('location_grid_heading'),
+          'content'       => get_sub_field('location_grid_content'),
+          'num_locations' => get_sub_field('location_grid_number')
         );
 
         $components .= ll_include_component(
