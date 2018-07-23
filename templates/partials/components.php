@@ -190,6 +190,23 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
+      case 'three-col-w-heading' :
+        //Home, About, all Locations
+        $blocks = array(
+          'heading'     => get_sub_field('three_col_heading_heading'),
+          'content' => get_sub_field('three_col_heading_content'),
+          'column_1' => get_sub_field('three_col_heading_content_1'),
+          'column_2' => get_sub_field('three_col_heading_content_2'),
+          'column_3' => get_sub_field('three_col_heading_content_3')
+        );
+
+        $components .= ll_include_component(
+          'three-col-w-heading',
+          $blocks,
+          array(),
+          true
+        );
+      break;
       case 'two-col-w-heading' :
         //Home, About, all Locations
         $blocks = array(

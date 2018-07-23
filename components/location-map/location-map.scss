@@ -39,7 +39,7 @@
     max-height: 635px;
     padding-left: 0;
     padding-right: 0;
-    @extend %gradient-before;
+    @include gradient-before;
   }
 
   .location-map__locations {

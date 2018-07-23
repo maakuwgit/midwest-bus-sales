@@ -49,7 +49,7 @@ $content            = $component_data['content'];
 $has_bg             = $component_data['has_bg'];
 
 if( $has_bg ) {
-  $bg = 'periwinkle ';
+  $bg = 'talc ';
 }else{
   $bg = '';
 }

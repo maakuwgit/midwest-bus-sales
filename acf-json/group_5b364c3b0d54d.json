@@ -78,6 +78,37 @@
                     "min": "",
                     "max": ""
                 },
+                "5b555f7bc65fc": {
+                    "key": "5b555f7bc65fc",
+                    "name": "three-col-w-heading",
+                    "label": "3 Column w\/ Heading",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b555f7bc65fd",
+                            "label": "3 Column w\/ Heading",
+                            "name": "three-col-w-heading",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b555cd68e1d6"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5b4e58681f74c": {
                     "key": "5b4e58681f74c",
                     "name": "bus-types-grid",
@@ -426,5 +457,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532118412
+    "modified": 1532321708
 }

@@ -54,7 +54,7 @@ $type = ( $type ? ' ' . $type : '' );
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <section class="ll-two-col-w-icons<?php echo implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="two-col-w-icons">
 
-  <div class="container row">
+  <div class="container row start centered">
 
   <?php if( $content ) : ?>
     <div class="two-col-w-icons__content col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12">
@@ -63,7 +63,7 @@ $type = ( $type ? ' ' . $type : '' );
   <?php endif; ?>
 
   <?php if( $list ) : ?>
-    <ul class="two-col-w-icons__list col col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12<?php echo $type; ?>">
+    <ul class="two-col-w-icons__list col col-md-6of12 col-lg-5of12 col-xl-5of12 col-xxl-5of12<?php echo $type; ?>">
 
     <?php foreach( $list as $item ) : ?>
 

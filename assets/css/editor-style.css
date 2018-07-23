@@ -3,3 +3,16 @@
  * the wysiwyg
  */
 @import 'main.min.css';
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet');
+
+body {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+#tinymce {
+  font-family: 'IBM Plex Sans', Helvetica Neue, Arial, sans-serif;
+  font-weight: 300;
+  padding: 1rem;
+}
+

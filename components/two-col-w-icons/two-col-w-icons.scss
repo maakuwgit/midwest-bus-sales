@@ -50,6 +50,7 @@
   .two-col-w-icons__item {
     position: relative;
     list-style: none;
+    padding-left: rem-calc(70);
 
     &:before {
       @extend %coin;
@@ -66,6 +67,7 @@
 
   @include screen-md-up {
     .two-col-w-icons__content {
+      padding-left: 0;
 
       > * {
         max-width: 85%;
@@ -74,6 +76,9 @@
       ul {
         margin-top: $padding-small;
       }
+    }
+    .two-col-w-icons__list {
+      padding-right: 0;
     }
   }
 }

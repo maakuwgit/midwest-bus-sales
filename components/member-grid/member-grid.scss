@@ -8,6 +8,7 @@
 
 .ll-member-grid {
   @extend %section-padding;
+  background-color: $talc;
 
   .container:first-child {
     padding-bottom: $padding-medium;
@@ -60,8 +61,7 @@
     p {
       margin: 0;
       font-size: rem-calc(14);
-      font-weight: $text-light;
-      color: $grey;
+      color: $ebony;
       line-height: 24px;
       line-height: 1.71428571428571;
     }

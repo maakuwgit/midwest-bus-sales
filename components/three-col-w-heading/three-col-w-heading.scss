@@ -1,0 +1,54 @@
+/**
+ * three-col-w-heading Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-three-col-w-heading {
+  @extend %section-padding;
+
+  .three-col-w-heading__heading {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .three-col-w-heading__header {
+    @extend %h2;
+  }
+
+  .three-col-w-heading__content {
+    margin-bottom: rem-calc(22);
+  }
+
+  + .ll-lr-blocks {
+    &:before,
+    &:after {
+      border: none;
+    }
+  }
+
+  @include screen-md-up {
+
+    .three-col-w-heading__block {
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+    }
+
+    .three-col-w-heading__heading,
+    .three-col-w-heading__content {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+}

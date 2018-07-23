@@ -46,7 +46,7 @@
     bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    @extend %gradient-before;
+    @include gradient-before($talc);
   }
 
   .lr-w-gradient__content {
@@ -93,12 +93,12 @@
     }
   }
 
-  &.periwinkle,
+  &.talc,
   + .ll-lr-w-gradient {
-    background-color: $periwinkle;
+    background-color: $talc;
   }
 
-  &.periwinkle {
+  &.talc {
 
     + .ll-lr-w-gradient {
       background-color: $white;

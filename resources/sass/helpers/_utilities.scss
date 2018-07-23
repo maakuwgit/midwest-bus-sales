@@ -64,14 +64,14 @@
   }
 }
 
-%gradient-before {
+@mixin gradient-before($color: $periwinkle) {
   &:before {
     position: absolute;
     z-index: 1;
     content: '';
     width: 100px;
     height: 100%;
-    background-image: linear-gradient(to right, $periwinkle 0%, rgba($periwinkle, 0) 100%);
+    background-image: linear-gradient(to right, $color 0%, rgba($color, 0) 100%);
   }
 }
 
@@ -94,6 +94,16 @@
 .h5.text-normal,
 .h6.text-normal {
   font-weight: $text-normal;
+}
+
+.text-semi,
+.h1.text-semi,
+.h2.text-semi,
+.h3.text-semi,
+.h4.text-semi,
+.h5.text-semi,
+.h6.text-semi {
+  font-weight: $text-semi;
 }
 
 .text-light,
