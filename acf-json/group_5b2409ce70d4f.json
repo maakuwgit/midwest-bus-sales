@@ -1,6 +1,6 @@
 {
     "key": "group_5b2409ce70d4f",
-    "title": "Hero Banner",
+    "title": "Hero",
     "fields": [
         {
             "key": "field_5b240b32b71c2",
@@ -51,8 +51,7 @@
                     },
                     "choices": {
                         "h1": "H1",
-                        "h2": "H2",
-                        "h3": "H3"
+                        "h2": "H2"
                     },
                     "allow_null": 0,
                     "default_value": "h2",
@@ -109,11 +108,11 @@
                         "id": ""
                     },
                     "choices": {
-                        "h1": "H1",
-                        "h2": "H2"
+                        "h2": "H2",
+                        "h3": "H3"
                     },
                     "allow_null": 0,
-                    "default_value": "h1",
+                    "default_value": "h2",
                     "layout": "horizontal",
                     "return_format": "value"
                 }
@@ -184,13 +183,6 @@
     "location": [
         [
             {
-                "param": "page_type",
-                "operator": "==",
-                "value": "posts_page"
-            }
-        ],
-        [
-            {
                 "param": "post_type",
                 "operator": "==",
                 "value": "post"
@@ -205,5 +197,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "100vw, 90vh <DIV> with the following options. The background image is styled to have an overlay tint, which can be controlled through the component.",
-    "modified": 1531855132
+    "modified": 1532376224
 }

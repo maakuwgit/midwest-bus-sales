@@ -32,7 +32,7 @@
   .footer__logo_wrap {
     display: flex;
     flex-direction: column;
-    width: rem-calc(184);
+    width: calc(25% - #{$grid-column-padding});
 
     a {
       display: block;
@@ -44,6 +44,29 @@
 
     .logo-svg {
       transform: scale(1.13926);
+    }
+
+    .footer__certifications {
+      margin-top: rem-calc(32);
+      margin-bottom: 0;
+    }
+
+    .thomas_logo,
+    .platinum_logo,
+    .premier_logo {
+      padding-left: rem-calc(10);
+    }
+
+    .thomas_logo {
+      width: rem-calc(103);
+      height: auto;
+      padding-left: 0;
+    }
+
+    .platinum_logo,
+    .premier_logo {
+      width: rem-calc(43);
+      height: auto;
     }
   }
 
@@ -84,6 +107,10 @@
   .footer__social_wrap {
     margin-right: 0;
     margin-left: auto;
+  }
+
+  .footer__social__title {
+    margin-bottom: rem-calc(15);
   }
 
   .footer__bottom {

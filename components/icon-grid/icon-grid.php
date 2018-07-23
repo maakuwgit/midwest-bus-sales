@@ -41,12 +41,12 @@ $id            = ' id="' . $component_args['id'] . '"';
  */
 $heading       = $component_data['heading'];
 $content       = $component_data['content'];
-$blocks        = $component_data['blocks'];
+$icons        = $component_data['icons'];
 
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<section class="ll-icon-grids<?php echo implode( " ", $classes ); ?>" <?php echo $id; ?> data-component="icon-grids">
+<section class="ll-icon-grid<?php echo implode( " ", $classes ); ?>" <?php echo $id; ?> data-component="icon-grid">
 
   <div class="container column text-center">
 
@@ -60,53 +60,24 @@ $blocks        = $component_data['blocks'];
 
   </div><!-- .container.row.centered -->
 
-<?php if( $blocks ) : ?>
+<?php if( $icons ) : ?>
 
   <div class="container">
 
-    <ul class="icon-grid__blocks">
+    <ul class="icon-grid__icons row stretch">
 
     <?php
-      foreach( $blocks as $block ) :
+      foreach( $icons as $block ) :
 
         $icon      = $block['icon'];
         $title     = $block['title'];
         $caption   = $block['caption'];
-        $use       = $block['infographic'];
-        $image     = $block['image'];
-        $svg       = $block['svg'];
-
-        if( $use == 'img' && $image ) {
-          $bg = ' data-backgrounder';
-        }else{
-          $bg = '';
-        }
 
     ?>
-      <li class="icon-grid__block row stretch">
-
-      <?php if( $image || $svg ) : ?>
-        <figure class="icon-grid__block__figure col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12"<?php echo $bg;?>>
-
-        <?php if( $use === 'img' && $image ) : ?>
-
-          <div class="icon-grid__block__feature feature">
-          <?php echo ll_format_image($image); ?>
-          </div><!-- .icon-grid__feature.feature -->
-
-        <?php elseif( $use === 'svg' && $svg ) : ?>
-
-          <div class="icon-grid__block__svg">
-          <?php echo $svg; ?>
-          </div><!-- .icon-grid__svg -->
-
-        <?php endif; ?>
-
-        </figure><!-- .icon-grid__figure -->
-      <?php endif; ?>
+      <li class="icon-grid__block col col-md-4of12 col-lg-3of12 col-xl-3of12 col-xxl-3of12">
 
       <?php if( $title || $caption ) : ?>
-        <div class="icon-grid__block__content col col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-4of12 col-offset-xl-1of12 col-xl-4of12 col-offset-xxl-1of12 col-xxl-4of12">
+        <div class="icon-grid__block__content">
 
         <?php if( $icon ) : ?>
           <div class="icon-grid__block__icon">

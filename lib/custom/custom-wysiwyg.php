@@ -109,7 +109,7 @@ function ll_format_tinymce( $data ) {
       'items' => array(
         array(
           'title'    => 'Button',
-          'classes'  => 'button',
+          'classes'  => 'btn',
           'selector' => 'a, button',
           'wrapper'  => false
         )

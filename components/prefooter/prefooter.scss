@@ -40,7 +40,6 @@
 
   .prefooter__content {
     font-weight: $text-light;
-    opacity: 0.75;
   }
 
   .prefooter__icons {
@@ -76,10 +75,15 @@
 
   p {
     margin-bottom: $padding-medium * 0.75;
+    opacity: 0.75;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  p:last-child:not(:first-child) {
+    opacity: 1;
   }
 
   @include screen-xs {

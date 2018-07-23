@@ -7,11 +7,11 @@
 */
 
 $defaults = [
-  'title'   => false,
-  'heading' => false,
-  'image'   => false,
-  'video'   => false,
-  'overlay' => 0.5
+  'supertitle'  => false,
+  'heading'     => false,
+  'image'       => false,
+  'video'       => false,
+  'overlay'     => 0.5
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
@@ -37,18 +37,14 @@ $id = ( $component_args['id'] ? $component_args['id'] : uniqid('hero-') );
 
 $supertitle         = $component_data['supertitle']['text'];
 $supertitle_tag     = $component_data['supertitle']['tag'];
-$title              = $component_data['heading']['text'];
-$title_tag          = $component_data['heading']['tag'];
+$heading            = $component_data['heading']['text'];
+$heading_tag        = $component_data['heading']['tag'];
 $video              = $component_data['video'];
-$overlay   = $component_data['overlay'];
-$bg                 = $component_data['image'];
+$overlay            = $component_data['overlay'];
+$image              = $component_data['image'];
 
-if( $bg ) {
-  $bg = wp_get_attachment_url($bg);
-}
-
-if( $bg ) {
-  $bg = ' style="background-image:url(' . $bg . ');"';
+if( $image ) {
+  $bg = ' data-backgrounder';
 }else{
   $bg = '';
 }
@@ -57,7 +53,7 @@ if( $bg ) {
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
 
-<div class="ll-hero hdg<?php echo implode( " ", $classes ); ?>"<?php echo ' id="'.$id.'"'; ?> data-component="hero"<?php echo $bg; ?>>
+<header class="ll-hero<?php echo implode( " ", $classes ); ?>"<?php echo ' id="'.$id.'"'; ?> data-component="hero"<?php echo $bg; ?>>
 
   <?php if( $bg ) : ?>
   <style>
@@ -72,6 +68,19 @@ if( $bg ) {
     }
   </style>
 <?php endif; ?>
+
+  <?php if ($image ) : ?>
+
+    <div class="hero__feature feature">
+      <?php
+      if( is_array($image) ) {
+        echo ll_format_image($image);
+      }else{
+        echo $image;
+      } ?>
+    </div><!-- .hero__feature.feature -->
+
+  <?php endif; ?>
 
   <?php
     if( $video ) {
@@ -88,26 +97,26 @@ if( $bg ) {
     }
   ?>
 
+  <div class="container centered start row">
+
   <?php if( $supertitle ) : ?>
 
-  <div class="hero__supertitle__container container">
-
-    <<?php echo $supertitle_tag; ?> class="hero__supertitle hdg__supertitle">
+    <<?php echo $supertitle_tag; ?> class="hero__supertitle col">
       <?php echo $supertitle; ?>
     </<?php echo $supertitle_tag; ?>>
     <!-- .hero__supertitle.hdg__supertitle -->
 
-  </div>
-
   <?php endif; ?>
 
-  <?php if( $title ) : ?>
+  <?php if( $heading ) : ?>
 
-    <<?php echo $title_tag; ?> class="hero__supertitle hdg__title">
-      <?php echo $title; ?>
-    </<?php echo $title_tag; ?>>
+    <<?php echo $heading_tag; ?> class="hero__heading col">
+      <?php echo $heading; ?>
+    </<?php echo $heading_tag; ?>>
     <!-- .hero__title.hdg__title -->
 
   <?php endif; ?>
 
-</div>
+  </div>
+
+</header>

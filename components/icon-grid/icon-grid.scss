@@ -7,5 +7,67 @@
  */
 
 .ll-icon-grid {
+  @extend %section-padding;
+
+  .icon-grid__heading {
+    @extend %h3;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: $text-light;
+    color: $ebony;
+  }
+
+  .icon-grid__content {
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .icon-grid__icons {
+    position: relative;
+    list-style: none;
+    width: calc( 100% + #{$grid-column-padding*2} );
+    margin-left: $grid-column-padding * -1;
+  }
+
+  .icon-grid__block {
+    margin-top: $padding-xsmall;
+    margin-bottom: $padding-xsmall;
+  }
+
+  .icon-grid__block__icon {
+    @extend %coin;
+    margin-bottom: rem-calc(16);
+    color: $blue;
+    background-color: $powder;
+  }
+
+  .icon-grid__block__title {
+    h2, h3, h4 {
+      margin-bottom: rem-calc(10);
+      color: $blue;
+    }
+  }
+
+  .icon-grid__block__caption {
+
+    p {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include screen-lg-up {
+
+    .icon-grid__block {
+      margin-top: $padding-small;
+      margin-bottom: $padding-small;
+    }
+
+  }
 
 }

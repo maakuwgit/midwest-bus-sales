@@ -22,8 +22,11 @@
     margin-right: auto;
   }
 
-  + .ll-lr-blocks {
-    &:before {
+  + .ll-lr-blocks,
+  + .ll-two-col-w-icons {
+    margin-bottom: auto;
+    &:before,
+    &:after {
       border: none;
     }
   }

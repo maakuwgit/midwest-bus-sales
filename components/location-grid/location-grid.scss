@@ -27,6 +27,9 @@
   }
 
   .location-grid__locations {
+    position: relative;
+    width: calc( 100% + #{$grid-column-padding*2} );
+    margin-left: $grid-column-padding * -1;
   }
 
   .location-grid__location {

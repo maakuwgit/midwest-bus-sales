@@ -104,6 +104,11 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "default"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "posts_page"
             }
         ],
         [
@@ -121,7 +126,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -129,5 +134,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Centered text with textured background and a list of icons",
-    "modified": 1531930347
+    "modified": 1532373104
 }

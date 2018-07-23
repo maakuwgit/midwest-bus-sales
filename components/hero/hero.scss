@@ -7,5 +7,35 @@
  */
 
 .ll-hero {
+  position: relative;
+  min-height: 637px;
+  height: 66.6667vh;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: left;
+  background-color: $navy;
 
+  + .entry__meta {
+   @include triangle-caps($white, true, false);
+   padding-top: $padding-small;
+  }
+
+  .container {
+    min-height: inherit;
+  }
+
+  .hero__heading,
+  .hero__supertitle {
+    padding-left: 0;
+    padding-right: 0;
+    color: $white;
+  }
+
+  .hero__supertitle {
+    @extend %supertitle;
+  }
+
+  .hero__heading {
+    @extend %h0;
+  }
 }

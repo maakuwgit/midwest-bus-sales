@@ -91,10 +91,8 @@ if( have_rows( 'components' ) ) {
         $icons = array(
           'heading' => get_sub_field('icon_grid_heading'),
           'content' => get_sub_field('icon_grid_content'),
-          'icons'   => get_sub_field('icon_grid_images')
+          'icons'   => get_sub_field('icon_grid_icons')
         );
-
-        var_dump($icons);
 
         $components .= ll_include_component(
           'icon-grid',

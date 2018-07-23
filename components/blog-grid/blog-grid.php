@@ -57,7 +57,7 @@ $num_posts = $num_posts->publish;
     $image = get_the_post_thumbnail();
   ?>
 
-      <div class="blog-grid__blog_wrapper col col-sm-6of12 col-md-3of12 col-lg-4of12 col-xl-4of12">
+      <div class="blog-grid__blog_wrapper col col-sm-6of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
 
         <div class="blog-grid__blog" data-clickthrough>
 
@@ -72,6 +72,23 @@ $num_posts = $num_posts->publish;
 
           </figure>
         <?php endif; ?>
+
+        <?php
+          $categories = get_the_category();
+
+          if ($categories) :
+
+            foreach($categories as $category) :
+          ?>
+
+            <span class="blog-grid__blog__meta" href="<?php echo get_tag_link($category->term_id); ?>"><?php echo $category->name; ?></span>
+            <!-- .entry__meta_category -->
+
+              <?php
+            endforeach;
+
+          endif;
+          ?>
 
           <h4 class="blog-grid__blog__title">
             <a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a>

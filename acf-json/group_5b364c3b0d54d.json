@@ -444,9 +444,23 @@
                 "operator": "==",
                 "value": "templates\/template-home.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "location"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "bus"
+            }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -457,5 +471,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532321708
+    "modified": 1532359201
 }

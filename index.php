@@ -5,7 +5,7 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
-<?php get_template_part('templates/partials/header', 'blog'); ?>
+<?php get_template_part('templates/contents/hero', 'blog'); ?>
 <?php
 /*Dev Note: we don't use this since the blog grid component iterates
   through the blog posts anyway

@@ -37,6 +37,24 @@
   }
 }
 
+%btn--tertiary {
+  @extend %btn;
+  color: #3891F9;
+  border: solid 1px $powder;
+  background-color: $powder;
+
+  &:hover, &:active, &:focus {
+    color: $white;
+    border-color: $cerulean;
+    background-color: $cerulean;
+  }
+}
+
+%btn--radius {
+  @extend %btn;
+  border-radius: 200px;
+}
+
 .btn,
 input[type="submit"],
 button {
@@ -49,7 +67,15 @@ button {
     }
   }
 
+  &.btn--radius {
+    @extend %btn--radius;
+  }
+
   &.btn--secondary {
     @extend %btn--secondary;
+  }
+
+  &.btn--tertiary {
+    @extend %btn--tertiary;
   }
 }

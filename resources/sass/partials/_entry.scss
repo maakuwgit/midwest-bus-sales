@@ -8,7 +8,8 @@
 }
 
 .entry__header {
-
+  padding-left: $grid-column-padding/2;
+  padding-right: $grid-column-padding/2;
 }
 
 .entry__header__title {
@@ -17,4 +18,12 @@
 
 .entry__summary {
 
+}
+
+.entry__meta {
+
+  .btn {
+    margin-left: $grid-column-padding/2;
+    margin-right: $grid-column-padding/2;
+  }
 }

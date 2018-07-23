@@ -20,7 +20,19 @@
     init: function() {
 
       var _this = this;
+      var gallery = $("."+_this.className);
 
+        gallery.each(function(){
+
+          $(this).find('.logo-grid__logos').slick({
+            infinite: true,
+            arrows: false,
+            rows: 3,
+            slidesPerRow: 5,
+            dots: true
+          });
+
+        });
     },
 
 

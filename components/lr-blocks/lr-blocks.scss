@@ -100,18 +100,8 @@
     }
   }
 
-  &.periwinkle,
-  + .ll-lr-blocks {
+  &.periwinkle {
     @include triangle-caps($periwinkle);
     background-color: $periwinkle;
-  }
-
-  &.periwinkle {
-
-    + .ll-lr-blocks {
-      @include triangle-caps($white);
-      background-color: $white;
-    }
-
   }
 }

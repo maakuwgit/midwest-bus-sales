@@ -29,6 +29,18 @@
         <!-- .footer__logo__address -->
         <?php endif; ?>
 
+        <ul class="footer__certifications no-bullet flex start row centered">
+          <li>
+            <img class="thomas_logo" alt="Thomas Built Buses" width="413" height="159" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-thomas.png">
+          </li>
+          <li>
+            <img class="premier_logo" alt="Premieer Assessment" width="300" height="277" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-premier_support.png">
+          </li>
+          <li>
+            <img class="platinum_logo" alt="Platinum Support" width="300" height="277" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-platinum_support.png">
+          </li>
+        </ul>
+
       </div><!-- .footer__logo_wrap -->
 
       <div class="footer__navigation_wrap">
@@ -42,7 +54,7 @@
       </div><!-- .footer__navigation_wrap -->
 
       <div class="footer__social_wrap">
-
+        <h4 class="footer__social__title">Follow Us</h4>
         <nav class="footer__social">
           <?php ll_get_social_list(); ?>
         </nav><!-- .footer__social -->

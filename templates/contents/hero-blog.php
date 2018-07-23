@@ -1,23 +1,28 @@
 <?php
-  $cat = get_queried_object();
+  $cat   = get_queried_object();
+  $pfpid = get_option( 'page_for_posts' );
 
-  if( is_archive() ){
-    $heading   = $cat->name;
-    $overlay = 0.6;
-    $image   = get_the_post_thumbnail( get_option( 'page_for_posts' ) );
+  if( !is_archive() ){
+    $heading   = array(
+        'text'  => get_the_title($pfpid),
+        'tag'   => 'h2'
+      );
   }else{
-    $heading      = get_field('blog_hero_heading', $cat);
-    $subheading   = get_field('blog_hero_subheading', $cat);
-    $overlay      = get_field('blog_overlay_strength', $cat);
-    $image        = get_field('blog_image', $cat);
+    $heading      = array(
+      'text' => $cat->name,
+      'tag'  => 'h2'
+    );
   }
 
   $hero = array(
-    'supertitle'  => $supertitle,
+    'supertitle'  => array(
+      'text' => get_field('supertitle', $pfpid ),
+      'tag'  => 'h1'
+      ),
     'heading'     => $heading,
-    'image'       => $feature,
-    'overlay'     => $overlay,
-    'video'       => $video
+    'image'       => get_the_post_thumbnail( $pfpid ),
+    'overlay'     => 0.5,
+    'video'       => false
   );
 
   ll_include_component(
