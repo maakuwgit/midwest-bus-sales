@@ -7,5 +7,81 @@
  */
 
 .ll-location-details {
+  @extend %section-padding;
+  @include triangle-caps($talc,true,false);
+  margin-bottom: $padding-small;
 
+  .details__address,
+  .details__contact,
+  .details__hours,
+  .details__directions {
+    a, address, dt, dd {
+      @extend %p;
+      font-weight: $text-normal;
+    }
+  }
+
+  .details__address {
+
+    address {
+      margin-top: rem-calc(16);
+    }
+
+  }
+
+  .details__contact {
+
+    a:first-of-type {
+      margin-top: rem-calc(16);
+    }
+
+  }
+
+  .details__hours {
+
+    dl {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &:first-of-type {
+        margin-top: rem-calc(16);
+      }
+    }
+
+  }
+
+  .details__directions {
+    margin-right: auto;
+  }
+
+  + .ll-lr-blocks {
+    &:before {
+      border: none;
+    }
+  }
+
+  @include screen-sm {
+
+    .details__address,
+    .details__contact,
+    .details__hours,
+    .details__directions {
+      margin-top: $padding-large;
+    }
+  }
+
+  @include screen-md-up {
+    margin-bottom: $padding-medium;
+
+    .details__address {
+      padding-left: 0;
+    }
+
+    .details__address,
+    .details__contact,
+    .details__hours,
+    .details__directions {
+      padding-right: 0;
+    }
+  }
 }

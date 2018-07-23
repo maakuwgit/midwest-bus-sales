@@ -156,7 +156,7 @@ label {
   line-height: 1.28571428571429;
 }
 
-p, .p, li, td, dd {
+%p {
   font-size: rem-calc(14);
   line-height: 26px;
   line-height: 1.85714285714286;
@@ -166,6 +166,10 @@ p, .p, li, td, dd {
     line-height: 27px;
     line-height: 1.6875;
   }
+}
+
+p, .p, li, td, dd {
+  @extend %p;
 }
 
 p, .p, address {
