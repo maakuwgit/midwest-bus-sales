@@ -61,7 +61,7 @@ $args    = array(
     <?php endif; ?>
     </div><!-- .container.row.centered.center.text-center -->
 
-    <div class="location-grid__locations container row">
+    <div class="location-grid__locations container row center">
       <?php while( $locations->have_posts() ) : ?>
         <?php
           $locations->the_post();

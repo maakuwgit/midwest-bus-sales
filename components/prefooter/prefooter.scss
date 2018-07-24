@@ -13,11 +13,12 @@
   background-image: linear-gradient(135deg, $cerulean 0%, $blue 100%);
 
   .container {
-    min-height: 461px;
+    min-height: 75vw;
     padding-top: $padding-small;
     padding-bottom: $padding-small;
 
     @include screen-lg-up {
+      min-height: 461px;
       padding-top: $padding-medium;
       padding-bottom: $padding-medium;
     }

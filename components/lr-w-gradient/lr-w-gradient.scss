@@ -25,6 +25,14 @@
 
   }
 
+  @include screen-md-up {
+
+    .lr-w-gradient__figure {
+      @include gradient-before($talc);
+    }
+
+  }
+
   &.lefty {
 
     .lr-w-gradient__content {
@@ -39,6 +47,10 @@
     }
   }
 
+  .lr-w-gradient__content_wrap {
+    z-index: 2;
+  }
+
   .lr-w-gradient__figure {
     position: absolute;
     top: 0;
@@ -46,7 +58,6 @@
     bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    @include gradient-before($talc);
   }
 
   .lr-w-gradient__content {

@@ -59,7 +59,7 @@ if( $has_bg ) {
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <section class="ll-lr-w-gradient<?php echo ' ' . $bg . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-w-gradient">
 
-  <div class="container row">
+  <div class="lr-w-gradient__content_wrap container row">
 
   <?php if( $content ) : ?>
     <div class="lr-w-gradient__content col col-md-6of12 col-lg-5of12 col-xl-5of12 col-xxl-5of12">

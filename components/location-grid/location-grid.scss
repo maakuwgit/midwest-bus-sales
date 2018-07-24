@@ -28,8 +28,6 @@
 
   .location-grid__locations {
     position: relative;
-    width: calc( 100% + #{$grid-column-padding*2} );
-    margin-left: $grid-column-padding * -1;
   }
 
   .location-grid__location {
@@ -44,7 +42,7 @@
 
   .location-grid__location__title {
     margin-bottom: rem-calc(10);
-    font-size: rem-calc(18);
+    font-size: rem-calc(16);
     color: $ebony;
     line-height: 24px;
     line-height: 1.33333333333333;
@@ -57,10 +55,10 @@
   .location-grid__location__address,
   .location-grid__location__hours,
   .location-grid__location__phone {
-    font-size: rem-calc(16);
+    font-size: rem-calc(14);
     font-weight: $text-normal;
-    line-height: 27px;
-    line-height: 1.6875;
+    line-height: 22px;
+    line-height: 1.57142857142857;
   }
 
   @include screen-sm {
@@ -73,9 +71,21 @@
 
   @include screen-md-up {
 
+    .location-grid__location__address,
+    .location-grid__location__hours,
+    .location-grid__location__phone {
+      font-size: rem-calc(16);
+      line-height: 27px;
+      line-height: 1.6875;
+    }
+
     .location-grid__location {
       margin-top: $padding-medium;
       margin-bottom: $padding-medium;
+    }
+
+    .location-grid__location__title {
+      font-size: rem-calc(18);
     }
 
   }
