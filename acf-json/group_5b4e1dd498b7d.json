@@ -33,7 +33,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "80",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -47,6 +47,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5b4e1dd4a0369",
+            "label": "Background Color",
+            "name": "lr_w_gradient_background",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Color",
+            "ui_off_text": "Transparent"
         },
         {
             "key": "field_5b4e1dd4a032b",
@@ -66,25 +85,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_5b4e1dd4a0369",
-            "label": "Background Color",
-            "name": "lr_w_gradient_background",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "Color",
-            "ui_off_text": "Transparent"
         }
     ],
     "location": [
@@ -104,5 +104,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "Similar to the Left\/Right Block, only with a white-to-transparent gradient on the left overlaying the image.",
-    "modified": 1531852956
+    "modified": 1532435421
 }

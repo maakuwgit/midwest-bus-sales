@@ -63,6 +63,22 @@
     height: rem-calc(93);
     border: solid #{rem-calc(3)} $white;
     border-radius: 200px;
+
+    &.icon-calendar,
+    &.icon-certified,
+    &.icon-inspection,
+    &.icon-location,
+    &.icon-odometer,
+    &.icon-service_date,
+    &.icon-user {
+
+      use {
+        transform: scale(0.8);
+        transform-origin: center;
+      }
+
+    }
+
   }
 
   .icon__link__label {

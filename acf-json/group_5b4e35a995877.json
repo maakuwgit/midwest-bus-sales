@@ -3,10 +3,10 @@
     "title": "Customizables",
     "fields": [
         {
-            "key": "field_5b4e35b6386ef",
+            "key": "field_5b572307f31c1",
             "label": "Content",
             "name": "customizable_content",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,34 +16,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5b4e35d3386f0",
-            "label": "Image",
-            "name": "customizable_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_5b4e35ff386f1",
@@ -54,15 +30,15 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "60",
                 "class": "",
                 "id": ""
             },
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "+ Image",
+            "layout": "block",
+            "button_label": "+ Feature",
             "sub_fields": [
                 {
                     "key": "field_5b4e3613386f2",
@@ -111,7 +87,7 @@
                     "key": "field_5b4e362c386f4",
                     "label": "Description",
                     "name": "description",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -122,11 +98,35 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
                 }
             ]
+        },
+        {
+            "key": "field_5b4e35d3386f0",
+            "label": "Image",
+            "name": "customizable_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -146,5 +146,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "A complex set of tabs, this component utilizes content on the left, with features under the copy. Clicking on feature displays the description, sets the opacity of the feature “Title” to 100%, hides all other feature image and shows the active one over the top of the background image.",
-    "modified": 1531852393
+    "modified": 1532438169
 }

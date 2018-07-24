@@ -54,6 +54,23 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "bus"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "ownership:preowned"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "bus"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "ownership:certified-preowned"
             }
         ]
     ],
@@ -65,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "A SlickSlider with a series of images. Images should not be auto-height.",
-    "modified": 1531851521
+    "modified": 1532437038
 }
