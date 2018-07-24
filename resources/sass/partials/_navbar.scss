@@ -27,7 +27,7 @@
 
   }
 
-  &.top {
+  &.top:not(.no-hero) {
     background-color: transparent;
 
     .menu-item a {
