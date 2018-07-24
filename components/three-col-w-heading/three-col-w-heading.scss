@@ -22,12 +22,7 @@
     margin-bottom: rem-calc(22);
   }
 
-  + .ll-lr-blocks {
-    &:before,
-    &:after {
-      border: none;
-    }
-  }
+  @include disable-triangle-next;
 
   @include screen-md-up {
 

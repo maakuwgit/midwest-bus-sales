@@ -11,7 +11,8 @@
   @include triangle-caps($talc,true,false);
   margin-bottom: $padding-small;
 
-  .synopsis__col {
+  .synopsis__col,
+  .synopsis__description {
     padding-left: 0;
   }
 
@@ -22,14 +23,7 @@
     margin-right: auto;
   }
 
-  + .ll-lr-blocks,
-  + .ll-two-col-w-icons {
-    margin-bottom: auto;
-    &:before,
-    &:after {
-      border: none;
-    }
-  }
+  @include disable-triangle-next;
 
   @include screen-sm {
     .synopsis__description {

@@ -52,9 +52,9 @@
 
   .lr-blocks__figure {
     position: absolute;
-    top: $padding-medium;
+    top: 0;
     right: 0;
-    bottom: $padding-medium;
+    bottom: 0;
   }
 
   .lr-blocks__content {
@@ -103,5 +103,15 @@
   &.periwinkle {
     @include triangle-caps($periwinkle);
     background-color: $periwinkle;
+  }
+
+  @include screen-md-up {
+    
+    .lr-blocks__figure {
+      top: $padding-medium;
+      right: 0;
+      bottom: $padding-medium;
+    }
+    
   }
 }

@@ -54,11 +54,7 @@
     margin-right: auto;
   }
 
-  + .ll-lr-blocks {
-    &:before {
-      border: none;
-    }
-  }
+  @include disable-triangle-next;
 
   @include screen-sm {
 

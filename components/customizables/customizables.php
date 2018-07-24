@@ -7,9 +7,18 @@
 */
 
 $defaults = [
+  'heading'    => false,
+  'content'    => false,
+  'features'      => false
+];
+
+$args = [
+  'id'      => uniqid('customizables-'),
+  'classes' => false,
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
+$component_args = ll_parse_args( $component_args, $args );
 ?>
 
 <?php
@@ -27,10 +36,93 @@ $classes        = $component_args['classes'] ?: array();
  * @var array
  * @see args['id']
  */
-$component_id   = $component_args['id'];
+
+$id = $component_args['id'];
+
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
+$image              = $component_data['image'];
+$content            = $component_data['content'];
+$features           = $component_data['features'];
+
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="ll-customizables <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="customizables">
+<section class="ll-customizables<?php echo ' ' . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="customizables">
 
-</div>
+  <div class="container row stretch center">
+
+    <div class="customizables__content col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12">
+
+    <?php if( $content ) : ?>
+      <div class="customizables__caption">
+        <?php echo $content; ?>
+      </div><!-- .customizables__caption -->
+    <?php endif; ?>
+
+    <?php if ( $features ) : ?>
+
+      <dl class="customizables__feature_list">
+
+        <?php
+          $t = 0;
+          foreach( $features as $trigger ) :
+            $active = ( $t == 0 ? ' active' : '' );
+        ?>
+          <dt class="customizables__feature_title<?php echo $active; ?>" data-feature="<?php echo $t; ?>">
+            <?php echo $trigger['title']; ?>
+          </dt>
+          <!-- .customizables__feature_title -->
+
+          <dd class="customizables__feature_description">
+            <?php echo $trigger['description']; ?>
+          </dd>
+          <!-- .customizables__feature_description -->
+        <?php
+          $t++;
+          endforeach;
+        ?>
+
+      </dl>
+      <!-- .customizables__feature_list -->
+
+    <?php endif; ?>
+
+    </div><!-- .customizables__content.col.col-md-6of12.col-lg-6of12.col-xl-6of12.col-xxl-6of12 -->
+
+    <?php if( $image ) : ?>
+
+    <div class="customizables__visuals col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12" data-backgrounder>
+
+      <div class="feature">
+
+        <?php echo ll_format_image($image); ?>
+
+      </div><!-- .feature -->
+
+      <?php if( $features ) : ?>
+      <ul class="customizables__list no-bullet row">
+
+        <?php foreach( $features as $visual ) : ?>
+          <li class="customizables__block col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
+
+            <div class="customizables__visual feature">
+              <?php echo $visual['image']; ?>
+            </div>
+            <!-- .customizables__visual.feature -->
+
+          </li><!-- .customizables-block.col.col-md-6of12.col-lg-5of12.col-xl-5of12.col-xxl-5of12 -->
+        <?php endforeach; ?>
+
+      </ul>
+      <!-- .customizables__list.no-bullet.row.text-center -->
+      <?php endif; ?>
+
+    </div><!-- .customizables__visuals.col.col-md-6of12.col-lg-6of12.col-xl-6of12.col-xxl-6of12 -->
+
+    <?php endif; ?>
+
+  </div><!-- .container.row -->
+
+</section>

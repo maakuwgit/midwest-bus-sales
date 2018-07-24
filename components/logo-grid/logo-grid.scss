@@ -133,6 +133,10 @@
     li {
       display: inline-flex;
       padding: #{$padding-xsmall} #{$padding-xsmall/4};
+
+      &:last-child:first-child {
+        display: none;
+      }
     }
 
     button {
