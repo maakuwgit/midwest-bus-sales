@@ -258,6 +258,10 @@
 
     &.ginput_container_textarea {
       max-width: initial;
+
+      textarea {
+        max-height: rem-calc(130);
+      }
     }
 
     @include screen-lg {

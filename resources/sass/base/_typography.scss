@@ -180,6 +180,6 @@ th, dt {
   @extend %h4;
 }
 
-small, .small {
+small, p.small, li.small, td.small, dd.small, dt.small {
   @extend %small;
 }
