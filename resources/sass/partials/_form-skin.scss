@@ -6,7 +6,7 @@
   }
 
   .gform_button {
-    margin: 1rem auto auto auto;
+    margin: #{rem-calc(-90)} auto auto auto;
   }
 
   .gform_wrapper {
@@ -84,17 +84,14 @@
   }
 
   .gform_fields {
-    @extend %clearfix;
+    @include flexible;
+    width: 100%;
     list-style: none;
     padding: 0;
     margin: 0;
 
     .gfield {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      flex: 0 1 auto;
-      margin-bottom: 15px;
+      margin-bottom: rem-calc(15);
 
       @include screen-lg-up {
         padding-left: $grid-column-padding;
@@ -120,7 +117,8 @@
     color: $ebony;
   }
 
-  .gform_body {
+  .gform_body,
+  .gform_confirmation_message {
     width: 83.333333333334%;
     max-width: rem-calc(937);
     margin-left: auto;
@@ -131,43 +129,12 @@
     box-shadow: 0 0 #{rem-calc(7)} 0 rgba($black, 0.2);
   }
 
-  .gform_description {
-    @extend %p;
+  .gform_body {
+    padding-bottom: #{rem-calc(115)};
   }
 
-
-  /**
-   * Default checkbox / radio input styles. Hide default input and make inputs
-   * display block 100% by default
-   */
-
-  //Page 2 has a boxed container and inputs that should be 50% width
-  #gform_fields_1_2 {
-
-    .gfield:not(.gsection) {
-      max-width: 66.666666667%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .gfield_checkbox,
-    .gfield_radio {
-
-      @include screen-md-up {
-        width: calc(100% + #{$padding-xsmall});
-        margin-left: -1.25rem;
-      }
-
-      li {
-        flex: 1 1 100%;
-        margin: $padding-xsmall/2;
-
-        @include screen-md-up {
-          flex: 1 0.50 auto;
-          width: calc(50% - #{$padding-xsmall});
-        }
-      }
-    }
+  .gform_description {
+    @extend %p;
   }
 
   //All the other checkbox/radio inputs should be the same
@@ -326,58 +293,6 @@
     display: none;
   }
 
-  //Page Navigation
-  .gform_button,
-  .gform_previous_button,
-  .gform_next_button {
-    @extend %btn;
-    padding: 0;
-    min-width: initial;
-    width: rem-calc(45);
-    height: rem-calc(45);
-    margin: auto $padding-xsmall;
-    font-size: 0;
-    line-height: 0;
-  }
-
-  .gform_previous_button {
-    border-radius: 0 #{rem-calc(10)} 0 #{rem-calc(10)};
-    color: $blue;
-    background: $white url(../img/svg/triangle-left.svg) center no-repeat;
-  }
-
-  input[type="submit"],
-  .gform_next_button {
-    border-radius: #{rem-calc(10)} 0 #{rem-calc(10)} 0;
-    background-color: $blue;
-    background-image: url(../img/svg/triangle-right.svg), linear-gradient(45deg, $cerulean 0%, $blue 100%);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .gform_confirmation_wrapper {
-    @extend %card;
-    position: absolute;
-    top: 25%;
-    right: $padding-xsmall;
-    left: $padding-xsmall;
-    display: flex;
-    width: calc(100% - #{$padding-xsmall * 2});
-    max-width: rem-calc(742);
-    height: calc(100% - #{$padding-xsmall * 2});
-    max-height: rem-calc(305);
-    padding: #{rem-calc(29)} #{rem-calc(33.5)};
-
-    @include screen-md-up {
-      top: calc(50% - #{rem-calc(152.5)});
-      left: calc(50% - #{rem-calc(371)});
-      right: initial;
-      width: rem-calc(742);
-      height: rem-calc(305);
-      padding: #{rem-calc(58)} #{rem-calc(67)};
-    }
-  }
-
   .gform_confirmation_message {
     display: flex;
     flex-direction: column;
@@ -389,12 +304,9 @@
       display: none;
     }
 
-    h2 {
-      margin-bottom: rem-calc(10);
-      font-size: rem-calc(40);
-      color: $ebony;
-      line-height: 44px;
-      line-height: 1.1;
+    h2, h3 {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

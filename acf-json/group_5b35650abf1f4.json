@@ -39,13 +39,6 @@
         ],
         [
             {
-                "param": "post_template",
-                "operator": "==",
-                "value": "templates\/template-form-template.php"
-            }
-        ],
-        [
-            {
                 "param": "post_type",
                 "operator": "==",
                 "value": "location"
@@ -67,5 +60,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "A header that supersedes the page, sub and main headings. It is hardcoded to H1",
-    "modified": 1532436861
+    "modified": 1532463825
 }

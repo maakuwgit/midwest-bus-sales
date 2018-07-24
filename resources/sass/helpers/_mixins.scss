@@ -103,15 +103,15 @@
   display: inline-block;
   width: 100%;
   margin-top: $padding-xsmall * 0.75;
-  margin-bottom: $padding-xsmall * 0.75;
-  padding: #{rem-calc(16)}
-           #{rem-calc(16)}
-           #{rem-calc(14)}
-           #{rem-calc(16)};
+  margin-bottom: auto;
+  padding: #{rem-calc(5)}
+           #{rem-calc(7)}
+           #{rem-calc(6)}
+           #{rem-calc(7)};
   border: #{rem-calc(1)} solid #D5D8E4;
   border-radius: rem-calc(4);
   font-size: rem-calc(14);
-  font-weight: $text-semi;
+  font-weight: $text-normal;
   color: $black;
   line-height: 27px;
   line-height: 1.92857142857143;

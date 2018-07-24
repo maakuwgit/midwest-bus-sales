@@ -39,7 +39,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "A horizontal form. Only the Form ID  is an option.",
-    "modified": 1531851413
+    "modified": 1532464365
 }

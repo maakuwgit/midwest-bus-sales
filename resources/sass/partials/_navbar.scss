@@ -67,6 +67,15 @@
   .menu-item {
     &.btn {
       margin-left: rem-calc(20);
+      padding: 0;
+
+      a {
+        @extend %btn;
+
+        &:hover {
+          color: $white;
+        }
+      }
     }
 
     a {
