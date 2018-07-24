@@ -18,9 +18,29 @@
     @extend %section-padding;
   }
 
-  .customizables__feature_list {
+  .customizables__block {
+    display: none;
+    width: 100%;
+    height: auto;
 
-    .customizables__feature_title:not(.active) {
+    &.active {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .customizables__list {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .customizables__feature_list {
+    cursor: pointer;
+
+    .customizables__feature_title {
       opacity: 0.5;
 
       + .customizables__feature_description {
@@ -31,6 +51,7 @@
 
   .customizables__feature_title {
     position: relative;
+    padding: #{rem-calc(9)} 0;
     font-size: rem-calc(16);
     font-weight: $text-semi;
     color: $blue;
@@ -51,11 +72,27 @@
                   0 0 1px $blue,
                   0 0 1px $blue;
     }
+
+    &:focus,
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+
+    &:focus {
+      color: $cerulean;
+    }
+
+
+    &.active + .customizables__feature_description {
+      display: block;
+    }
   }
 
   .customizables__feature_description {
     @extend %p;
     margin-top: rem-calc(4);
+    margin-bottom: rem-calc(16);
     color: $ebony;
     font-weight: $text-normal;
   }

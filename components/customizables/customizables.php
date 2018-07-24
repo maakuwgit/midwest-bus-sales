@@ -49,7 +49,7 @@ $features           = $component_data['features'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<section class="ll-customizables<?php echo ' ' . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="customizables">
+<section class="ll-customizables<?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="customizables">
 
   <div class="container row stretch center">
 
@@ -79,6 +79,7 @@ $features           = $component_data['features'];
             <?php echo $trigger['description']; ?>
           </dd>
           <!-- .customizables__feature_description -->
+
         <?php
           $t++;
           endforeach;
@@ -102,18 +103,22 @@ $features           = $component_data['features'];
       </div><!-- .feature -->
 
       <?php if( $features ) : ?>
-      <ul class="customizables__list no-bullet row">
+      <ul class="customizables__list no-bullet row centered">
 
-        <?php foreach( $features as $visual ) : ?>
-          <li class="customizables__block col col-sm-6of12 col-md-4of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
+        <?php
+          $v = 0;
+          foreach( $features as $visual ) :
+            $active = ( $v == 0 ? ' active' : '' );
+        ?>
 
-            <div class="customizables__visual feature">
-              <?php echo $visual['image']; ?>
-            </div>
-            <!-- .customizables__visual.feature -->
-
+          <li data-trigger="<?php echo $v; ?>" class="customizables__block<?php echo $active; ?>">
+            <?php echo ll_format_image( $visual['image'] ); ?>
           </li><!-- .customizables-block.col.col-md-6of12.col-lg-5of12.col-xl-5of12.col-xxl-5of12 -->
-        <?php endforeach; ?>
+
+        <?php
+          $v++;
+          endforeach;
+        ?>
 
       </ul>
       <!-- .customizables__list.no-bullet.row.text-center -->
