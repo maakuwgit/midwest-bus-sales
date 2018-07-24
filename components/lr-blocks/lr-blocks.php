@@ -59,7 +59,7 @@ if( $has_bg ) {
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <section class="ll-lr-blocks<?php echo ' ' . $bg . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
 
-  <div class="container row">
+  <div class="container row centered center">
 
   <?php if( $content ) : ?>
     <div class="lr-blocks__content col col-md-6of12 col-lg-5of12 col-xl-5of12 col-xxl-5of12">

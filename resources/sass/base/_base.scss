@@ -166,10 +166,12 @@ input {
 }
 
 label {
-  font-size: rem-calc(18);
+  margin-top: rem-calc(30);
+  font-size: rem-calc(14);
   font-weight: $text-bold;
-  line-height: 23px;
-  line-height: 1.27777777777778;
+  color: $ebony;
+  line-height: 18px;
+  line-height: 1.28571428571429;
 }
 
 main {
@@ -182,59 +184,6 @@ main {
     article > *:last-child {
       padding-bottom: rem-calc(50);
     }
-  }
-}
-
-input[type="range"],
-progress {
-  @include slider-bar-wrapper;
-}
-
-progress {
-  &::-webkit-progress-bar {
-    @include slider-bar;
-  }
-
-  &::-webkit-progress-value {
-    background: linear-gradient(to right, rgba($blue,0) 0%,rgba($blue,1) 10%,rgba($blue,1) 100%);
-  }
-
-  &::-moz-progress-bar {
-    @include slider-bar;
-  }
-}
-
-input[type="range"] {
-  &::-webkit-slider-thumb {
-    @include slider-thumb;
-  }
-
-  &::-moz-range-track {
-    @include slider-bar;
-  }
-
-  &::-moz-range-thumb {
-    @include slider-thumb;
-  }
-
-  &::after {
-    @include slider-bar;
-    position: absolute;
-    right: rem-calc(65);
-    left: rem-calc(55);
-    content: '';
-    width: calc(100% - #{rem-calc(120)});
-  }
-
-  + .value_text {
-    position: absolute;
-    display: block;
-    top: rem-calc(22);
-    font-size: rem-calc(18);
-    font-weight: $text-bold;
-    line-height: 23px;
-    line-height: 1.27777777777778;
-    color: $blue;
   }
 }
 
@@ -255,7 +204,7 @@ textarea {
   @include input_base;
 
   @include placeholder-text {
-    font-weight: $text-bold;
-    color: $ebony;
+    font-weight: $text-normal;
+    color: $silver;
   }
 }

@@ -97,9 +97,9 @@ h1, .h1 {
   line-height: 1.9;
 
   @include screen-lg-up {
-    font-size: rem-calc(25);
-    line-height: 43px;
-    line-height: 1.72;
+    font-size: rem-calc(35);
+    line-height: 49px;
+    line-height: 1.4;
   }
 }
 
@@ -110,7 +110,7 @@ h2,
 
 %h3 {
   font-size: rem-calc(18);
-  font-weight: $text-bold;
+  font-weight: $text-light;
   line-height: 23px;
   line-height: 1.4375;
 

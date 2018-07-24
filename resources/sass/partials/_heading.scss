@@ -9,12 +9,6 @@
   max-height: initial;
   background-color: $silver;
 
-  @include screen-md-up {
-    height: 69vh;
-    max-height: 610px;
-    overflow: hidden;
-  }
-
   .hdg__supertitle,
   .hdg__title,
   .hdg__content {
@@ -35,4 +29,16 @@
       font-weight: $text-normal;
     }
   }
+
+  @include screen-md-up {
+    height: 69vh;
+    max-height: 610px;
+    overflow: hidden;
+  }
+
+  @include screen-xl-up {
+    max-height: initial;
+    height: 80vh;
+  }
+
 }

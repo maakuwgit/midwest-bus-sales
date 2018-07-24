@@ -10,17 +10,21 @@ $defaults = [
   'form_id' => false
 ];
 
-$component_data = ll_parse_args( $component_data, $defaults );
-?>
+$args = [
+  'id'      => uniqid('logo-grid-'),
+  'classes' => array(),
+];
 
-<?php
+$component_data = ll_parse_args( $component_data, $defaults );
+$component_args = ll_parse_args( $component_args, $args );
+
 /**
  * Any additional classes to apply to the main component container.
  *
  * @var array
  * @see args['classes']
  */
-$classes        = $component_args['classes'] ?: array();
+$classes  = $component_args['classes'];
 
 /**
  * ID to apply to the main component container.
@@ -28,10 +32,21 @@ $classes        = $component_args['classes'] ?: array();
  * @var array
  * @see args['id']
  */
-$component_id   = $component_args['id'];
+$id            = ' id="' . $component_args['id'] . '"';
+
+/**
+ * ACF values pulled into the component from the components.php partial.
+ */
+$form_id = $component_data['form_id'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="ll-call-to-action <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="call-to-action">
+<section class="ll-call-to-action <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="call-to-action">
 
-</div>
+  <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
+
+    <?php gravity_form( $form_id, true, true ); ?>
+
+  <?php endif; ?>
+
+</section>

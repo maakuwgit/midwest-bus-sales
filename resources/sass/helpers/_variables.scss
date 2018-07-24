@@ -106,10 +106,10 @@ $screen-xxl-min: $screen-xxl !default;
 $screen-nav-mobile: $screen-md-maximum;
 
 //Padding Options
-$padding-xsmall: rem-calc(18.5);
-$padding-small: rem-calc(37);
-$padding-medium: rem-calc(61);
-$padding-large: rem-calc(106);
+$padding-xsmall: rem-calc(12.5);
+$padding-small: rem-calc(25);
+$padding-medium: rem-calc(50);
+$padding-large: rem-calc(100);
 $padding-xlarge: $padding-small + $padding-large;
 
 //Thumbnails

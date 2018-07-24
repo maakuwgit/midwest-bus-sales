@@ -15,11 +15,21 @@
   }
 
   .three-col-w-heading__header {
-    @extend %h2;
+    @extend %h3;
+    color: $ebony;
   }
 
   .three-col-w-heading__content {
     margin-bottom: rem-calc(22);
+  }
+
+  .three-col-w-heading__block {
+
+    li {
+      padding-top: #{rem-calc(6)};
+      padding-bottom: #{rem-calc(6)};
+    }
+
   }
 
   @include disable-triangle-next;

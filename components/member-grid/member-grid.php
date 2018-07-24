@@ -13,7 +13,7 @@ $defaults = [
 ];
 
 $args = [
-  'id'      => uniqid('logo-grid-'),
+  'id'      => uniqid('member-grid-'),
   'classes' => array(),
 ];
 

@@ -21,6 +21,21 @@ if( have_rows( 'components' ) ) {
           array(),
           true
         );
+      case 'bus-comparison' :
+        //About Us”
+        $buses = array(
+          'heading'           => get_sub_field('comparison_bus_heading'),
+          'content'           => get_sub_field('comparison_bus_content'),
+          'bus_left'          => get_sub_field('comparison_bus_left'),
+          'bus_right'         => get_sub_field('comparison_bus_right')
+        );
+
+        $components .= ll_include_component(
+          'specs-comparison',
+          $buses,
+          array(),
+          true
+        );
       break;
       case 'customizable' :
         //New Buses
@@ -38,7 +53,7 @@ if( have_rows( 'components' ) ) {
         );
       break;
       case 'hero' :
-        //Pretty much every page
+        //The Blog Archive and Blog Single pages
         $hero = array(
           'supertitle'  => get_sub_field('hero_supertitle'),
           'heading'     => get_sub_field('hero_heading'),
@@ -50,6 +65,19 @@ if( have_rows( 'components' ) ) {
         $components .= ll_include_component(
           'hero',
           $hero,
+          array(),
+          true
+        );
+      break;
+      case 'call-to-action':
+        //New Buses
+        $form = array(
+          'form_id'  => get_sub_field('cta_form_id')
+        );
+
+        $components .= ll_include_component(
+          'call-to-action',
+          $form,
           array(),
           true
         );

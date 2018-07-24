@@ -90,6 +90,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "Similar to the Left\/Right Block, only with one side being a list of features.",
-    "modified": 1531859541
+    "description": "Two columns with text blocks and a headline above them aligned to the top of their boxes. A toggle switches the side of the image and the content",
+    "modified": 1532446928
 }

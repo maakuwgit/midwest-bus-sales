@@ -13,29 +13,6 @@
   background-color: $white;
   padding-top: $padding-small;
 
-  @include screen-md-only {
-    padding-top: $padding-medium;
-  }
-
-  @include screen-lg-up {
-    padding-top: $padding-large;
-
-    .lr-blocks__figure {
-      top: $padding-large;
-      bottom: $padding-large;
-    }
-
-    .lr-blocks__content {
-      min-height: 397px;
-    }
-
-    .lr-blocks__figure {
-      top: $padding-medium;
-      bottom: $padding-medium;
-    }
-
-  }
-
   &.lefty {
 
     .lr-blocks__content {
@@ -62,16 +39,6 @@
     z-index: 1;
     @include flexible(left, flex-start, column);
     padding: $padding-small 0;
-
-    @include screen-lg-up  {
-      padding-top: $padding-medium;
-      padding-bottom: $padding-medium;
-
-      > * {
-        width: 100%;
-      }
-
-    }
 
     ul {
       list-style: none;
@@ -105,13 +72,51 @@
     background-color: $periwinkle;
   }
 
+  @include screen-md-only {
+    padding-top: $padding-medium;
+  }
+
   @include screen-md-up {
-    
+
     .lr-blocks__figure {
       top: $padding-medium;
       right: 0;
       bottom: $padding-medium;
     }
-    
+
+  }
+
+  @include screen-lg-up {
+    padding-top: $padding-large;
+
+    .lr-blocks__figure {
+      top: $padding-large;
+      bottom: $padding-large;
+    }
+
+    .lr-blocks__content {
+      min-height: 397px;
+      padding-top: $padding-medium;
+      padding-bottom: $padding-medium;
+
+      > * {
+        width: 100%;
+      }
+
+    }
+
+    .lr-blocks__figure {
+      top: $padding-medium;
+      bottom: $padding-medium;
+    }
+
+  }
+
+  @include screen-xl-up {
+    min-height: 40vw;
+
+    > .container {
+      min-height: 40vw;
+    }
   }
 }

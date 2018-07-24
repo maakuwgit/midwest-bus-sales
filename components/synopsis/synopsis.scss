@@ -17,6 +17,7 @@
   }
 
   .synopsis__header {
+    @extend %h3;
   }
 
   .synopsis__description {

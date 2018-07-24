@@ -1,0 +1,142 @@
+/**
+ * specs-comparison Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-specs-comparison {
+  @extend %section-padding;
+
+  .specs-comparison__header {
+    @extend %h2;
+  }
+
+  .specs-comparison__col {
+    width: 50%;
+    flex: 0 0.5 auto;
+    min-width: rem-calc(480);
+
+    &:nth-of-type(even) {
+      background-color: $talc;
+
+      .specs-comparison__table {
+        margin-right: auto;
+        margin-left: 0;
+      }
+
+    }
+
+
+    &:nth-of-type(odd) {
+
+      .specs-comparison__table {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+    }
+
+  }
+
+  .specs-comparison__table {
+    max-width: calc( #{rem-calc($container-width)}/2);
+
+    td, th {
+      padding: #{rem-calc(25)} #{rem-calc(118)};
+    }
+
+    th {
+      @extend %h3;
+      padding-top: #{rem-calc(48)};
+      color: $ebony;
+    }
+
+    td {
+      @extend %p;
+      font-weight: $text-normal;
+
+      strong {
+        @extend %h4;
+        margin-bottom: rem-calc(10);
+        color: $ebony;
+      }
+
+    }
+
+  }
+
+  @include screen-md {
+
+    .specs-comparison__col {
+      width: 100%;
+      flex: 1 1 100%;
+
+      .specs-comparison__table {
+        max-width: initial;
+
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+      }
+
+    }
+
+    .specs-comparison__tbody {
+      display: flex;
+      flex-wrap: wrap;
+
+      tr {
+        display: inline-flex;
+      }
+    }
+
+  }
+
+  @include screen-sm-only {
+
+    .specs-comparison__tbody {
+
+      tr {
+
+        flex: 0 0.5 auto;
+        width: 50%;
+
+        &:nth-child(5n) {
+          flex: 0 1 auto;
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+  @include screen-md-up {
+
+    .specs-comparison__table {
+
+      td, th {
+        padding: #{rem-calc(25)} #{rem-calc(118)};
+      }
+
+      th {
+      padding-top: #{rem-calc(96)};
+      }
+
+    }
+
+  }
+
+  @include screen-xl-up {
+
+    .specs-comparison__table {
+      max-width: calc( #{rem-calc($container-width)}/1.625);
+    }
+
+  }
+
+}

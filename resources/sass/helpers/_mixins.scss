@@ -90,8 +90,7 @@
  * be applied to components as well
  */
 @mixin input_effects {
-  border-color: $white;
-  border-radius: rem-calc(4);
+  border-color: $cerulean;
   outline: none;
 }
 
@@ -99,6 +98,8 @@
  * Input styles
  */
 @mixin input_base {
+  appearance: none;
+  -webkit-appearance: none;
   display: inline-block;
   width: 100%;
   margin-top: $padding-xsmall * 0.75;
@@ -107,12 +108,13 @@
            #{rem-calc(16)}
            #{rem-calc(14)}
            #{rem-calc(16)};
-  border: 4px solid $midnight;
-  border-radius: rem-calc(8);
-  font-size: rem-calc(16);
-  color: $ebony;
-  appearance: none;
-  -webkit-appearance: none;
+  border: #{rem-calc(1)} solid #D5D8E4;
+  border-radius: rem-calc(4);
+  font-size: rem-calc(14);
+  font-weight: $text-semi;
+  color: $black;
+  line-height: 27px;
+  line-height: 1.92857142857143;
   background-color: $white;
 
   @include screen-lg-up {
