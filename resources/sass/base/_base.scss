@@ -186,13 +186,14 @@ main {
 
 select {
   @include input_base;
-  padding-right: 3.5rem;
-  background-image: url('../img/svg/chevron-down-w.svg');
+  padding-right: rem-calc(16);
+  background-image: url('../img/svg/angle-down.svg');
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: rem-calc(10);
   @include screen-lg-up {
     &:hover {
-      background-image: url('../img/svg/chevron-down-y.svg');
+      background-image: url('../img/svg/angle-up.svg');
     }
   }
 }

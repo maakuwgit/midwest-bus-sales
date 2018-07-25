@@ -18,7 +18,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
   }
 
   function start_lvl(&$output, $depth = 0, $args = array()) {
-    $output .= "\n<ul class=\" collapsed dropdown-menu\" id=\"dropdown-".$this->curItem."\"  data-content=\"collapse\">\n";
+    $output .= "\n<ul class=\" collapsed dropdown-menu wrapper\" id=\"dropdown-".$this->curItem."\"  data-content=\"collapse\">\n";
   }
 
   function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
@@ -26,15 +26,35 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     $item_html = '';
     parent::start_el($item_html, $item, $depth, $args);
 
+    $menu = wp_get_nav_menu_object($args->menu);
+
+    /*Check the ACFs if this is a bus */
+    $bus_hero    = get_field('bus-hero_image', $item);
+    $bus_overlay = get_field('bus-hero_overlay_strength', $item->object_id);
+
+    $title = $item->post_excerpt;
+    $description = $item->post_content;
+
     if ($item->is_dropdown && ($depth === 0)) {
       $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="collapse" data-target="#dropdown-'.$item->ID.'"', $item_html);
-      $item_html = str_replace('</a>', '<b class="caret"></b></a>', $item_html);
+      $item_html = str_replace('</a>', '</a>', $item_html);
     }
     elseif (stristr($item_html, 'li class="divider')) {
       $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);
     }
     elseif (stristr($item_html, 'li class="dropdown-header')) {
       $item_html = preg_replace('/<a[^>]*>(.*)<\/a>/iU', '$1', $item_html);
+    }
+    if ( $bus_hero ) {
+      $img = '<div class="feature"><img alt="" src="'.$bus_hero.'"></div>';
+
+      $content = '';
+
+      if ( $title ) $content .= '<small class="text-bold">' . $bus_hero['title'] . '</small>';
+
+      if ( $description ) $content .= format_text($description);
+
+      $item_html .= '<figure data-backgrounder>'.$img.'<figcaption>'.$content.'</figcaption></figure>';
     }
 
     $item_html = apply_filters('roots/wp_nav_menu_item', $item_html);
@@ -99,7 +119,7 @@ function roots_nav_menu_args($args = '') {
   }
 
   if (!$args['depth']) {
-    $roots_nav_menu_args['depth'] = 2;
+    $roots_nav_menu_args['depth'] = 3;
   }
 
   if (!$args['walker']) {

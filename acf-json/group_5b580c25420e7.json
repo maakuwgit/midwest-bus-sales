@@ -1,0 +1,69 @@
+{
+    "key": "group_5b580c25420e7",
+    "title": "Bus Hero",
+    "fields": [
+        {
+            "key": "field_5b580c2548e22",
+            "label": "Image",
+            "name": "bus-hero_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b580c2548f1e",
+            "label": "Overlay",
+            "name": "bus-hero_overlay_strength",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "0.6",
+            "placeholder": "0.6",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 1,
+            "step": "0.1"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "ownership"
+            }
+        ]
+    ],
+    "menu_order": -1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "100vw, 85vh <DIV> with the following options. The background image is styled to have an overlay tint, which can be controlled through the component.",
+    "modified": 1532521927
+}

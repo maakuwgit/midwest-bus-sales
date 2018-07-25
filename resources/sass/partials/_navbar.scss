@@ -308,14 +308,7 @@ body.locked {
 }
 
 .dropdown-menu {
-  flex-direction: column;
   list-style: none;
-
-  li {
-    width: 100%;
-    text-align: left;
-  }
-
 }
 
 #primary-nav {
@@ -379,4 +372,47 @@ body.locked {
   .nav {
     margin: auto 0 auto auto;
   }
+
+  .dropdown-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  list-style: none;
+  background-color: $white;
+
+  &:before {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: rem-calc(158);
+    background-color: $white;
+    z-index: -1;
+  }
+
+  &.collapsed {
+    display: none;
+  }
+
+  .menu-item {
+    width: 25%;
+    height: rem-calc(158);
+    flex: 0 0.25 auto;
+    display: inline-flex;
+    text-align: left;
+
+    a {
+      display: block;
+      padding: #{rem-calc(54)};
+      font-size: rem-calc(18);
+      font-weight: $text-semi;
+      line-height: 21px;
+      line-height: 1.16666666666667;
+      color: $blue;
+    }
+  }
+
+}
 }

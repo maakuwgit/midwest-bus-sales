@@ -1,0 +1,63 @@
+/**
+ * Archive Bus
+ */
+.post-type-archive-bus {
+  main {
+    min-height: 100vh;
+    margin-top: rem-calc(107);
+    @extend %section-padding;
+  }
+
+  .form-skin {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .gform_body {
+      padding: 0;
+    }
+
+    .gsection {
+      background-color: $talc;
+      width: 100%;
+      padding: rem-calc(21);
+    }
+
+    .gsection_title{
+      @extend %h4;
+      margin-bottom: 0;
+      color: $ebony;
+    }
+
+    .gfield:not(.gsection) {
+      width: 50%;
+      flex: 0 0.5 auto;
+    }
+
+  }
+
+  .bus__row__figure {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: rem-calc(220);
+    background-color: $blue;
+  }
+
+  .bus__row__header {
+    background-image: linear-gradient(180deg, #F7F8FF 0%, #E1E4EE 100%);
+  }
+
+  .bus__row__header,
+  .bus__row__details {
+    width: calc(100% - #{rem-calc(220)});
+    margin: 0 0 0 auto;
+    display: flex;
+  }
+
+  .bus__row__name {
+    @extend %h4;
+    color: $ebony;
+  }
+
+}

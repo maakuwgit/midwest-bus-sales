@@ -83,17 +83,17 @@ if ( ! function_exists('register_bus_taxonomy') ) {
 
     // Add new taxonomy, make it non-hierarchical (like tags)
     $labels = array(
-      'name'                => _x( 'Models', 'taxonomy general name' ),
-      'singular_name'       => _x( 'Model', 'taxonomy singular name' ),
-      'search_items'        => __( 'Search Models' ),
-      'all_items'           => __( 'All Models' ),
-      'parent_item'         => __( 'Parent Model' ),
-      'parent_item_colon'   => __( 'Parent Model:' ),
-      'edit_item'           => __( 'Edit Model' ),
-      'update_item'         => __( 'Update Model' ),
-      'add_new_item'        => __( 'Add New Model' ),
-      'new_item_name'       => __( 'New Model' ),
-      'menu_name'           => __( 'Models' )
+      'name'                => _x( 'Unit Types', 'taxonomy general name' ),
+      'singular_name'       => _x( 'Unit Type', 'taxonomy singular name' ),
+      'search_items'        => __( 'Search Types' ),
+      'all_items'           => __( 'All Types' ),
+      'parent_item'         => __( 'Parent Type' ),
+      'parent_item_colon'   => __( 'Parent Type:' ),
+      'edit_item'           => __( 'Edit Type' ),
+      'update_item'         => __( 'Update Type' ),
+      'add_new_item'        => __( 'Add New Type' ),
+      'new_item_name'       => __( 'New Type' ),
+      'menu_name'           => __( 'Unit Types' )
     );
 
     $args = array(
