@@ -58,10 +58,14 @@
   }
 
   .bus__row {
-    margin-top: rem-calc(40);
+    margin-bottom: rem-calc(40);
     border: solid 1px #E4E6EE;
     border-radius: rem-calc(4);
     overflow: hidden;
+
+    &:last-child {
+      margin-bottom: auto;
+    }
   }
 
   .bus__row__figure {

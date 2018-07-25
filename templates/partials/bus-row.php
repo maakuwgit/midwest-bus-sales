@@ -24,6 +24,13 @@
   }
 
   if( $_GET['bus_make'] && $_GET['bus_make'] !== $make ) return;
+  if( $_GET['bus_model'] && $_GET['bus_model'] !== $model ) return;
+  if( $_GET['bus_brakes'] && $_GET['bus_brakes'] !== $brakes ) return;
+  if( $_GET['bus_engine'] && $_GET['bus_engine'] !== $engine ) return;
+  if( $_GET['bus_fuel'] && $_GET['bus_fuel'] !== $fuel ) return;
+  if( $_GET['bus_air'] && $_GET['bus_air'] !== $air ) return;
+  if( $_GET['bus_luggage'] && $_GET['bus_luggage'] !== $luggage ) return;
+  if( $_GET['bus_lift'] && $_GET['bus_lift'] !== $lift ) return;
 ?>
 <article class="bus__row row relative" data-clickthrough>
 
