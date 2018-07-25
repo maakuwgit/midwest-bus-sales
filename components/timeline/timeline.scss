@@ -1,0 +1,87 @@
+/**
+ * timeline Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-timeline {
+  @extend %section-padding;
+
+  .timeline__milestones {
+    height: rem-calc(357);
+
+    &:before {
+      content: '•••••••••••••••••••••••••••••••••••••••••••••••••••••••';
+      white-space: nowrap;
+      position: absolute;
+      top: calc(50% - #{rem-calc(26.5)});
+      overflow: hidden;
+      font-size: rem-calc(30);
+      color: $white;
+      text-shadow: 0 0 #{rem-calc(3)} rgba($black, 0.3);
+      letter-spacing: rem-calc(10);
+      z-index: -1;
+    }
+  }
+
+  .timeline__milestone {
+    flex-direction: column;
+    align-self: flex-start;
+
+    &:nth-child(2),
+    &:last-child {
+
+      .timeline__milestone__year {
+        order: 2;
+        margin-top: rem-calc(20);
+        margin-bottom: initial;
+      }
+
+      .timeline__milestone__content {
+        order: 1;
+      }
+
+    }
+
+    &:nth-child(odd) {
+      align-self: flex-end;
+    }
+
+  }
+
+  .timeline__milestone__year {
+    @extend %coin;
+    width: rem-calc(75);
+    height: rem-calc(75);
+    margin-bottom: rem-calc(20);
+    margin-left: rem-calc(69);
+    padding: rem-calc(28);
+    font-size: rem-calc(14);
+    line-height: 18px;
+    line-height: 1.28571428571429;
+    background-color: $blue;
+    background-image: linear-gradient(135deg, $blue 0%, $cerulean 100%);
+  }
+
+  .timeline__milestone__content {
+    @extend %p;
+    width: rem-calc(213);
+    height: rem-calc(121);
+    padding: rem-calc(14);
+    box-shadow: 0 0 #{rem-calc(4)} 0 rgba($black, 0.17);
+
+    strong {
+      @extend %h4;
+      margin-bottom: rem-calc(3);
+      color: $blue;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+}

@@ -299,6 +299,9 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
   &.periwinkle {
     color: $periwinkle;
   }
+  &.talc {
+    color: $talc;
+  }
   &.grey {
     color: $grey;
   }
@@ -325,6 +328,9 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
   }
   &.powder {
     background-color: $powder;
+  }
+  &.talc {
+    background-color: $talc;
   }
   &.periwinkle {
     background-color: $periwinkle;

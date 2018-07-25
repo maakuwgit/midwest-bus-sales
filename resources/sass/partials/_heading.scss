@@ -32,7 +32,8 @@
 
   @include screen-md-up {
     height: 69vh;
-    max-height: 610px;
+    max-height: rem-calc(610);
+    min-height: 560px;
     overflow: hidden;
   }
 

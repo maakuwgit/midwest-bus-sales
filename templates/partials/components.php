@@ -233,6 +233,19 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
+      case 'timeline' :
+        //Home
+        $milestones = array(
+          'milestones' => get_sub_field('timeline_milestones')
+        );
+
+        $components .= ll_include_component(
+          'timeline',
+          $milestones,
+          array(),
+          true
+        );
+      break;
       case 'two-col-w-heading' :
         //Home, About, all Locations
         $blocks = array(

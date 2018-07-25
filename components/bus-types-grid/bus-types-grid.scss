@@ -9,6 +9,10 @@
 .ll-bus-types-grid {
   @extend %section-padding;
 
+  .bus-types-grid__heading {
+    @extend %h3;
+  }
+
   .bus-type-grid__card {
     @extend %card;
 

@@ -480,6 +480,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5b57d2f98f4f9": {
+                    "key": "5b57d2f98f4f9",
+                    "name": "timeline",
+                    "label": "Timeline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b57d2f98f4fa",
+                            "label": "Timeline",
+                            "name": "timeline",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b57cc9112cdc"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -533,5 +564,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1532457183
+    "modified": 1532482321
 }

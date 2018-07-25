@@ -56,7 +56,7 @@ $cards              = $component_data['cards'];
     <div class="col col-md-10of12 col-lg-9of12 col-xl-10of12 col-xxl-10of12 text-center">
 
     <?php if( $heading ) : ?>
-      <<?php echo $heading['tag'];?>><?php echo $heading['text']; ?></<?php echo $heading['tag'];?>>
+      <<?php echo $heading['tag'];?> class="bus-types-grid__heading"><?php echo $heading['text']; ?></<?php echo $heading['tag'];?>>
       <!-- .bus-types-grid__heading -->
     <?php endif; ?>
 

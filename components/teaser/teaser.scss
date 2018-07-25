@@ -10,6 +10,10 @@
   @extend %section-padding;
   @include triangle-caps;
 
+  .teaser__headline {
+    @extend %h3;
+  }
+
   .teaser__col__title {
     color: $blue;
     font-weight: $text-semi;

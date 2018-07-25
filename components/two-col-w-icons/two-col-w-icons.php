@@ -45,6 +45,13 @@ $style      = $component_data['style'];
 $type       = $component_data['type'];
 $content    = $component_data['content'];
 $list       = $component_data['list'];
+$has_bg     = $component_data['has_bg'];
+
+if( $has_bg ) {
+  $bg = ' periwinkle';
+}else{
+  $bg = '';
+}
 
 
 $type = ( $type ? ' ' . $type : '' );
@@ -52,7 +59,7 @@ $type = ( $type ? ' ' . $type : '' );
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<section class="ll-two-col-w-icons<?php echo implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="two-col-w-icons">
+<section class="ll-two-col-w-icons<?php echo $bg . implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="two-col-w-icons">
 
   <div class="container row start centered">
 
