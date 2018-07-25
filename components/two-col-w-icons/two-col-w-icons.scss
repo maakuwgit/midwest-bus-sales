@@ -40,7 +40,7 @@
       }
     }
 
-    a {
+    a:not(.btn) {
       color: $blue;
 
       &:hover {
@@ -56,11 +56,28 @@
 
     &:before {
       @extend %coin;
-      content: '';
+      content: 'S';
       position: absolute;
       margin-left: rem-calc(-70);
       color: $blue;
       background-color: $powder;
+    }
+
+      
+    &:nth-of-type(2) {
+      &:before {
+        content: 'M';
+      }
+    }
+
+    &:nth-of-type(3) {
+      &:before {
+        content: 'L';
+      }
+    }
+
+    &.check:before {
+      content: '';
       background-image: url(../img/svg/check.svg);
       background-repeat: no-repeat;
       background-size: contain;
