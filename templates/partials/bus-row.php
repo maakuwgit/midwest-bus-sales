@@ -23,6 +23,7 @@
 
     <h2 class="bus__row__name"><?php the_title(); ?></h2>
     <!-- .bus__name -->
+    <a class="btn" href="<?php bloginfo('url'); ?>/contact-us?bus_unit=<?php echo $unit;?>">Request a Quote</a>
 
   </header>
   <!-- .bus__row__header -->
@@ -37,9 +38,9 @@
   </figure>
 
   <dl class="bus__row__details">
-    <div>
 
     <?php if ($bus_types) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Bus Type</dt>
       <!-- .bus__row__details__title -->
@@ -55,9 +56,12 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
     <?php if( $mileage ) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Mileage</dt>
       <!-- .bus__row__details__title -->
@@ -67,9 +71,12 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
     <?php if( $unit ) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Unit</dt>
       <!-- .bus__row__details__title -->
@@ -79,9 +86,12 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
     <?php if( $luggage ) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Luggage</dt>
       <!-- .bus__row__details__title -->
@@ -91,9 +101,12 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
     <?php if( $engine ) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Engine</dt>
       <!-- .bus__row__details__title -->
@@ -103,9 +116,12 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
     <?php if( $location ) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Location</dt>
       <!-- .bus__row__details__title -->
@@ -115,9 +131,12 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
     <?php if( $seating ) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Seating</dt>
       <!-- .bus__row__details__title -->
@@ -127,9 +146,12 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
     <?php if( $lift ) : ?>
+    <div class="bus__row__details__wrapper">
 
       <dt class="bus__row__details__title">Lift</dt>
       <!-- .bus__row__details__title -->
@@ -139,6 +161,8 @@
       </dd>
       <!-- .bus__row__details__description -->
 
+    </div>
+    <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
 

@@ -68,6 +68,14 @@
 
   .bus__row__header {
     background-image: linear-gradient(180deg, #F7F8FF 0%, #E1E4EE 100%);
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   .bus__row__header,
@@ -79,6 +87,30 @@
 
   .bus__row__name {
     @extend %h4;
+    padding: #{rem-calc(12)} #{rem-calc(38)};
+    line-height: 24px;
+    line-height: 1.33333333333333;
+    text-transform: uppercase;
+    color: $ebony;
+  }
+
+  .bus__row__details__title,
+  .bus__row__details__description {
+    font-size: rem-calc(14);
+  }
+
+  .bus__row__details__wrapper {
+    padding: #{rem-calc(19)} #{rem-calc(22)};
+  }
+
+  .bus__row__details__description {
+    line-height: 27px;
+    line-height: 1.92857142857143
+  }
+
+  .bus__row__details__title {
+    line-height: 18px;
+    line-height: 1.28571428571429;
     color: $ebony;
   }
 
