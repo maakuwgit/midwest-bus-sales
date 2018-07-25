@@ -57,12 +57,19 @@
 
   }
 
+  .bus__row {
+    margin-top: rem-calc(40);
+    border: solid 1px #E4E6EE;
+    border-radius: rem-calc(4);
+    overflow: hidden;
+  }
+
   .bus__row__figure {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: rem-calc(220);
+    width: rem-calc(188);
     background-color: $blue;
   }
 
@@ -80,7 +87,7 @@
 
   .bus__row__header,
   .bus__row__details {
-    width: calc(100% - #{rem-calc(220)});
+    width: calc(100% - #{rem-calc(188)});
     margin: 0 0 0 auto;
     display: flex;
   }
@@ -94,13 +101,21 @@
     color: $ebony;
   }
 
+  .bus__row__details {
+    padding-top: rem-calc(19);
+    padding-bottom: rem-calc(19);
+  }
+
   .bus__row__details__title,
   .bus__row__details__description {
     font-size: rem-calc(14);
   }
 
   .bus__row__details__wrapper {
-    padding: #{rem-calc(19)} #{rem-calc(22)};
+    flex: 0 0.5 auto;
+    width: 25%;
+    min-width: 88px;
+    padding: #{rem-calc(4)} #{rem-calc(22)};
   }
 
   .bus__row__details__description {

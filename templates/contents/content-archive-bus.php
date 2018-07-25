@@ -9,13 +9,34 @@
 
   <?php endif; ?>
 
-  <div class="bus__entries col col-8of12">
+  <article class="bus__entries col col-8of12">
+<?php
+  $args    = array(
+            'post_type'     => 'bus',
+            'post_status'   => 'publish',
+            'order'         => 'ASC',
+            'showposts'     => -1,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'ownership',
+                'field' => 'slug',
+                'terms' => 'new',
+                'include_children' => true,
+                'operator' => 'NOT IN'
+              )
+            )
+          );
 
-  <?php while (have_posts()) : the_post(); ?>
+  $buses = new WP_Query( $args );
+
+  if ( $buses->have_posts() ) : ?>
+
+  <?php while ( $buses->have_posts()) : $buses->the_post(); ?>
     <?php include( locate_template('templates/partials/bus-row.php') ); ?>
   <?php endwhile; ?>
 
-  </div>
+<?php endif; ?>
+  </article>
   <!-- .bus__entries.col -->
 
 </div>

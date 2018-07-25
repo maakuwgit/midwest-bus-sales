@@ -26,7 +26,7 @@ if ( ! function_exists('register_bus_custom_post_type') ) {
       'label'               => 'bus',
       'description'         => 'Bus description',
       'labels'              => $labels,
-      'supports'            => array( 'title', 'page-attributes' ),
+      'supports'            => array( 'title', 'thumbnail', 'page-attributes' ),
       'hierarchical'        => true,
       'public'              => true,
       'show_ui'             => true,
@@ -57,17 +57,17 @@ if ( ! function_exists('register_bus_taxonomy') ) {
 
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
-      'name'                => _x( 'Ownership', 'taxonomy general name' ),
-      'singular_name'       => _x( 'Ownership', 'taxonomy singular name' ),
-      'search_items'        => __( 'Search Ownership' ),
-      'all_items'           => __( 'All Ownership' ),
-      'parent_item'         => __( 'Owner\'s owner' ),
-      'parent_item_colon'   => __( 'Owner\'s owner:' ),
-      'edit_item'           => __( 'Edit Owner' ),
-      'update_item'         => __( 'Update Owner' ),
-      'add_new_item'        => __( 'Add New Owner' ),
-      'new_item_name'       => __( 'New Owner' ),
-      'menu_name'           => __( 'Ownership' )
+      'name'                => _x( 'Bus Types', 'taxonomy general name' ),
+      'singular_name'       => _x( 'Bus Type', 'taxonomy singular name' ),
+      'search_items'        => __( 'Search Bus Types' ),
+      'all_items'           => __( 'All Bus Types' ),
+      'parent_item'         => __( 'Bus Type owner' ),
+      'parent_item_colon'   => __( 'Bus Type owner:' ),
+      'edit_item'           => __( 'Edit Bus Type' ),
+      'update_item'         => __( 'Update Bus Type' ),
+      'add_new_item'        => __( 'Add New Bus Type' ),
+      'new_item_name'       => __( 'New Bus Type' ),
+      'menu_name'           => __( 'Bus Types' )
     );
 
     $args = array(

@@ -118,6 +118,33 @@
             "step": ""
         },
         {
+            "key": "field_5b58d1299c3b4",
+            "label": "Fuel Type",
+            "name": "filterables_fuel",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "diesel": "Diesel",
+                "unleaded": "Unleaded"
+            },
+            "default_value": [
+                "diesel"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
             "key": "field_5b588a027c3f9",
             "label": "Year",
             "name": "filterables_year",
@@ -203,6 +230,25 @@
             "key": "field_5b588e8c07c0f",
             "label": "Luggage",
             "name": "filterables_luggage",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b58d19db4e7f",
+            "label": "A\/C",
+            "name": "filterables_air",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -492,6 +538,46 @@
             "maxlength": ""
         },
         {
+            "key": "field_5b588dd7b0f94",
+            "label": "Bus Location",
+            "name": "filterables_location",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b58d0cd19ead",
+            "label": "Price",
+            "name": "filterable_price",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
             "key": "field_5b5887e47c3e7",
             "label": "Phone",
             "name": "filterables_phone",
@@ -566,25 +652,6 @@
             "maxlength": "",
             "rows": 3,
             "new_lines": "br"
-        },
-        {
-            "key": "field_5b588dd7b0f94",
-            "label": "Bus Location",
-            "name": "filterables_location",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -604,5 +671,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1532530338
+    "modified": 1532547506
 }

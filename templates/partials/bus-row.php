@@ -1,5 +1,5 @@
 <?php
-  $bus_types  = get_terms('ownership');
+  $bus_types  = get_the_terms(get_the_ID(), 'ownership');
   $mileage    = get_field('filterables_mileage');
   $unit       = get_field('filterables_unit_number');
   $luggage    = get_field('filterables_luggage');
@@ -7,13 +7,23 @@
   $location   = get_field('filterables_location');
   $seating    = get_field('filterables_seating');
   $lift       = get_field('filterables_lift');
+  $make       = get_field('filterables_make');
+  $model      = get_field('filterables_model');
+  $price      = get_field('filterables_price');
+  $brakes     = get_field('filterables_brakes');
+  $passengers = get_field('filterables_passengers');
+  $fuel       = get_field('filterables_fuel');
+  $year       = get_field('filterables_year');
+  $air        = get_field('filterables_air');
   $image      = has_post_thumbnail();
 
   if( $image ) {
-    $bg = ' data-background';
+    $bg = ' data-backgrounder';
   }else {
     $bg = '';
   }
+
+  if( $_GET['bus_make'] && $_GET['bus_make'] !== $make ) return;
 ?>
 <article class="bus__row row relative" data-clickthrough>
 
@@ -37,7 +47,7 @@
 
   </figure>
 
-  <dl class="bus__row__details">
+  <dl class="bus__row__details row start">
 
     <?php if ($bus_types) : ?>
     <div class="bus__row__details__wrapper">
@@ -49,7 +59,7 @@
 
       <?php foreach($bus_types as $type) : ?>
 
-        <?php echo $type->name; ?>
+        <?php echo ucfirst($type->slug); ?>
 
       <?php endforeach; ?>
 
@@ -97,7 +107,7 @@
       <!-- .bus__row__details__title -->
 
       <dd class="bus__row__details__description">
-        <?php echo $luggage; ?>
+        <?php echo $luggage === 1 ? 'Yes' : 'No'; ?>
       </dd>
       <!-- .bus__row__details__description -->
 
@@ -165,8 +175,6 @@
     <!-- .bus__row__details__wrapper -->
     <?php endif; ?>
 
-
-    </div>
   </dl>
 
 </article>
