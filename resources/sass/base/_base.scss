@@ -122,47 +122,6 @@ input {
   &:focus {
     outline: none;
   }
-
-  &[type="checkbox"] {
-    display: inline-flex;
-    appearance: none;
-    margin-right: rem-calc(13);
-    height: rem-calc(19);
-    width: rem-calc(19);
-    border: #{rem-calc(2)} solid rgba(#979797, 0.5);
-    border-radius: rem-calc(4);
-
-    &:checked {
-      border-color: transparent;
-      background-color: transparent;
-
-      &:after,
-      &:before {
-        content: '';
-        position: absolute;
-      }
-
-      &:before {
-        z-index: 1;
-        height: rem-calc(23);
-        width: rem-calc(23);
-        border-radius: rem-calc(6);
-        margin-left: rem-calc(-4);
-        margin-top: rem-calc(-4);
-        background-color: $blue;
-        background-image: linear-gradient(to right, rgba(190,199,218,1) 0%, rgba(182,224,227,1) 100%);
-      }
-
-      &:after {
-        z-index: 2;
-        height: rem-calc(15);
-        width: rem-calc(15);
-        border-radius: inherit;
-        background-color: $navy;
-        background-image: linear-gradient(320.43deg, $blue 0%, $navy 100%);
-      }
-    }
-  }
 }
 
 label {

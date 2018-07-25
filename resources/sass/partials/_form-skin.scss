@@ -137,111 +137,24 @@
     @extend %p;
   }
 
-  //All the other checkbox/radio inputs should be the same
   .gfield_checkbox,
   .gfield_radio {
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
 
-    @include screen-md-up {
-      width: calc(100% + #{$padding-xsmall});
-      margin-left: -1.25rem;
-    }
-
     li {
-      flex: 1 1 100%;
-      margin: $padding-xsmall/2;
+      margin-left: rem-calc(30);
 
-      @include screen-md-only {
-        flex: 1 0.50 auto;
-        width: calc(50% - #{$padding-xsmall});
+      &:first-child {
+        margin-left: 0;
       }
-
-      @include screen-lg-up {
-        flex: 1 0.33 auto;
-        width: calc(33% - #{$padding-xsmall * 2});
-        margin: $padding-xsmall;
-      }
-
-      label {
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 75px;
-        height: 100%;
-        padding: #{rem-calc(13)} #{rem-calc(10)} #{rem-calc(17)} #{rem-calc(10)};
-        border: none;
-        border-radius: rem-calc(4);
-        text-align: center;
-        color: $white;
-        background-image: linear-gradient(180deg, $navy 0%, $powder 100%);
-        box-shadow: 0 #{rem-calc(4)} #{rem-calc(10)} 0 rgba($black, 0.4);
-
-        @include screen-md-up {
-          min-height: 113px;
-          padding: #{rem-calc(43)} #{rem-calc(40)} #{rem-calc(47)} #{rem-calc(40)};
-        }
-
-        &:before {
-          content: initial;
-        }
-
-      }
-
     }
 
-    /**
-     * extend visuallyhidden rather than display: none to hide the input to
-     * allow the input to still be accessible by screen readers and keyboards
-     */
-    input {
-      @extend %visuallyhidden;
-
-      /**
-       * give the focused inputs label a style so keyboard users can tell
-       * which radio / checkbox is focused. Accessibility win
-       */
-      &:hover ~ label,
-      &:checked ~ label {
-        color: #5252CD;
-        background-image: none;
-        background-color: $white;
-      }
-
-      &:focus ~ label {
-        color: $ebony;
-      }
-
-    }
-
-    /**
-     * use pseudo elements on the label for the custom checkbox / radio icons.
-     * the ::before here is the base styles for those. The icons are set
-     * further down
-     */
     label {
-      position: relative;
-      display: block;
-      padding: 0.15em;
-      border: 1px solid transparent; //this prevents the label from jumping when the border shows on focus
-      transition: border 0.15s linear;
-
-      &::before {
-        content: '';
-        position: relative;
-        top: -0.05em; //baseline offset for icon
-        display: inline-block;
-        width: 1.75em;
-        height: 1.75em;
-        margin-right: 0.25em;
-        vertical-align: middle;
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-
+      font-size: rem-calc(14);
+      line-height: 27px;
+      line-height: 1.92857142857143;
+      font-weight: $text-light;
     }
   }
 
