@@ -21,6 +21,10 @@
     line-height: 1.4;
   }
 
+  + .ll-timeline {
+    padding-top: 0;
+  }
+
   @include screen-md-up {
 
     .two-col-w-heading__block {
