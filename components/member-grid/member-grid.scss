@@ -10,6 +10,11 @@
   @extend %section-padding;
   background-color: $talc;
 
+  /* Dev Note: Should there be an archive page, simply remove this style */
+  .member-grid__nav {
+    display: none;
+  }
+
   .container:first-child {
     padding-bottom: $padding-medium;
   }
