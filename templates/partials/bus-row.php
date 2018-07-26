@@ -34,11 +34,31 @@
 
   if($_GET['bus_price']){
     $get_price = preg_replace('/\s+/', '', $_GET['bus_price']);
-    $from_price = substr($get_price, 0, strpos($get_price, '-'));
-    $to_price = substr($get_price, strpos($get_price, '-') + 1);
+
+    if( strpos($get_price, '-') ) {
+      $from_price = substr($get_price, 0, strpos($get_price, '-'));
+    }
+
+    if( strpos($get_price, '<') ) {
+      $from_price = substr($get_price, 0, strpos($get_price, '<'));
+    }
 
     if(!$from_price) $from_price = 0;
+
+    $to_price = substr($get_price, strpos($get_price, '-') + 1);
+
     if( $price < $from_price || $price > $to_price) return;
+  }
+ //var_dump($_GET['bus_mileage_from'], $mileage, $_GET['bus_mileage_from'] < $mileage);
+
+  if( $_GET['bus_mileage_from'] ){
+    $from_miles = str_replace(',', '', $_GET['bus_mileage_from']);
+    if( $mileage < $from_miles ) return;
+  }
+
+  if( $_GET['bus_mileage_to'] ){
+    $to_miles = str_replace(',', '', $_GET['bus_mileage_to']);
+    if( $mileage > $to_miles ) return;
   }
 ?>
 <article class="bus__row row relative" data-clickthrough>
