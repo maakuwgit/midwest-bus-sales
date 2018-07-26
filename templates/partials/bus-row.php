@@ -68,7 +68,7 @@
     if( $year > $_GET['bus_year_to'] ) return;
   }
 ?>
-<article class="bus__row row relative" data-clickthrough>
+<section class="bus__row row relative" data-clickthrough>
 
   <a class="hide" href="<?php the_permalink();?>"></a>
 
@@ -220,4 +220,4 @@
 
   </dl>
 
-</article>
+</section>
