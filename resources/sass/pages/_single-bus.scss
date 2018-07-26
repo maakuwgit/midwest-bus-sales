@@ -3,12 +3,9 @@
  */
 .single-bus {
 
-  main {
-    padding-top: rem-calc(107);
-  }
-
   .bus__hdg__breadcrumb {
     display: flex;
+    padding-top: rem-calc(107);
     margin-top: rem-calc(81);
     margin-bottom: rem-calc(18);
     list-style: none;
