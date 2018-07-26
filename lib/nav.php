@@ -47,7 +47,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
       $item_html  = '<li class="menu-item">';
       $item_html .= '<figure class="menu-item-image" data-backgrounder>'.$img;
       $item_html .= '<figcaption class="menu-item-image_caption">'.$content.'</figcaption>';
-      $item_html .= '</figure></li>';
+      $item_html .= '</figure>';
     }
     elseif ($item->is_dropdown && ($depth === 0)) {
       $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="collapse" data-target="#dropdown-'.$item->ID.'"', $item_html);
