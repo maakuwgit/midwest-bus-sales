@@ -202,5 +202,13 @@
 <title>Triangle Right</title>
 <polygon transform="translate(23.000000, 23.000000) rotate(90.000000) translate(-23.000000, -23.000000) " points="23 19 29 27 17 27"></polygon>
 </symbol>
+<symbol id="icon-triangle-down" viewBox="0 0 45 45">
+<title>Triangle Down</title>
+<polygon transform="translate(23.000000, 23.000000) rotate(180.000000) translate(-23.000000, -23.000000) " points="23 19 29 27 17 27"></polygon>
+</symbol>
+<symbol id="icon-triangle-up" viewBox="0 0 45 45">
+<title>Triangle Up</title>
+<polygon transform="translate(23.000000, 23.000000) translate(-23.000000, -23.000000) " points="23 19 29 27 17 27"></polygon>
+</symbol>
 </defs>
 </svg>

@@ -30,6 +30,10 @@
     }
   }
 
+  .hdg__nav {
+    margin-top: rem-calc(115);
+  }
+
   @include screen-md-up {
     height: 69vh;
     max-height: rem-calc(610);

@@ -17,6 +17,15 @@
     </div><!-- .hdg__content -->
   <?php endif; ?>
 
+  <?php if( is_singular('bus') ) : ?>
+    <a class="hdg__nav icon-link row centered start" href="<?php echo bloginfo('url') . '/parts'; ?>">
+      <svg class="icon icon-triangle-down iflex">
+        <use xlink:href="#icon-triangle-down"></use>
+      </svg>
+      <span class="icon-link__text iflex">Request Pricing</span>
+    </a><!-- .icon-link.row.centered.start -->
+  <?php endif; ?>
+
   </div><!-- .container -->
 
 </header><!-- .hdg -->
