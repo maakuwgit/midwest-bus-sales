@@ -117,6 +117,15 @@ if( $image ) {
 
   <?php endif; ?>
 
+  <?php if ( $video ) : ?>
+    <a class="play-video-button js-play-video flex centered start row">
+      <svg class="icon icon-triangle-right iflex">
+        <use xlink:href="#icon-triangle-right"></use>
+      </svg>
+      <span class="iflex">Watch Video</span>
+    </a>
+  <?php endif; ?>
+
   </div>
 
 </header>

@@ -38,4 +38,22 @@
   .hero__heading {
     @extend %h0;
   }
+
+  .play-video-button {
+    margin-top: rem-calc(21);
+    font-size: rem-calc(14);
+    font-weight: $text-bold;
+    line-height: 18px;
+    line-height: 1.28571428571429;
+    color: $white;
+
+    svg {
+      width: rem-calc(34);
+      height: rem-calc(34);
+      fill: white;
+      margin-right: rem-calc(10);
+      border-radius: 200px;
+      background-color: rgba($white, 0.5);
+    }
+  }
 }
