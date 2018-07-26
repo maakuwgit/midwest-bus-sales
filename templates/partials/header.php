@@ -4,12 +4,16 @@
 <header class="navbar top" role="banner">
   <div class="navbar__topbar">
     <nav class="navbar__topbar__nav container row end centered">
-      <a href="#search" class="navbar__topbar__search iflex">
-        <span>Search</span>
-        <svg class="icon icon-search">
-          <use xlink:href="#icon-search"></use>
-        </svg>
-      </a>
+
+      <form class="navbar__topbar__search iflex" role="search" method="get" id="search" action="<?php echo home_url(); ?>" data-component="search-form">
+        <input type="text" value="" name="s" id="s" placeholder="Search">
+        <label>
+          <svg class="icon icon-search">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+        </label>
+      </form>
+
       <?php if( $phone ) : ?>
         <a class="navbar__topbar__phone iflex" href="tel:+1<?php echo $phone; ?>"><?php echo format_phone($phone, false, '.'); ?></a>
       <?php endif; ?>

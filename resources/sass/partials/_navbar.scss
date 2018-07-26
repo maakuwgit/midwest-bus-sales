@@ -107,6 +107,7 @@
 
 .navbar__topbar {
   height: rem-calc(28);
+  width: auto;
   margin-bottom: rem-calc(12);
   font-size: rem-calc(14);
   font-weight: $text-semi;
@@ -118,9 +119,48 @@
 }
 
 .navbar__topbar__search {
+  width: auto;
 
-  span {
+  label {
+    margin-top: auto;
+    margin-right: rem-calc(30);
+
+    .icon {
+      fill: $blue;
+    }
+  }
+
+  input {
+    display: inline-flex;
+    width: rem-calc(65);
     align-self: center;
+    margin: auto;
+    padding: 0;
+    line-height: 1.5;
+    margin-top: 2.5px;
+    text-align: right;
+    border-color: transparent;
+    background-color: transparent;
+
+    @include placeholder-text {
+      color: $blue;
+    }
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &:focus {
+      width: auto;
+      padding-right: #{rem-calc(8)};
+      padding-left: #{rem-calc(8)};
+      text-align: left;
+      background-color: $white;
+
+      &:hover {
+        border-color: $silver;
+      }
+    }
   }
 
 }
