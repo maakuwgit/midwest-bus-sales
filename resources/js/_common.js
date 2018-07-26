@@ -84,6 +84,11 @@
         var target = $(this).data('target');
         $(this).toggleClass('collapsed');
         $(target).toggleClass('collapsed');
+        if( $('header.navbar').hasClass('top') ) {
+          $('header').removeClass('top');
+        }else{
+          $('header').addClass('top');
+        }
       });
 
       /*
