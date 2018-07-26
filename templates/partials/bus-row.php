@@ -49,7 +49,6 @@
 
     if( $price < $from_price || $price > $to_price) return;
   }
- //var_dump($_GET['bus_mileage_from'], $mileage, $_GET['bus_mileage_from'] < $mileage);
 
   if( $_GET['bus_mileage_from'] ){
     $from_miles = str_replace(',', '', $_GET['bus_mileage_from']);
@@ -59,6 +58,14 @@
   if( $_GET['bus_mileage_to'] ){
     $to_miles = str_replace(',', '', $_GET['bus_mileage_to']);
     if( $mileage > $to_miles ) return;
+  }
+
+  if( $_GET['bus_year_from'] ){
+    if( $year < $_GET['bus_year_from'] ) return;
+  }
+
+  if( $_GET['bus_year_to'] ){
+    if( $year > $_GET['bus_year_to'] ) return;
   }
 ?>
 <article class="bus__row row relative" data-clickthrough>
