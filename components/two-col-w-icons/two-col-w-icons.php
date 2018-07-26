@@ -53,7 +53,6 @@ if( $has_bg ) {
   $bg = '';
 }
 
-
 $type = ( $type ? ' ' . $type : '' );
 
 ?>

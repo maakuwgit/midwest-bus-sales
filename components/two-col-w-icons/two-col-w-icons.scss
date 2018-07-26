@@ -63,7 +63,7 @@
       background-color: $powder;
     }
 
-      
+
     &:nth-of-type(2) {
       &:before {
         content: 'M';
@@ -76,7 +76,11 @@
       }
     }
 
-    &.check:before {
+  }
+
+  .two-col-w-icons__list.checkbox {
+
+    .two-col-w-icons__item:before {
       content: '';
       background-image: url(../img/svg/check.svg);
       background-repeat: no-repeat;
