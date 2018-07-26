@@ -3,7 +3,7 @@
 ?>
 <header class="navbar top" role="banner">
   <div class="navbar__topbar">
-    <nav class="navbar__topbar__nav container row end">
+    <nav class="navbar__topbar__nav container row end centered">
       <a href="#search" class="navbar__topbar__search iflex">
         <span>Search</span>
         <svg class="icon icon-search">
@@ -11,7 +11,7 @@
         </svg>
       </a>
       <?php if( $phone ) : ?>
-        <a class="navbar__topbar__phone iflex" href="tel:+1<?php echo $phone; ?>"><?php echo $phone; ?></a>
+        <a class="navbar__topbar__phone iflex" href="tel:+1<?php echo $phone; ?>"><?php echo format_phone($phone, false, '.'); ?></a>
       <?php endif; ?>
     </nav>
   </div>
