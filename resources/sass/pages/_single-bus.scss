@@ -110,25 +110,29 @@
     font-weight: $text-normal;
   }
 
-  .form-skin {
-    @extend %short-form;
+  .bus__quote {
 
-    .gform_body {
-      width: 100%;
-      max-width: initial;
-      margin-right: 0;
+    .form-skin {
+      @extend %short-form;
+
+      .gform_body {
+        width: 100%;
+        max-width: initial;
+        margin-right: 0;
+      }
+
+      .gsection {
+        background-color: #F8F8FF;
+      }
+
+      input[type=text],
+      input[type=date],
+      input[type=email],
+      textarea {
+        margin-top: auto;
+      }
     }
 
-    .gsection {
-      background-color: #F8F8FF;
-    }
-
-    input[type=text],
-    input[type=date],
-    input[type=email],
-    textarea {
-      margin-top: auto;
-    }
   }
 
   .ll-image-slider {
