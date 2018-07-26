@@ -27,20 +27,24 @@
 
   }
 
-  &.top:not(.no-hero) {
-    background-color: transparent;
+  @include screen-md-up {
 
-    .menu-item a {
-      color: $white;
+    &.top:not(.no-hero) {
+      background-color: transparent;
 
-      &:hover {
-        color: $blue;
+      .menu-item a {
+        color: $white;
+
+        &:hover {
+          color: $blue;
+        }
       }
-    }
 
-    .logo__brand {
-      fill: $white;
-      color: $white;
+      .logo__brand {
+        fill: $white;
+        color: $white;
+      }
+
     }
 
   }
