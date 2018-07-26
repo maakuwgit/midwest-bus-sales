@@ -29,13 +29,27 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     $menu = wp_get_nav_menu_object($args->menu);
 
     /*Check the ACFs if this is a bus */
-    $bus_hero    = get_field('bus-hero_image', $item);
-    $bus_overlay = get_field('bus-hero_overlay_strength', $item->object_id);
+    $bus_hero    = get_field('bus-hero_image', $item->object . '_' . $item->object_id);
+    $bus_overlay = get_field('bus-hero_overlay_strength', $item->object . '_' . $item->object_id);
 
     $title = $item->post_excerpt;
     $description = $item->post_content;
 
-    if ($item->is_dropdown && ($depth === 0)) {
+    if ( $bus_hero ) {
+      $img = '<div class="feature"><img alt="" src="'.$bus_hero.'"></div>';
+
+      $content = '';
+
+      if ( $title ) $content .= '<small class="text-bold">' . $bus_hero['title'] . '</small>';
+
+      if ( $description ) $content .= '<a href="' . $item->url . '">' . $description . '</a>';
+
+      $item_html  = '<li class="menu-item">';
+      $item_html .= '<figure class="menu-item-image" data-backgrounder>'.$img;
+      $item_html .= '<figcaption class="menu-item-image_caption">'.$content.'</figcaption>';
+      $item_html .= '</figure></li>';
+    }
+    elseif ($item->is_dropdown && ($depth === 0)) {
       $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="collapse" data-target="#dropdown-'.$item->ID.'"', $item_html);
       $item_html = str_replace('</a>', '</a>', $item_html);
     }
@@ -44,17 +58,6 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     }
     elseif (stristr($item_html, 'li class="dropdown-header')) {
       $item_html = preg_replace('/<a[^>]*>(.*)<\/a>/iU', '$1', $item_html);
-    }
-    if ( $bus_hero ) {
-      $img = '<div class="feature"><img alt="" src="'.$bus_hero.'"></div>';
-
-      $content = '';
-
-      if ( $title ) $content .= '<small class="text-bold">' . $bus_hero['title'] . '</small>';
-
-      if ( $description ) $content .= format_text($description);
-
-      $item_html .= '<figure data-backgrounder>'.$img.'<figcaption>'.$content.'</figcaption></figure>';
     }
 
     $item_html = apply_filters('roots/wp_nav_menu_item', $item_html);

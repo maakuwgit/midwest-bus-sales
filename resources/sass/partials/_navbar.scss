@@ -436,6 +436,7 @@ body.locked {
       }
 
       .menu-item {
+        position: relative;
         width: 25%;
         height: rem-calc(158);
         flex: 0 0.25 auto;
@@ -444,6 +445,7 @@ body.locked {
 
         a {
           display: block;
+          height: 100%;
           padding: #{rem-calc(54)};
           font-size: rem-calc(18);
           font-weight: $text-semi;
@@ -451,6 +453,36 @@ body.locked {
           line-height: 1.16666666666667;
           color: $blue;
         }
+
+        &:hover .menu-item-image:before {
+          background-color: transparent;
+        }
+
+      }
+
+      .menu-item-image {
+
+        &:before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $white;
+          z-index: 0;
+
+          a {
+            z-index: 1;
+          }
+
+        }
+
+      }
+
+      .menu-item-image_caption {
+        position: relative;
+        height: 100%;
       }
 
     }
