@@ -28,6 +28,10 @@
     * {
       font-weight: $text-normal;
     }
+
+    p, li, dt, dd {
+      color: $white;
+    }
   }
 
   .hdg__nav {
