@@ -16,8 +16,8 @@
   }
 
   .two-col-w-heading__header {
-    font-size: rem-calc(35);
-    line-height: 49px;
+    font-size: rem-calc(24);
+    line-height: 33px;
     line-height: 1.4;
   }
 
@@ -27,6 +27,11 @@
 
   @include screen-md-up {
 
+    .tow-col-w-heading__header {
+      font-size: rem-calc(35);
+      line-height: 49px;
+    }
+    
     .two-col-w-heading__block {
 
       &:first-of-type {

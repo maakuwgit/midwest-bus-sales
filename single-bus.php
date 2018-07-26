@@ -25,7 +25,7 @@
         <?php include( locate_template('templates/partials/image-slider.php') ); ?>
 
         <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
-        <aside class="bus__quote col col-5of12">
+        <aside class="bus__quote col col-md-5of12 col-lg-5of12 col-xl-5of12 col-xxl-5of12">
           <?php gravity_form( 6, false, false ); ?>
         </aside>
         <?php endif; ?>

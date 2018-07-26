@@ -87,7 +87,7 @@ $members = new WP_Query( $margs );
     $offices    = get_the_terms(get_the_ID(), 'offices');
 
   ?>
-    <li class="member-grid__item col-3of12">
+    <li class="member-grid__item col col-sm-6of12 col-md-6of12 col-lg-3of12 col-xl-3of12 col-xxl-3of12">
 
       <figure id="<?php echo basename(get_permalink()); ?>" class="member-grid__thumb__figure relative">
         <a href="<?php the_permalink(); ?>" data-magnific></a>

@@ -37,7 +37,7 @@
 
   <div class="container row stretch">
 
-    <div class="bus__details__wrapper bus_details_specifications col col-4of12">
+    <div class="bus__details__wrapper bus_details_specifications col col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
 
       <table class="bus__details__table row start">
 
@@ -133,7 +133,7 @@
     </div>
     <!-- .bus_details_specifications -->
 
-    <div class="bus__details__wrapper bus_details_performance col col-4of12">
+    <div class="bus__details__wrapper bus_details_performance col col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
 
       <table class="bus__details__table row start">
 
@@ -286,7 +286,7 @@
     </div>
     <!-- .bus_details_performance -->
 
-    <div class="bus__details__wrapper bus_details_dealer col col-4of12">
+    <div class="bus__details__wrapper bus_details_dealer col col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
 
       <table class="bus__details__table row start">
 

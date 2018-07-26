@@ -50,7 +50,7 @@ $milestones  = $component_data['milestones'];
 
       <?php foreach( $milestones as $milestone ) : ?>
 
-      <div class="timeline__milestone col col-3of12 flex">
+      <div class="timeline__milestone col col-md-6of12 col-lg-3of12 col-xl-3of12 col-xxl-3of12 flex">
 
         <dt class="timeline__milestone__year">
           <?php echo $milestone['year']; ?>

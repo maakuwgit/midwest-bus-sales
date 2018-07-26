@@ -10,18 +10,13 @@
   @extend %section-padding;
 
   .timeline__milestones {
-    width: 83.333333333333%;
     margin: auto;
-    height: rem-calc(357);
 
     &:before {
       content: '•••••••••••••••••••••••••••••••••••••••••••••••••••••••';
       white-space: nowrap;
       position: absolute;
-      top: calc(50% - #{rem-calc(26.5)});
-      left: calc(8.333333333334% + #{rem-calc(213/2)});
       overflow: hidden;
-      width: calc(83.333333333333% - #{rem-calc(213)});
       font-size: rem-calc(30);
       color: $white;
       text-shadow: 0 0 #{rem-calc(3)} rgba($black, 0.3);
@@ -33,26 +28,6 @@
   .timeline__milestone {
     flex-direction: column;
     align-self: flex-start;
-
-    &:nth-child(3),
-    &:first-child {
-
-      .timeline__milestone__year {
-        order: 2;
-        margin-top: rem-calc(20);
-        margin-bottom: initial;
-      }
-
-      .timeline__milestone__content {
-        order: 1;
-      }
-
-    }
-
-    &:nth-child(even) {
-      align-self: flex-end;
-    }
-
   }
 
   .timeline__milestone__year {
@@ -85,6 +60,58 @@
     p {
       margin-top: 0;
       margin-bottom: 0;
+    }
+  }
+
+  @include screen-md {
+
+    .timeline__milestones:before {
+      content: '';
+    }
+
+    .timeline__milestone__year,
+    .timeline__milestone__content {
+      margin: auto;
+    }
+
+    .timeline__milestone__year {
+      margin: #{$padding-small} auto;
+    }
+  }
+
+  @include screen-md-up {
+
+    .timeline__milestones {
+      width: 83.333333333333%;
+      height: rem-calc(357);
+
+      &:before {
+        left: calc(8.333333333334% + #{rem-calc(213/2)});
+        top: calc(50% - #{rem-calc(26.5)});
+        width: calc(83.333333333333% - #{rem-calc(213)});
+      }
+
+    }
+
+    .timeline__milestone {
+      &:nth-child(3),
+      &:first-child {
+
+        .timeline__milestone__year {
+          order: 2;
+          margin-top: rem-calc(20);
+          margin-bottom: initial;
+        }
+
+        .timeline__milestone__content {
+          order: 1;
+        }
+
+      }
+
+      &:nth-child(even) {
+        align-self: flex-end;
+      }
     }
   }
 
