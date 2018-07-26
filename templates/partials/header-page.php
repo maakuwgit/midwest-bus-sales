@@ -18,7 +18,7 @@
   <?php endif; ?>
 
   <?php if( is_singular('bus') ) : ?>
-    <a class="hdg__nav icon-link row centered start" href="<?php echo bloginfo('url') . '/parts'; ?>">
+    <a class="hdg__nav icon-link row centered start" href="#gform_2">
       <svg class="icon icon-triangle-down iflex">
         <use xlink:href="#icon-triangle-down"></use>
       </svg>
