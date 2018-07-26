@@ -16,18 +16,26 @@
                 "id": ""
             },
             "choices": {
-                "icon-new_bus": "New Bus",
+                "icon-armchair": "Armchair",
                 "icon-calendar": "Calendar",
                 "icon-certified": "Certified",
                 "icon-check": "Check Mark",
+                "icon-coffee": "Coffee",
+                "icon-curved_sheet": "Curved Sheet",
+                "icon-donut": "Donut",
+                "icon-genders": "Genders",
                 "icon-inspection": "Inspection",
                 "icon-location": "Location",
+                "icon-new_bus": "New Bus",
                 "icon-odometer": "Odometer",
+                "icon-part": "Part",
                 "icon-parts": "Parts",
                 "icon-service": "Service",
                 "icon-service_date": "Service Date",
+                "icon-umbrella_and_chairs": "Umbrella & Chairs",
                 "icon-used_bus": "Used Bus",
-                "icon-user": "User"
+                "icon-user": "User",
+                "icon-wifi": "Wifi"
             },
             "default_value": [
                 "icon-calendar"
@@ -57,5 +65,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "This houses all the icon options. Other 'Icon' fields are clones of this",
-    "modified": 1532436532
+    "modified": 1532647463
 }
