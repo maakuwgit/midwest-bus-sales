@@ -19,6 +19,10 @@
     padding-bottom: $padding-large;
   }
 
+  &.container {
+    max-width: initial;
+  }
+
 }
 
 .post__hdg {
@@ -27,6 +31,9 @@
 .post__content {
 
   * {
+    max-width: 1130px;
+    margin-left: auto;
+    margin-right: auto;
     color: $silver;
   }
 
