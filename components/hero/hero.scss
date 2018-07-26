@@ -7,11 +7,13 @@
  */
 
 .ll-hero {
+  @include triangle-caps($white, false, true);
   position: relative;
   min-height: 637px;
   height: 66.6667vh;
   flex-direction: column;
   overflow: hidden;
+  margin-bottom: 0 !important;
   text-align: left;
   background-color: $navy;
 
@@ -42,5 +44,11 @@
   .play-video-button {
     @extend %icon-link;
     margin-top: rem-calc(21);
+  }
+
+  &:after {
+    bottom: 0;
+    border-width: #{rem-calc(75)} 100vw 0 0;
+    border-color: transparent $white transparent transparent;
   }
 }
