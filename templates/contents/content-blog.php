@@ -15,7 +15,7 @@
 
     <div class="col entry__header">
 
-      <a class="entry__meta_category <?php echo ( !is_archive() ? 'btn--tertiary ' : ''); ?>btn btn--radius" href="<?php bloginfo('url'); ?>/news/">Company</a>
+      <a class="entry__meta_category <?php echo ( !is_home() ? 'btn--tertiary ' : ''); ?>btn btn--radius" href="<?php bloginfo('url'); ?>/news/">Company</a>
           <!-- .entry__meta_category -->
     <?php
 
@@ -24,8 +24,12 @@
         foreach($categories as $category) :
 
           if( $category->term_id > 1 ) :
-            if ( $first_cat ){
-              $active = ( $first_cat->term_id === $category->term_id ? ' btn--tertiary' : '' );
+            if( is_home() ) {
+              $active = ' btn--tertiary';
+            }else {
+              if ( $first_cat ){
+                  $active = ( $first_cat->term_id !== $category->term_id ? ' btn--tertiary' : '' );
+              }
             }
             ?>
 

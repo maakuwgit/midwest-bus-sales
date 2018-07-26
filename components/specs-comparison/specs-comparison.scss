@@ -40,6 +40,10 @@
 
   }
 
+  .specs-comparison__content {
+    margin-bottom: rem-calc(50);
+  }
+
   .specs-comparison__table {
     max-width: calc( #{rem-calc($container-width)}/2);
 
