@@ -19,12 +19,21 @@
   <?php else : ?>
 
     <?php get_template_part('templates/partials/header', 'used-bus'); ?>
-    <?php include( locate_template('templates/partials/image-slider.php') ); ?>
-    <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
+    <section class="bus__details">
 
-      <?php gravity_form( 6, false, false ); ?>
+      <div class="container row stretch">
+        <?php include( locate_template('templates/partials/image-slider.php') ); ?>
 
-    <?php endif; ?>
+        <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
+        <aside class="bus__filters col col-5of12">
+          <?php gravity_form( 6, false, false ); ?>
+        </aside>
+        <?php endif; ?>
+
+      </div>
+
+    </section>
+
     <?php include( locate_template('templates/partials/bus-details.php') ); ?>
 
   <?php endif; ?>

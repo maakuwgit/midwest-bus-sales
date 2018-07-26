@@ -8,4 +8,81 @@
 
 .ll-image-slider {
 
+  .image-slider__slides {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .image-slider__slide {
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      cursor: ew-resize;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+  }
+
+  .image-slider__slick-prev,
+  .image-slider__slick-next {
+    position: absolute;
+    top: -262.5px;
+    width: rem-calc(33);
+    height: rem-calc(33);
+    padding: rem-calc(11);
+    font-size: rem-calc(10);
+    line-height: 1.5;
+  }
+
+  .image-slider__slick-prev {
+    left: 0;
+    text-align: left;
+  }
+
+  .image-slider__slick-next {
+    right: 0;
+    text-align: right;
+  }
 }
