@@ -559,7 +559,7 @@
         {
             "key": "field_5b58d0cd19ead",
             "label": "Price",
-            "name": "filterable_price",
+            "name": "filterables_price",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -670,6 +670,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1532547506
+    "description": "A full list of specifications for the Bus type. Used EVERYWHERE",
+    "modified": 1532619655
 }

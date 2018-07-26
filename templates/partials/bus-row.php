@@ -31,6 +31,15 @@
   if( $_GET['bus_air'] && $_GET['bus_air'] !== $air ) return;
   if( $_GET['bus_luggage'] && $_GET['bus_luggage'] !== $luggage ) return;
   if( $_GET['bus_lift'] && $_GET['bus_lift'] !== $lift ) return;
+
+  if($_GET['bus_price']){
+    $get_price = preg_replace('/\s+/', '', $_GET['bus_price']);
+    $from_price = substr($get_price, 0, strpos($get_price, '-'));
+    $to_price = substr($get_price, strpos($get_price, '-') + 1);
+
+    if(!$from_price) $from_price = 0;
+    if( $price < $from_price || $price > $to_price) return;
+  }
 ?>
 <article class="bus__row row relative" data-clickthrough>
 
