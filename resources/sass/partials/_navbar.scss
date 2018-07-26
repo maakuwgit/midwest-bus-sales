@@ -366,7 +366,7 @@ body.locked {
     overflow: hidden;
     height: 100vh;
     width: 100%;
-    background-color: $midnight;
+    background-color: $white;
 
     ul {
       flex-direction: column;
@@ -397,12 +397,13 @@ body.locked {
     .menu-item {
 
       &.btn {
-        margin: $padding-small 0;
+        max-width: 200px;
+        margin: $padding-xsmall 0;
         padding: 0;
       }
 
       a {
-        padding: #{rem-calc(20)} 0;
+        padding: $padding-xsmall 0;
         font-size: rem-calc(18);
         text-align: center;
       }
@@ -414,45 +415,49 @@ body.locked {
   }
 
   .dropdown-menu {
-  position: absolute;
-  left: 0;
-  right: 0;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  list-style: none;
-  background-color: $white;
 
-  &:before {
-    content: '';
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: rem-calc(158);
-    background-color: $white;
-    z-index: -1;
-  }
+    @include screen-md-up {
+      position: absolute;
+      left: 0;
+      right: 0;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      list-style: none;
+      background-color: $white;
 
-  &.collapsed {
-    display: none;
-  }
+      &:before {
+        content: '';
+        position: fixed;
+        left: 0;
+        right: 0;
+        height: rem-calc(158);
+        background-color: $white;
+        z-index: -1;
+      }
 
-  .menu-item {
-    width: 25%;
-    height: rem-calc(158);
-    flex: 0 0.25 auto;
-    display: inline-flex;
-    text-align: left;
+      .menu-item {
+        width: 25%;
+        height: rem-calc(158);
+        flex: 0 0.25 auto;
+        display: inline-flex;
+        text-align: left;
 
-    a {
-      display: block;
-      padding: #{rem-calc(54)};
-      font-size: rem-calc(18);
-      font-weight: $text-semi;
-      line-height: 21px;
-      line-height: 1.16666666666667;
-      color: $blue;
+        a {
+          display: block;
+          padding: #{rem-calc(54)};
+          font-size: rem-calc(18);
+          font-weight: $text-semi;
+          line-height: 21px;
+          line-height: 1.16666666666667;
+          color: $blue;
+        }
+      }
+
     }
-  }
 
-}
+    &.collapsed {
+      display: none;
+    }
+
+  }
 }

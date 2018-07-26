@@ -71,8 +71,8 @@
     </nav><!-- .primary-nav -->
     <?php endif; ?>
 
-    <?php if (has_nav_menu('secondary_navigation')) : ?>
-    <button type="button" class="navbar-toggle navbar-toggle--stand">
+    <?php if (has_nav_menu('primary_navigation')) : ?>
+    <button type="button" class="navbar-toggle navbar-toggle--stand" data-nav="collapse" data-target="#primary-nav">
 
       <span class="sr-only">Toggle navigation</span>
       <span class="navbar-toggle__box">
