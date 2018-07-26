@@ -22,7 +22,7 @@
     <?php include( locate_template('templates/partials/image-slider.php') ); ?>
     <?php if( is_plugin_active( 'gravityforms/gravityforms.php' ) ) : ?>
 
-      <?php gravity_form( 5, false, false ); ?>
+      <?php gravity_form( 6, false, false ); ?>
 
     <?php endif; ?>
     <?php include( locate_template('templates/partials/bus-details.php') ); ?>

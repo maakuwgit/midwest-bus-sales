@@ -33,94 +33,355 @@
   $fax          = get_field('filterables_fax');
   $address      = get_field('filterables_address');
 ?>
-<section class="bus__details row relative">
+<section class="bus__details">
 
-  <table class="bus__details__details row start">
+  <div class="container row stretch">
 
-    <thead>
-      <tr>
-        <th>Specifications</th>
-      </tr>
-    </thead>
+    <div class="bus__details__wrapper bus_details_specifications col col-4of12">
 
-    <tbody>
-      <?php if( $serial ) : ?>
-      <tr class="bus__details__table__row">
+      <table class="bus__details__table row start">
 
-        <td class="bus__details__details__title">Serial Number</td>
-        <!-- .bus__details__details__title -->
+        <thead class="bus__details__thead">
+          <tr>
+            <th>Specifications</th>
+          </tr>
+        </thead>
+        <!-- .bus__details__thead -->
 
-        <td class="bus__details__details__description">
-          <?php echo $serial; ?>
-        </td>
-        <!-- .bus__details__details__description -->
+        <tbody class="bus__details__tbody">
+          <?php if( $serial ) : ?>
+          <tr class="bus__details__table__row">
 
-      </tr>
-      <!-- .bus__details__table__row -->
-      <?php endif; ?>
+            <td class="bus__details__details__title">Serial Number</td>
+            <!-- .bus__details__details__title -->
 
-      <?php if( $mileage ) : ?>
-      <tr class="bus__details__table__row">
+            <td class="bus__details__details__description">
+              <?php echo $serial; ?>
+            </td>
+            <!-- .bus__details__details__description -->
 
-        <td class="bus__details__details__title">Mileage</td>
-        <!-- .bus__details__details__title -->
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
 
-        <td class="bus__details__details__description">
-          <?php echo $mileage; ?>
-        </td>
-        <!-- .bus__details__details__description -->
+          <?php if( $mileage ) : ?>
+          <tr class="bus__details__table__row">
 
-      </tr>
-      <!-- .bus__details__table__row -->
-      <?php endif; ?>
+            <td class="bus__details__details__title">Mileage</td>
+            <!-- .bus__details__details__title -->
 
-      <?php if( $unit_type ) : ?>
-      <tr class="bus__details__table__row">
+            <td class="bus__details__details__description">
+              <?php echo $mileage; ?>
+            </td>
+            <!-- .bus__details__details__description -->
 
-        <td class="bus__details__details__title">Unit Type</td>
-        <!-- .bus__details__details__title -->
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
 
-        <td class="bus__details__details__description">
-          <?php echo $unit_type; ?>
-        </td>
-        <!-- .bus__details__details__description -->
+          <?php if( $unit_type ) : ?>
+          <tr class="bus__details__table__row">
 
-      </tr>
-      <!-- .bus__details__table__row -->
-      <?php endif; ?>
+            <td class="bus__details__details__title">Unit Type</td>
+            <!-- .bus__details__details__title -->
 
-      <?php if( $luggage ) : ?>
-      <tr class="bus__details__table__row">
+            <td class="bus__details__details__description">
+              <?php echo $unit_type; ?>
+            </td>
+            <!-- .bus__details__details__description -->
 
-        <td class="bus__details__details__title">Luggage</td>
-        <!-- .bus__details__details__title -->
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
 
-        <td class="bus__details__details__description">
-          <?php echo $luggage === 1 ? 'Yes' : 'No'; ?>
-        </td>
-        <!-- .bus__details__details__description -->
+          <?php if( $luggage ) : ?>
+          <tr class="bus__details__table__row">
 
-      </tr>
-      <!-- .bus__details__table__row -->
-      <?php endif; ?>
+            <td class="bus__details__details__title">Luggage</td>
+            <!-- .bus__details__details__title -->
 
-      <?php if( $engine ) : ?>
-      <tr class="bus__details__table__row">
+            <td class="bus__details__details__description">
+              <?php echo $luggage === 1 ? 'Yes' : 'No'; ?>
+            </td>
+            <!-- .bus__details__details__description -->
 
-        <td class="bus__details__details__title">Engine</td>
-        <!-- .bus__details__details__title -->
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
 
-        <td class="bus__details__details__description">
-          <?php echo $engine; ?>
-        </td>
-        <!-- .bus__details__details__description -->
+          <?php if( $engine ) : ?>
+          <tr class="bus__details__table__row">
 
-      </tr>
-      <!-- .bus__details__table__row -->
-      <?php endif; ?>
+            <td class="bus__details__details__title">Engine</td>
+            <!-- .bus__details__details__title -->
 
-    </tbody>
+            <td class="bus__details__details__description">
+              <?php echo $engine; ?>
+            </td>
+            <!-- .bus__details__details__description -->
 
-  </table>
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+        </tbody>
+        <!-- .bus__details__tbody -->
+
+      </table>
+      <!-- .bus__details__table.row.start -->
+
+    </div>
+    <!-- .bus_details_specifications -->
+
+    <div class="bus__details__wrapper bus_details_performance col col-4of12">
+
+      <table class="bus__details__table row start">
+
+        <thead class="bus__details__thead">
+          <tr>
+            <th>Performance</th>
+          </tr>
+        </thead>
+
+        <tbody class="bus__details__tbody">
+          <?php if( $transmission ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Transmission</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo ucfirst($transmission); ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $horsepower ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Horsepower</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $horsepower; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $lift ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Lift</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $lift === 1 ? 'Yes' : 'No'; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $retail ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Retail</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $retail; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $export ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Export</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $export; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $wholesale ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Wholesale</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $wholesale; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $engine ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Engine</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $engine; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $brakes ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Brakes</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $brakes; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $suspension ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Suspension</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $suspension; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+        </tbody>
+
+      </table>
+
+    </div>
+    <!-- .bus_details_performance -->
+
+    <div class="bus__details__wrapper bus_details_dealer col col-4of12">
+
+      <table class="bus__details__table row start">
+
+        <thead class="bus__details__thead">
+          <tr>
+            <th>Dealer Information</th>
+          </tr>
+        </thead>
+        <!-- .bus__details__thead -->
+
+        <tbody class="bus__details__tbody">
+          <?php if( $dealer ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Dealer</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo $dealer; ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $phone ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Phone</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo  format_phone($phone); ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $phone2 ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Phone</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo  format_phone($phone2); ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $fax ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Fax</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <?php echo format_phone($fax); ?>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+          <?php if( $address ) : ?>
+          <tr class="bus__details__table__row">
+
+            <td class="bus__details__details__title">Address</td>
+            <!-- .bus__details__details__title -->
+
+            <td class="bus__details__details__description">
+              <address><?php echo $address; ?></address>
+            </td>
+            <!-- .bus__details__details__description -->
+
+          </tr>
+          <!-- .bus__details__table__row -->
+          <?php endif; ?>
+
+        </tbody>
+        <!-- .bus__details__tbody -->
+
+      </table>
+
+    </div>
+    <!-- .bus_details_dealer -->
+
+  </div>
+  <!-- .container.row -->
 
 </section>

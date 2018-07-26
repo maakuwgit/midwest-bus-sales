@@ -1,0 +1,62 @@
+/**
+ * Single Bus
+ */
+.single-bus {
+
+.bus__details {}
+
+.bus__details__table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #E1E3EC;
+  border-radius: rem-calc(4);
+  background-color: $white;
+  overflow: hidden;
+  box-shadow: 0 0 #{rem-calc(8)} 0 rgba($black, 0.26);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    content: '';
+    height: rem-calc(6);
+    width: 100%;
+    background-color: $blue;
+  }
+}
+
+.bus__details__thead {
+  margin: #{rem-calc(24)} #{rem-calc(44)} #{rem-calc(9)} #{rem-calc(44)};
+
+  th {
+    font-size: rem-calc(27);
+    font-weight: $text-light;
+    line-height: 49px;
+    line-height: 1.81481481481481;
+    color: $midnight;
+  }
+}
+
+.bus__details__tbody {
+  margin: 0 #{rem-calc(44)} #{rem-calc(20)} #{rem-calc(44)};
+}
+
+.bus__details__details__title,
+.bus__details__details__description {
+  font-size: rem-calc(14);
+  line-height: 32px;
+  line-height: 2.28571428571429;
+}
+
+.bus__details__details__title {
+  color: $black;
+  font-weight: $text-bold;
+}
+
+.bus__details__details__description {
+  padding-left: rem-calc(60);
+  font-weight: $text-normal;
+}
+
+}
