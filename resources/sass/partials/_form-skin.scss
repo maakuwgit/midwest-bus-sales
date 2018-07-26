@@ -127,6 +127,7 @@
     border-radius: rem-calc(4);
     background-color: $white;
     box-shadow: 0 0 #{rem-calc(7)} 0 rgba($black, 0.2);
+    overflow: hidden;
   }
 
   .gform_body {

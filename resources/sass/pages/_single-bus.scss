@@ -3,7 +3,16 @@
  */
 .single-bus {
 
-  .bus__details {}
+  .bus__details {
+    &:first-of-type {
+      padding-top: rem-calc(80);
+      padding-bottom: $padding-medium;
+    }
+
+    &:last-of-type {
+      padding-bottom: $padding-large;
+    }
+  }
 
   .bus__details__table {
     position: relative;
@@ -14,7 +23,6 @@
     border-radius: rem-calc(4);
     background-color: $white;
     overflow: hidden;
-    box-shadow: 0 0 #{rem-calc(8)} 0 rgba($black, 0.26);
 
     &:before {
       position: absolute;
@@ -57,6 +65,27 @@
   .bus__details__details__description {
     padding-left: rem-calc(60);
     font-weight: $text-normal;
+  }
+
+  .form-skin {
+    @extend %short-form;
+
+    .gform_body {
+      width: 100%;
+      max-width: initial;
+      margin-right: 0;
+    }
+
+    .gsection {
+      background-color: #F8F8FF;
+    }
+
+    input[type=text],
+    input[type=date],
+    input[type=email],
+    textarea {
+      margin-top: auto;
+    }
   }
 
   .ll-image-slider {

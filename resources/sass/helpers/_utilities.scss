@@ -64,6 +64,56 @@
   }
 }
 
+
+%short-form {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .gform_body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  .gsection {
+    background-color: $talc;
+    width: 100%;
+    padding: rem-calc(21);
+  }
+
+  .gsection_title{
+    @extend %h4;
+    margin-bottom: 0;
+    color: $ebony;
+  }
+
+  .gfield:not(.gsection) {
+    width: 50%;
+    flex: 0 0.5 auto;
+
+    &:last-of-type {
+      width: 100%;
+    }
+  }
+
+  .instruction {
+    display: none;
+  }
+
+  .range-label {
+    .ginput_container {
+      margin-top: rem-calc(27);
+    }
+    label {
+      position: absolute;
+      color: $silver;
+      margin-top: rem-calc(47);
+      margin-left: rem-calc(-19);
+    }
+  }
+
+}
+
 @mixin gradient-before($color: $periwinkle) {
   &:before {
     position: absolute;

@@ -39,7 +39,7 @@
             infinite: true,
             prevArrow: prevArrow,
             nextArrow: nextArrow,
-            appendArrows: gallery.find('.image-slider__nav'),
+            appendArrows: gallery,
             dots: false
           });
 
