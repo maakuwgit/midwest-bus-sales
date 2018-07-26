@@ -41,6 +41,21 @@
             "delay": 0
         },
         {
+            "key": "field_5b5a015ab3997",
+            "label": "Button",
+            "name": "teaser_button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5b4e4938a6347",
             "label": "Columns",
             "name": "teaser_columns",
@@ -138,5 +153,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Two columns with a headline on the left and copy on the right. All elements should justify content center",
-    "modified": 1531871700
+    "modified": 1532625275
 }

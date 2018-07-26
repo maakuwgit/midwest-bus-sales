@@ -45,6 +45,10 @@
     .teaser__body {
       margin-top: $padding-large;
     }
+
+    .teaser__description {
+      max-width: 85%;
+    }
   }
 
 }
