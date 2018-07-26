@@ -30,16 +30,33 @@
 
 .post__content {
 
-  * {
-    max-width: 1130px;
-    margin-left: auto;
-    margin-right: auto;
-    color: $silver;
+  > {
+
+    * {
+      max-width: 1130px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p, li, time, td, th, dt, dd {
+      color: $silver;
+    }
+
+    p, ul {
+      margin-bottom: $padding-small;
+
+      @include screen-md-up {
+        margin-bottom: $padding-medium;
+      }
+
+    }
+
+    ul, ol {
+      margin-left: rem-calc(18);
+    }
+
   }
 
-  ul, ol {
-    margin-left: rem-calc(18);
-  }
 }
 
 .post__title {

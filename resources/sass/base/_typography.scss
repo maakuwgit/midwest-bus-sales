@@ -32,12 +32,15 @@ address {
 }
 
 blockquote {
-  font-size: rem-calc(20);
+  font-size: rem-calc(35);
   font-weight: $text-light;
+  line-height: 49px;
+  line-height: 1.4;
 
   p {
     font-weight: inherit;
     font-size: inherit;
+    line-height: inherit;
   }
 
   cite {

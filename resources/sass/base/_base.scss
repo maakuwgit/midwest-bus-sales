@@ -60,9 +60,12 @@ a {
 
 blockquote {
   position: relative;
+  text-align: center;
+  color: $blue;
 
   p {
     margin: 0 auto auto;
+    color: inherit;
 
     &:before {
       content: "“";
