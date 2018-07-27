@@ -392,6 +392,10 @@ body.locked {
 
       }
 
+      .menu-item-image {
+        background-image: none !important;
+      }
+
     }
 
     .nav {
@@ -416,6 +420,25 @@ body.locked {
 
   .nav {
     margin: auto 0 auto auto;
+
+    .mega-menu {
+
+      .dropdown-menu {
+
+        .menu-item {
+          a:not(.menu-item__description) {
+            font-size: rem-calc(18);
+            font-weight: $text-semi;
+            line-height: 21px;
+            line-height: 1.16666666666667;
+            color: $blue;
+          }
+        }
+
+      }
+
+    }
+
   }
 
   .dropdown-menu {
@@ -426,6 +449,7 @@ body.locked {
       right: 0;
       flex-wrap: nowrap;
       flex-direction: row;
+      margin-top: rem-calc(14);
       list-style: none;
       background-color: $white;
 
@@ -434,7 +458,9 @@ body.locked {
         position: fixed;
         left: 0;
         right: 0;
-        height: rem-calc(158);
+        height: rem-calc(159);
+        margin-top: -1px;
+        border-top: solid 1px rgba(#CCCDD4, 0.66);
         background-color: $white;
         z-index: -1;
       }
@@ -448,23 +474,28 @@ body.locked {
         text-align: left;
 
         a {
-          display: block;
-          height: 100%;
-          padding: #{rem-calc(54)};
-          font-size: rem-calc(18);
-          font-weight: $text-semi;
-          line-height: 21px;
-          line-height: 1.16666666666667;
-          color: $blue;
+          display: flex;
+          align-self: center;
+          padding: 0;
         }
 
         &:hover .menu-item-image:before {
           background-color: transparent;
         }
 
+        .menu-item__description {
+          margin-top: rem-calc(8);
+          font-size: rem-calc(16);
+          line-height: 1;
+          font-weight: $text-normal;
+          color: $silver;
+        }
+
       }
 
       .menu-item-image {
+        padding: #{rem-calc(54)};
+        cursor: pointer;
 
         &:before {
           position: absolute;

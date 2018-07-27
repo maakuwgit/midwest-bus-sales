@@ -32,17 +32,27 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     $bus_hero    = get_field('bus-hero_image', $item->object . '_' . $item->object_id);
     $bus_overlay = get_field('bus-hero_overlay_strength', $item->object . '_' . $item->object_id);
 
-    $title = $item->post_excerpt;
+    $bus = get_term($item->object_id);
+
+    $title = $bus->post_title;
     $description = $item->post_content;
 
     if ( $bus_hero ) {
+
+      $title = $bus->name;
+      $description = $bus->description;
+
       $img = '<div class="feature"><img alt="" src="'.$bus_hero.'"></div>';
 
       $content = '';
 
-      if ( $title ) $content .= '<small class="text-bold">' . $bus_hero['title'] . '</small>';
+      if ( $title ) {
+        $content .= '<a class="menu-item__title" href="' . $item->url . '">' . $title . '</a>';
 
-      if ( $description ) $content .= '<a href="' . $item->url . '">' . $description . '</a>';
+        if ( $description ) {
+          $content .= '<a class="menu-item__description">' . $description . '</a>';
+        }
+      }
 
       $item_html  = '<li class="menu-item">';
       $item_html .= '<figure class="menu-item-image" data-backgrounder>'.$img;
