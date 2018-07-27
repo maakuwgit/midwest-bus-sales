@@ -38,6 +38,10 @@
     margin-top: rem-calc(115);
   }
 
+  .hero_btn_link {
+    margin-top: rem-calc(36);
+  }
+
   @include screen-md-up {
     height: 69vh;
     max-height: rem-calc(610);

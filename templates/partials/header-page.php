@@ -1,4 +1,5 @@
 <?php
+  $btn        = get_field('hero_btn_link');
   $supertitle = get_field('supertitle');
 ?>
 <header class="hdg">
@@ -24,6 +25,11 @@
       </svg>
       <span class="icon-link__text iflex">Request Pricing</span>
     </a><!-- .icon-link.row.centered.start -->
+  <?php endif; ?>
+
+  <?php if( $btn ) : ?>
+    <a class="btn btn--secondary hero_btn_link" href="<?php echo $btn['url']; ?>"><?php echo $btn['title']; ?></a>
+    <!-- .btn -->
   <?php endif; ?>
 
   </div><!-- .container -->
