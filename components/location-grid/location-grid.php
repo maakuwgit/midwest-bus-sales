@@ -69,7 +69,7 @@ $args    = array(
           $details    = get_field('details');
           $contacts   = get_field('location_contact');
         ?>
-        <div class="location-grid__location">
+        <div class="location-grid__location col col-sm-6of12 col-md-3of12 col-lg-4of12 col-xl-4of12">
 
           <h4 class="location-grid__location__title">
             <a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a>

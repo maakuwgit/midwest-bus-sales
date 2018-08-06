@@ -28,10 +28,13 @@
 
   .location-grid__locations {
     position: relative;
+    margin-top: $padding-xsmall;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .location-grid__location {
-    margin-top: $padding-small;
+    margin-top: $padding-xsmall;
 
     a[href^="tel:"] {
       cursor: initial;
@@ -79,9 +82,14 @@
       line-height: 1.6875;
     }
 
+    .location-grid__locations {
+      max-width: 66.6666667%;
+      margin-top: $padding-small;
+    }
+
     .location-grid__location {
-      margin-top: $padding-medium;
-      margin-bottom: $padding-medium;
+      margin-top: $padding-small;
+      margin-bottom: $padding-small;
     }
 
     .location-grid__location__title {
